@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-veripress theme install richardchien/veripress-theme-light --name light2
+veripress theme install richardchien/veripress-theme-light --name light
 
 theme=`python -c "import config; print(config.THEME)"`
 rm -rf ./themes/$theme/templates/custom
