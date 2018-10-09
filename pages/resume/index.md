@@ -2,6 +2,10 @@
 title: 简历
 ---
 
+<blockquote class="hidden-print">
+  <p>如需打印请按 Ctrl+P（Windows）或 Command+P（macOS）。</p>
+</blockquote>
+
 ## 联系方式
 
 - 手机：18100615464
