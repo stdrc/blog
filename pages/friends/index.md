@@ -14,3 +14,4 @@ title: 友情链接
 - [梨子](https://rikakomoe.github.io/)
 - [暮光博客](https://muguang.me/)
 - [啦哆咪](https://lado.me/)
+- [Coxxs](https://coxxs.me/)
