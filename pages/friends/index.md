@@ -15,3 +15,4 @@ title: 友情链接
 - [暮光博客](https://muguang.me/)
 - [啦哆咪](https://lado.me/)
 - [Coxxs](https://coxxs.me/)
+- [森の色](https://yumoe.com/)
