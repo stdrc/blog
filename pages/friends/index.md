@@ -16,3 +16,4 @@ title: 友情链接
 - [啦哆咪](https://lado.me/)
 - [Coxxs](https://coxxs.me/)
 - [森の色](https://yumoe.com/)
+- [澪同学的博客](https://ihomura.cn/)
