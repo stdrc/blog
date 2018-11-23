@@ -2,16 +2,16 @@
 title: 简历
 ---
 
-<blockquote class="hidden-print">
-  <p>如感兴趣，请联系邮箱获取完整简历～</p>
-</blockquote>
-
 ## 联系方式
 
+- 手机：18100615464
 - Email：[richardchienthebest@gmail.com](mailto:richardchienthebest@gmail.com)
+- 微信：richard\_chien\_0
 
 ## 个人信息
 
+- 钱宇超／男／1997.8.26／南京
+- 教育经历：常州大学物联网工程本科
 - 技术博客：[https://stdrc.cc](https://stdrc.cc)
 - GitHub：[https://github.com/richardchien](https://github.com/richardchien)
 - 英语水平：四级 624／六级 546
