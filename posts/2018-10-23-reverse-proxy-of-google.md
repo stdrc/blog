@@ -96,7 +96,9 @@ ln -s /etc/nginx/sites-available/google-wikipedia /etc/nginx/sites-enabled/
 然后编辑 `/etc/nginx/sites-available/google-wikipedia`，内容如下：
 
 > 注意：
+>
 > - `<google.domain>` 和 `<wikipedia.domain>` 等需要改成你自己的域名，不包含 `https://`，如果你没有域名，而是打算直接使用 IP，则需要把下面配置中放在 `443` 端口中的配置移动到 `80` 端口配置中，并且无法使用 HTTPS
+>
 > - `<ip>` 需要改成你的 VPS 在 ZeroTier 网络中的 IP，如果你不使用 ZeroTier，则需要改成你需要监听的 IP，或直接连同端口前的冒号一起删除
 
 ```
