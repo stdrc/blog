@@ -12,12 +12,10 @@ title: 关于我
 
 你可以在下面这些地方找到我（按活跃程度排序）：
 
-[GitHub](http://github.com/richardchien)
-
 [Telegram](https://telegram.me/richardchien)
 
+[Email](mailto:richardchienthebest@gmail.com)
+
+[GitHub](http://github.com/richardchien)
+
 [Twitter](http://twitter.com/richard_chien)
-
-[知乎](https://www.zhihu.com/people/richardchien)
-
-[Facebook](https://www.facebook.com/richardchien97)

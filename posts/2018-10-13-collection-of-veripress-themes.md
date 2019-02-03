@@ -16,6 +16,7 @@ updated: 2018-10-13 23:21:00
 | [richardchien/veripress-theme-r] | - | 一个简洁的纯色博客主题 |
 | [richardchien/veripress-theme-light] | [Preview](https://stdrc.cc) | 一个风格小清新的博客主题，样式比较轻快 |
 | [txperl/Story-for-VeriPress] | [Preview](https://yumoe.com) | 一个适合写作与阅读的博客主题 |
+| [momocow/veripress-theme-suka] | [Preview](http://momocow.me/veripress-theme-suka/) | Modern, powerful and simple theme ported from Hexo. |
 
 [default]: https://github.com/veripress/themes/tree/default
 [default-preview]: https://veripress.github.io/demo/
@@ -25,6 +26,7 @@ updated: 2018-10-13 23:21:00
 [richardchien/veripress-theme-r]: https://github.com/richardchien/veripress-theme-r
 [richardchien/veripress-theme-light]: https://github.com/richardchien/veripress-theme-light
 [txperl/Story-for-VeriPress]: https://github.com/txperl/Story-for-VeriPress
+[momocow/veripress-theme-suka]: https://github.com/momocow/veripress-theme-suka
 
 以上的主题均可以直接通过：
 
