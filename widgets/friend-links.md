@@ -20,3 +20,5 @@ order: 1
 - [澪同学的博客](https://ihomura.cn/)
 - [Cow Say](https://cowsay.blog/)
 - [一年又一年的博客](https://iyn.me/i/)
+- [OrzZz~](https://orzzz.org/)
+- [Anguiao's Blog](https://blog.anguiao.com/)
