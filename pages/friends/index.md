@@ -18,3 +18,4 @@ title: 友情链接
 - [森の色](https://yumoe.com/)
 - [澪同学的博客](https://ihomura.cn/)
 - [Cow Say](https://cowsay.blog/)
+- [一年又一年的博客](https://iyn.me/i/)
