@@ -22,3 +22,4 @@ title: 友情链接
 - [OrzZz~](https://orzzz.org)
 - [Anguiao's Blog](https://blog.anguiao.com)
 - [啊哈呵嗨的个人博客](https://nuist.today)
+- [鲸鱼的小站](https://crazywhale.cn/)
