@@ -27,9 +27,9 @@ title: 简历
 
 ### Python
 
-- [VeriPress](https://github.com/veripress/veripress)：功能强大的博客引擎，使用 Flask 框架编写，采用 TDD 开发模式（测试驱动开发），达到 99% 的测试覆盖率。支持多种内容形式，支持主题管理、自定义布局、动态运行 WSGI app 或生成静态网页文件，以及 API 模式、webhook 回调脚本、Atom 订阅等多种特性，并且有完善的 [文档](https://veripress.github.io/docs/)。GitHub 上项目仓库已获数十 star。我自己的技术博客使用的就是 VeriPress。
+- [VeriPress](https://github.com/veripress/veripress)：功能强大的博客引擎，使用 Flask 框架编写，采用 TDD 开发模式（测试驱动开发），达到 99% 的测试覆盖率。支持多种内容形式，支持主题管理、自定义布局、动态运行 WSGI app 或生成静态网页文件，以及 API 模式、webhook 回调脚本、Atom 订阅等多种特性，并且有完善的 [文档](https://veripress.github.io/docs/)。我自己的技术博客使用的就是 VeriPress。
 - [NoneBot](https://github.com/richardchien/none-bot)：基于 酷Q 的 Python 异步 QQ 机器人框架，它会对 QQ 机器人收到的消息进行解析和处理，并以插件化的形式，分发给消息所对应的命令处理器和自然语言处理器，来完成具体的功能。项目有完善的 [文档](https://none.rclab.tk/)，GitHub 上项目仓库已获上百 star。
-- [CQHttp Python SDK](https://github.com/richardchien/python-cqhttp) 及其 [异步版本](https://github.com/richardchien/python-aiocqhttp)：为了方便用户使用 CoolQ HTTP API 插件，编写了 Python SDK，封装了 web server 的逻辑，对机器人编写者提供了更直观的接口，GitHub 上项目仓库已获数十 star。
+- [CQHttp Python SDK](https://github.com/richardchien/python-cqhttp) 及其 [异步版本](https://github.com/richardchien/python-aiocqhttp)：为了方便用户使用 CoolQ HTTP API 插件，编写了 Python SDK，封装了 web server 的逻辑，提供了更直观的接口。
 
 ### C++
 
