@@ -17,5 +17,3 @@ title: 关于我
 [Email](mailto:richardchienthebest@gmail.com)
 
 [GitHub](http://github.com/richardchien)
-
-[Twitter](http://twitter.com/richard_chien)
