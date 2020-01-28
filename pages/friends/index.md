@@ -21,6 +21,5 @@ title: 友情链接
 - [一年又一年的博客](https://iyn.me/i/)
 - [OrzZz~](https://orzzz.org)
 - [Anguiao's Blog](https://blog.anguiao.com)
-- [啊哈呵嗨的个人博客](https://nuist.today)
 - [鲸鱼的小站](https://crazywhale.cn/)
 - [愤怒的泡面](http://powman.org/)
