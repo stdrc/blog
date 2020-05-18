@@ -23,3 +23,4 @@ title: 友情链接
 - [Anguiao's Blog](https://blog.anguiao.com)
 - [鲸鱼的小站](https://crazywhale.cn/)
 - [愤怒的泡面](http://powman.org/)
+- [SkinCrab](https://skina.cn/)
