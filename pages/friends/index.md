@@ -24,3 +24,4 @@ title: 友情链接
 - [鲸鱼的小站](https://crazywhale.cn/)
 - [愤怒的泡面](http://powman.org/)
 - [SkinCrab](https://skina.cn/)
+- [Robert's Blog](https://www.robberphex.com/)
