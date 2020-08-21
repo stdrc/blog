@@ -25,3 +25,4 @@ title: 友情链接
 - [愤怒的泡面](http://powman.org/)
 - [SkinCrab](https://skina.cn/)
 - [Robert's Blog](https://www.robberphex.com/)
+- [Artin's Blog](https://lengthmin.me/)
