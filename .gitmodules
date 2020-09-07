@@ -1,0 +1,3 @@
+[submodule "theme"]
+	path = theme
+	url = git@github.com:richardchien/purepress-theme-light.git

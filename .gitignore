@@ -1,10 +1,7 @@
+.vscode
 .idea
-*.iml
-.DS_Store
 __pycache__
 themes
-preview.py
-veripress.ps1
-_deploy
+build
 venv
-.vscode
+.venv

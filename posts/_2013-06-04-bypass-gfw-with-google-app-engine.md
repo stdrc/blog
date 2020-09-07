@@ -2,7 +2,6 @@
 title: （已失效）使用 Google App Engine 翻墙
 categories: Misc
 tags: [GAE, GoAgent, GFW]
-is_draft: true
 ---
 
 ## 1. 登录 App Engine
