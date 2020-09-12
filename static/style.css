@@ -1,0 +1,23 @@
+.site-title {
+    font-family: 'Microsoft YaHei Mono', Consolas, "Liberation Mono", Menlo, Courier, monospace !important;
+}
+
+.site-title h1 {
+    letter-spacing: -0.04em;
+}
+
+.site-title h2 {
+    letter-spacing: 0em;
+}
+
+.site-title h2 a {
+    text-decoration: underline;
+}
+
+.site-title h1::before {
+    content: "/* ";
+}
+
+.site-title h1::after {
+    content: " */";
+}
