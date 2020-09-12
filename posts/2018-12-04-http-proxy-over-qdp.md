@@ -1,6 +1,6 @@
 ---
 title: 基于 QDP 协议实现 HTTP 代理
-categories: [Dev]
+categories: Dev
 tags: [QDP, 代理, HTTP代理, 通信协议, QQ, 酷Q, CQHTTP]
 created: 2018-12-04 21:21:00
 ---

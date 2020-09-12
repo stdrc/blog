@@ -1,6 +1,6 @@
 ---
 title: 使用 PyInstaller 将 Python 程序打包成无依赖的可执行文件
-categories: [Dev]
+categories: Dev
 tags: [Python, PyInstaller]
 created: 2017-06-30 10:30:00
 ---

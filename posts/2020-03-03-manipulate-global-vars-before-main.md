@@ -1,6 +1,6 @@
 ---
 title: 在 main 函数运行之前修改全局变量
-categories: [Dev]
+categories: Dev
 tags: [C++, 奇技淫巧]
 created: 2020-03-03 20:48:00
 ---

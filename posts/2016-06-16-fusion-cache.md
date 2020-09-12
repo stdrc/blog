@@ -1,6 +1,6 @@
 ---
 title: FusionCache 实现思路和使用方法
-categories: [Dev, Detailed]
+categories: Dev
 tags: [Android, FusionCache, Cache]
 ---
 

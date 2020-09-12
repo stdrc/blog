@@ -1,7 +1,7 @@
 ---
 title: 在 OS X 上编译 AOSP 源码
 updated: 2016-06-04
-categories: [Misc, Detailed]
+categories: Dev
 tags: [Android, AOSP]
 ---
 

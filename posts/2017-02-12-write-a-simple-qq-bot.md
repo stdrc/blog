@@ -1,6 +1,6 @@
 ---
 title: 情人节要到了，手把手教你写个 QQ 机器人给女朋友玩
-categories: [Dev, Detailed]
+categories: Dev
 tags: [酷Q, QQ Bot, Mojo-Webqq, HTTP API]
 ---
 

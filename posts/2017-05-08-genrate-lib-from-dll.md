@@ -1,6 +1,6 @@
 ---
 title: 从 DLL 文件生成 LIB 文件
-categories: [Dev, Detailed]
+categories: Dev
 tags: [动态链接库, Windows, 酷Q]
 ---
 

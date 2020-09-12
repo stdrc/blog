@@ -1,6 +1,6 @@
 ---
 title: 真正零门槛：使用 IFTTT 和酷 Q 制作你的专属 QQ 通知机器人（不需要写任何代码！）
-categories: [Play, Detailed]
+categories: Fun
 tags: [IFTTT, 酷Q, QQ Bot, 聊天机器人]
 created: 2017-06-30 11:40:00
 is_draft: true

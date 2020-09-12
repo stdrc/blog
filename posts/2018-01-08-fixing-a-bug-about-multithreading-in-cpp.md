@@ -1,6 +1,6 @@
 ---
 title: 记一次关于 C++ 多线程写文件操作的错误修复
-categories: [Dev]
+categories: Dev
 tags: [C++, Multithreading]
 created: 2018-01-08 16:17:00
 ---

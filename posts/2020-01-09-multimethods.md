@@ -1,6 +1,6 @@
 ---
 title: 关于 Multimethods
-categories: [Dev]
+categories: Dev
 tags: [编程语言, 多态, 多分派, Multimethods, C++]
 created: 2020-01-09 11:24:00
 ---

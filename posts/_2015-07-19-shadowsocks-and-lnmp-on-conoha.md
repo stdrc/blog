@@ -1,6 +1,6 @@
 ---
 title: 在 CentOS 上搭建 Shadowsocks 和 LNMP 过程及遇到的问题
-categories: [Ops, Detailed]
+categories: Ops
 tags: [Linux, Shadowsocks]
 is_draft: true
 ---
