@@ -1,6 +1,6 @@
 ---
 title: 树莓派上手三天总结
-categories: Misc
+categories: Fun
 tags: [Raspberry Pi, Linux]
 ---
 
