@@ -202,3 +202,11 @@ $ tree -L 1 .
 ```
 
 这里使用了 QEMU 的 [virt](https://www.qemu.org/docs/master/system/arm/virt.html) 平台。
+
+## 参考资料
+
+- [How to Build A Custom Linux Kernel For Qemu](https://mgalgs.github.io/2015/05/16/how-to-build-a-custom-linux-kernel-for-qemu-2015-edition.html)
+- [Busybox构建根文件系统和制作Ramdisk](https://www.cnblogs.com/lotgu/p/7020418.html)
+- [Building a minimal AArch64 root filesystem for network booting](http://wiki.loverpi.com/faq:sbc:libre-aml-s805x-minimal-rootfs)
+- [Build and run minimal Linux / Busybox systems in Qemu](https://gist.github.com/chrisdone/02e165a0004be33734ac2334f215380e)
+- [Download QEMU](https://www.qemu.org/download/#source)
