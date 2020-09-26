@@ -1,7 +1,7 @@
 ---
 title: ARM GIC 虚拟化学习笔记
 categories: Note
-tags: [ARM, GIC, GICv2, GICv3, 虚拟化]
+tags: [ARM, GIC, 虚拟化, Linux, KVM, OS]
 created: 2020-09-26 20:28:00
 ---
 
