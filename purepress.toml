@@ -1,8 +1,10 @@
 [site]
-title = "My Blog"
-subtitle = "Here is my blog"
-author = "My Name"
+title = "Project RC"
+subtitle = "一只腊鸡的技术成长。"
+author = "Richard Chien"
 timezone = "Asia/Shanghai"
 
 [config]
 posts_per_index_page = 5
+disqus_enabled = true
+disqus_short_name = "richardchien"
