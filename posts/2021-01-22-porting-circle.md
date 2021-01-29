@@ -1,6 +1,6 @@
 ---
 title: 移植树莓派驱动框架 Circle 到自制操作系统
-categories: Note
+categories: Dev
 tags: [树莓派, 驱动, OS]
 created: 2021-01-22 20:40:00
 ---

@@ -1,1 +1,1 @@
-purepress==0.2.1
+purepress==0.3.0
