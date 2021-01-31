@@ -57,11 +57,11 @@ Caused by:
 make: *** [target/aarch64/debug/kernel] Error 101
 ```
 
-意思是 `core::fmt` 包里面引用了 `memcpy`，然而 `no_std` 的情况下没有 `memcpy` 这符号，感觉这是 `core::fmt` 的 bug。
+意思是 `core::fmt` 包里面引用了 `memcpy`，然而 `no_std` 的情况下没有 `memcpy` 这符号。
 
 后来在 [Writing an OS in Rust (First Edition)](https://os.phil-opp.com/set-up-rust/#fixing-linker-errors) 找到解决方案，方法就是链接一个 [`rlibc`](https://crates.io/crates/rlibc)，这提供了 `memcpy`、`memmove` 等函数的实现。
 
-但事情并没有这么简单，虽然上面的方案可以用，但 rlibc 已经是弃用状态了，作者推荐使用 [`compiler_builtin`](https://github.com/rust-lang/compiler-builtins) 替代，这个 crate 的 README 里让添加 dependency，但其实这玩意在使用 `-Z build-std=core,alloc` 编译 的情况下会自动编译，不需要手动添加 dependency，但是自动编译的情况下不会加上 `mem` feature，而我们正是要它的 `mem` feature 才能解决链接问题，找了一圈发现这个问题已经在几个 issue 里讨论过了，最后有一个 PR 解决了这问题，现在只需要再加上 `-Z build-std-features=compiler-builtins-mem` 参数就可以把 `mem` feature 传给 `compiler_builtins` crate。
+但事情并没有这么简单，虽然上面的方案可以用，但 rlibc 已经是弃用状态了，作者推荐使用 [`compiler_builtin`](https://github.com/rust-lang/compiler-builtins) 替代，这个 crate 的 README 里让添加 dependency，但其实这玩意在使用 `-Z build-std=core,alloc` 编译的情况下会自动编译，不需要手动添加 dependency，但是自动编译的情况下不会加上 `mem` feature，而我们正是要它的 `mem` feature 才能解决链接问题，找了一圈发现这个问题已经在几个 issue 里讨论过了，最后有一个 PR 解决了这问题，现在只需要再加上 `-Z build-std-features=compiler-builtins-mem` 参数就可以把 `mem` feature 传给 `compiler_builtins` crate。
 
 相关链接：
 
@@ -69,7 +69,7 @@ make: *** [target/aarch64/debug/kernel] Error 101
 - https://github.com/alexcrichton/rlibc
 - https://github.com/rust-lang/compiler-builtins
 - https://github.com/rust-lang/compiler-builtins/issues/334
-- https://github.com/rust-lang/wg-cargo-std-aware/issues/53（这是关键，可能有后续更新）
+- https://github.com/rust-lang/wg-cargo-std-aware/issues/53 这是关键，可能有后续更新
 - https://github.com/rust-lang/rust/pull/77284
 
 ## 在 `build.rs` 中自动选择 linker script
@@ -84,4 +84,4 @@ make: *** [target/aarch64/debug/kernel] Error 101
 
 - https://github.com/rust-lang/cargo/issues/7984
 - https://github.com/rust-lang/cargo/pull/7811
-- https://github.com/rust-lang/cargo/pull/8441（最终合并的 PR）
+- https://github.com/rust-lang/cargo/pull/8441 最终合并的 PR
