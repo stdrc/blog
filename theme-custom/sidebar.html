@@ -1,0 +1,22 @@
+<div class="sidebar-widgets">
+  <div class="widget">
+    <h4>导航</h4>
+    <nav>
+      <ul>
+        <li><a href="{{ url_for('index') }}">首页</a></li>
+        <li><a href="{{ url_for('page', rel_url='about/') }}">关于</a></li>
+        <li><a href="{{ url_for('page', rel_url='friends/') }}">友链</a></li>
+        <li><a href="{{ url_for('archive') }}">归档</a></li>
+        <li><a href="https://github.com/richardchien">GitHub</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="widget">
+    <h4>专题</h4>
+    <nav>
+      <ul>
+        <li><a href="{{ url_for('page', rel_url='style-guide/') }}">风格指南</a></li>
+      </ul>
+    </nav>
+  </div>
+</div>
