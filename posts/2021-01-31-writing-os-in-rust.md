@@ -91,7 +91,7 @@ make: *** [target/aarch64/debug/kernel] Error 101
 
 在还没有启动 MMU 的时候，PC 寄存器首先会是物理地址，但内核最终需要使用 `0xffff` 开头的高地址，通常在 linker script 中可进行配置，使代码中使用的绝对寻址拿到的都是高地址，然后启用编译器的相关选项使生成的代码在访问静态变量、调用函数时都采用位置无关的方式。这样就可以在内核的 boot 阶段首先使用低地址，同时该阶段的代码可以随意访问内核其它部分的函数或静态变量，然后在配置好页表、启用 MMU 之后，使用绝对寻址跳转到高地址。
 
-要让 Rust 生成位置无关代码，在自定义 target 中添加 `"position-independent-executables": true,` 即可。
+要让 Rust 生成位置无关代码，在自定义 target 中添加 `"position-independent-executables": true` 即可。
 
 相关链接：
 
