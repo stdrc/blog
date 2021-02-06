@@ -3,7 +3,7 @@ title: 用 Rust 写操作系统的踩坑记录
 categories: Dev
 tags: [Rust, OS, System]
 created: 2021-01-31 13:50:00
-updated: 2021-02-01 23:51:00
+updated: 2021-02-06 20:09:00
 ---
 
 > 持续更新中……
@@ -30,7 +30,12 @@ error: build failed
 make: *** [target/aarch64/debug/kernel] Error 101
 ```
 
-报错信息具体就是 `rustc` 在编译 `core` 的时候发生了 segmentation fault，直接运行报错的那句命令也是一样的效果，后来发现使用 release 编译就不会报错，于是发现问题跟 `-C opt-level=` 编译选项有关，`opt-level` 等于 0 就会报错，大于等于 1 就没问题，可能是 `rustc` 的 bug。
+报错信息具体就是 `rustc` 在编译 `core` 的时候发生了 segmentation fault，直接运行报错的那句命令也是一样的效果，后来发现使用 release 编译就不会报错，于是发现问题跟 `-C opt-level=` 编译选项有关，`opt-level` 等于 0 就会报错，大于等于 1 就没问题，可能是 `rustc` 的 bug。具体解决方法是在 `Cargo.toml` 中针对 `core` 包修改 `opt-level`，如下：
+
+```toml
+[profile.dev.package.core]
+opt-level = 1
+```
 
 ## 内核链接错误，报 `undefined symbol: memcpy`
 
@@ -96,3 +101,9 @@ make: *** [target/aarch64/debug/kernel] Error 101
 相关链接：
 
 - https://github.com/rcore-os/rCore/blob/9c2459/kernel/targets/aarch64.json
+
+## 增量编译导致运行时难以追踪的 bug
+
+写到页表映射的时候，发生了很奇怪的问题，明明上一秒分配了物理页，然后把地址写到了上级页表项里，过了几行之后上级页表又空了，一开始以为是我的代码或是第三方库有问题，de 了两天 bug，GDB 调了好久，过程中 bug 还会变，居然分配物理页的函数会两次分配相同的物理页，可明明这个已经测试过了。
+
+最后终于发现是 rustc 增量编译的问题，可能生成的代码有些细节已经语义不对了，`cargo clean` 之后全量重新编译就没问题了。所以如果遇到奇怪的 bug，别忘了先试试 clean。
