@@ -101,9 +101,3 @@ make: *** [target/aarch64/debug/kernel] Error 101
 相关链接：
 
 - https://github.com/rcore-os/rCore/blob/9c2459/kernel/targets/aarch64.json
-
-## 增量编译导致运行时难以追踪的 bug
-
-写到页表映射的时候，发生了很奇怪的问题，明明上一秒分配了物理页，然后把地址写到了上级页表项里，过了几行之后上级页表又空了，一开始以为是我的代码或是第三方库有问题，de 了两天 bug，GDB 调了好久，过程中 bug 还会变，居然分配物理页的函数会两次分配相同的物理页，可明明这个已经测试过了。
-
-最后终于发现是 rustc 增量编译的问题，可能生成的代码有些细节已经语义不对了，`cargo clean` 之后全量重新编译就没问题了。所以如果遇到奇怪的 bug，别忘了先试试 clean。
