@@ -19,4 +19,12 @@
       </ul>
     </nav>
   </div>
+  {% if entry and entry.toc_html %}
+  <div class="widget">
+    <h4>本页目录</h4>
+    <nav>
+      {{ entry.toc_html | safe }}
+    </nav>
+  </div>
+  {% endif %}
 </div>
