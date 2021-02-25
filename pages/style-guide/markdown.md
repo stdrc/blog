@@ -176,7 +176,7 @@ This is the third paragraph. This is the third paragraph. This is the third para
 - [https://google.github.io/styleguide/docguide/style.html](https://google.github.io/styleguide/docguide/style.html)
 ```
 
-### 链接两边加空格，标题符号除外（个人习惯）
+### 链接两边加空格，标点符号除外（个人习惯）
 
 👍🏻：
 
@@ -201,7 +201,7 @@ This is the third paragraph. This is the third paragraph. This is the third para
 👍🏻：
 
 ```md
-这是一个段落。这是一个段落。这是一个段落。这是一个段落。这是一个段落。这是一个段落。这是一个段落。一个超大的图片如下：
+这是一个段落。这是一个段落。一个超大的图片如下：
 
 ![超大的图片](http://example.com/abc.jpg)
 
@@ -211,7 +211,7 @@ This is the third paragraph. This is the third paragraph. This is the third para
 👎🏻：
 
 ```md
-这是一个段落。这是一个段落。这是一个段落。这是一个段落。这是一个段落。这是一个段落。这是一个段落。中间有个 ![超大的图片](http://example.com/abc.jpg)。这是一个段落。这是一个段落。这是一个段落。
+这是一个段落。这是一个段落。中间有个 ![超大的图片](http://example.com/abc.jpg)。这是一个段落。这是一个段落。这是一个段落。
 ```
 
 ### 可使用 HTML 实现图片居中
