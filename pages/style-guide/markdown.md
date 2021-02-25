@@ -1,15 +1,13 @@
 ---
 title: Markdown 风格指南
-updated: 2021-02-25 20:29:00
+updated: 2021-02-25 23:56:00
 ---
-
-> 填坑中……
 
 ## 标题
 
 ### 使用 ATX 风格的标题（1～6 个 `#` 号）
 
-👍🏻：
+👍：
 
 ```md
 # 一级标题
@@ -18,7 +16,7 @@ updated: 2021-02-25 20:29:00
 #### 四级标题
 ```
 
-👎🏻：
+👎：
 
 ```md
 一级标题
@@ -27,7 +25,7 @@ updated: 2021-02-25 20:29:00
 
 ### 最后一个 `#` 后空一格，标题前后空一行
 
-👍🏻：
+👍：
 
 ```md
 前一个段落的内容……
@@ -37,7 +35,7 @@ updated: 2021-02-25 20:29:00
 下一个段落……
 ```
 
-👎🏻：
+👎：
 
 ```md
 ##一个标题
@@ -46,7 +44,7 @@ updated: 2021-02-25 20:29:00
 
 ### 一篇文章中只应有一个一级标题
 
-👍🏻：
+👍：
 
 ```md
 # 一个一级标题
@@ -60,7 +58,7 @@ Blahblah……
 Blahblah……
 ```
 
-👎🏻：
+👎：
 
 ```md
 # 一个一级标题
@@ -78,7 +76,7 @@ Blahblah……
 
 ### 段落开头顶格
 
-👍🏻：
+👍：
 
 ```md
 这是一个段落。这是一个段落。这是一个段落。这是一个段落。这是一个段落。这是一个段落。这是一个段落。这是一个段落。这是一个段落。
@@ -88,7 +86,7 @@ Blahblah……
 This is the third paragraph. This is the third paragraph. This is the third paragraph. This is the third paragraph.
 ```
 
-👎🏻：
+👎：
 
 ```md
   这是一个段落。这是一个段落。这是一个段落。这是一个段落。这是一个段落。这是一个段落。这是一个段落。这是一个段落。这是一个段落。
@@ -100,7 +98,7 @@ This is the third paragraph. This is the third paragraph. This is the third para
 
 ### 段落和其它块级元素间空一行
 
-👍🏻：
+👍：
 
 ```md
 ## 一个标题
@@ -115,11 +113,11 @@ This is the third paragraph. This is the third paragraph. This is the third para
 > 一块引用内容
 ```
 
-👎🏻：
+👎：
 
 ```md
 ## 一个标题
-这是一个段落。这是一个段落。这是一个段落。这是一个段落。这
+这是一个段落。这是一个段落。这是一个段落。这是一个段落。
 - foo
 - bar
 这是第二个段落。这是第二个段落。这是第二个段落。这是第二个段落。
@@ -130,13 +128,13 @@ This is the third paragraph. This is the third paragraph. This is the third para
 
 ### 使用一个、两个和三个 `*` 分别表示斜体、粗体和粗斜体
 
-👍🏻：
+👍：
 
 ```md
 这是一个*斜体*；这是一个**粗体**；这是一个***粗斜体***。
 ```
 
-👎🏻：
+👎：
 
 ```md
 这是一个_斜体_；这是一个__粗体__；这是一个___粗斜体___；这是一个**混用**。
@@ -146,13 +144,13 @@ This is the third paragraph. This is the third paragraph. This is the third para
 
 ### 使用有意义的链接文本
 
-👍🏻：
+👍：
 
 ```md
 我的博客是 [Project RC](https://stdrc.cc)。
 ```
 
-👎🏻：
+👎：
 
 ```md
 我的博客是 Project RC，点击 [这里](https://stdrc.cc) 查看。
@@ -160,7 +158,7 @@ This is the third paragraph. This is the third paragraph. This is the third para
 
 ### 使用 `<>` 快速创建链接
 
-👍🏻：
+👍：
 
 ```md
 ## 参考资料
@@ -168,7 +166,7 @@ This is the third paragraph. This is the third paragraph. This is the third para
 - <https://google.github.io/styleguide/docguide/style.html>
 ```
 
-👎🏻：
+👎：
 
 ```md
 ## 参考资料
@@ -178,7 +176,7 @@ This is the third paragraph. This is the third paragraph. This is the third para
 
 ### 链接两边加空格，标点符号除外（个人习惯）
 
-👍🏻：
+👍：
 
 ```md
 ## 标题里的 [某某链接](https://stdrc.cc)
@@ -186,7 +184,7 @@ This is the third paragraph. This is the third paragraph. This is the third para
 这是一个段落。这是一个段落。中间有个 [某某链接](https://stdrc.cc)。这是一个段落。这是一个段落。
 ```
 
-👎🏻：
+👎：
 
 ```md
 ## 标题里的[某某链接](https://stdrc.cc)
@@ -198,20 +196,20 @@ This is the third paragraph. This is the third paragraph. This is the third para
 
 ### 不应在文字段落中插入大图
 
-👍🏻：
+👍：
 
 ```md
 这是一个段落。这是一个段落。一个超大的图片如下：
 
 ![超大的图片](http://example.com/abc.jpg)
 
-这是另一个段落。这是另一个段落。这是另一个段落。
+这是另一个段落。这是另一个段落。
 ```
 
-👎🏻：
+👎：
 
 ```md
-这是一个段落。这是一个段落。中间有个 ![超大的图片](http://example.com/abc.jpg)。这是一个段落。这是一个段落。这是一个段落。
+这是一个段落。这是一个段落。中间有个 ![超大的图片](http://example.com/abc.jpg)。这是一个段落。这是一个段落。
 ```
 
 ### 可使用 HTML 实现图片居中
@@ -226,7 +224,7 @@ This is the third paragraph. This is the third paragraph. This is the third para
 
 ### 行内代码两边加空格，标点符号除外
 
-👍🏻：
+👍：
 
 ```md
 ## 标题里的 `inline` 代码
@@ -234,7 +232,7 @@ This is the third paragraph. This is the third paragraph. This is the third para
 这是一个段落。这是一个段落。中间有个 `inline code`。这是一个段落。这是一个段落。
 ```
 
-👎🏻：
+👎：
 
 ```md
 ## 标题里的`inline`代码
@@ -244,13 +242,13 @@ This is the third paragraph. This is the third paragraph. This is the third para
 
 ### 为文件名、命令、程序代码等应以等宽字体显示的内容使用行内代码样式
 
-👍🏻：
+👍：
 
 ```md
 编辑文件 `main.c`，然后运行命令 `gcc main.c`。
 ```
 
-👎🏻：
+👎：
 
 ```md
 编辑文件 main.c，然后运行命令 gcc main.c。
@@ -258,13 +256,13 @@ This is the third paragraph. This is the third paragraph. This is the third para
 
 ### 链接文本中的代码也应使用行内代码样式
 
-👍🏻：
+👍：
 
 ```md
 更多文档请参考 [`mmap`](https://man7.org/linux/man-pages/man2/mmap.2.html)。
 ```
 
-👎🏻：
+👎：
 
 ```md
 更多文档请参考 [mmap](https://man7.org/linux/man-pages/man2/mmap.2.html)。
@@ -280,7 +278,7 @@ This is the third paragraph. This is the third paragraph. This is the third para
 
 ### 使用 `` ``` `` 表示代码块
 
-👍🏻：
+👍：
 
 ````md
 下面是一个代码块：
@@ -293,7 +291,7 @@ def foo():
 这是另一个段落。
 ````
 
-👎🏻：
+👎：
 
 ```md
 下面是一个代码块：
@@ -303,6 +301,26 @@ def foo():
 
 这是另一个段落。
 ```
+
+### 尽量为代码块标注编程语言
+
+👍：
+
+````md
+```python
+def foo():
+    pass
+```
+````
+
+👎：
+
+````md
+```
+def foo():
+    pass
+```
+````
 
 ### 使用更多 `` ` `` 转义多个 `` ` `` 本身
 
@@ -319,31 +337,11 @@ def foo():
 ````
 `````
 
-### 尽量为代码块标注编程语言
-
-👍🏻：
-
-````md
-```python
-def foo():
-    pass
-```
-````
-
-👎🏻：
-
-````md
-```
-def foo():
-    pass
-```
-````
-
 ## 引用块
 
 ### 引用块中段落间空行不要在 `>` 右边加空格
 
-👍🏻：
+👍：
 
 ```md
 > 第一个段落。第一个段落。第一个段落。第一个段落。
@@ -351,7 +349,7 @@ def foo():
 > 第二个段落。第二个段落。第二个段落。第二个段落。
 ```
 
-👎🏻：
+👎：
 
 ```md
 > 第一个段落。第一个段落。第一个段落。第一个段落。
@@ -359,9 +357,9 @@ def foo():
 > 第二个段落。第二个段落。第二个段落。第二个段落。
 ```
 
-### 嵌套引用块应在两层的 `>` 间加空格，就像普通的段落一样
+### 嵌套引用块应在两层的 `>` 间加空格
 
-👍🏻：
+👍：
 
 ```md
 > 第一个段落。第一个段落。第一个段落。下面是个嵌套引用：
@@ -371,7 +369,7 @@ def foo():
 > > 嵌套引用第二个段落。嵌套引用第二个段落。嵌套引用第二个段落。嵌套引用第二个段落。
 ```
 
-👎🏻：
+👎：
 
 ```md
 > 第一个段落。第一个段落。第一个段落。下面是个嵌套引用：
@@ -385,7 +383,7 @@ def foo():
 
 ### 使用 `*` 或 `-` 表示无序列表，并在全文保持统一
 
-👍🏻：
+👍：
 
 ```md
 - foo
@@ -395,7 +393,7 @@ def foo():
 - baz
 ```
 
-👎🏻：
+👎：
 
 ```md
 - foo
@@ -412,9 +410,7 @@ def foo():
 
 ### 多级列表使用四个空格缩进
 
-> 
-
-👍🏻：
+👍：
 
 ```md
 - foo
@@ -424,7 +420,7 @@ def foo():
 - baz
 ```
 
-👎🏻：
+👎：
 
 ```md
 - foo
@@ -434,23 +430,109 @@ def foo():
 - baz
 ```
 
+### 列表项有多行内容时应缩进到与第一行相同的位置
+
+👍：
+
+````md
+- foo
+- 这是一个较复杂的列表项，有代码：
+
+  ```python
+  def foo():
+      pass
+  ```
+
+  和另一段内容。
+- baz
+````
+
+👎：
+
+````md
+- foo
+- 这是一个较复杂的列表项，有代码：
+
+```python
+def foo():
+    pass
+```
+
+和另一段内容。
+- baz
+````
+
 ## 有序列表
 
-## 分割线
+### 列表项较多且变更频繁时可全部标为 `1.`，由渲染引擎自动编号
+
+```md
+1. foo
+1. bar
+    1. bar1
+    1. bar2
+1. baz
+```
+
+### 列表项较少或变更不频繁时应尽量按正确顺序标号
+
+```md
+1. foo
+2. bar
+3. baz
+```
 
 ## 表格
 
-## 任务列表
+> 只针对 GitHub Flavored Markdown（GFM）。
+
+### 行的两侧不加 `|`，标题行下面只使用三个 `-`
+
+👍：
+
+```md
+姓名 | 学号 | 兴趣爱好
+--- | --- | ---
+张三 | 101 | 打篮球
+李四 | 102 | 唱歌
+```
+
+👎：
+
+```md
+| 姓名 | 学号 | 兴趣爱好 |
+| --- | --- | ------- |
+| 张三 | 101 | 打篮球 |
+| 李四 | 102 | 唱歌 |
+```
+
+### 表格内容两侧加空格
+
+👍：
+
+```md
+姓名 | 学号 | 兴趣爱好
+--- | --- | ---
+张三 | 101 | 打篮球
+李四 | 102 | 唱歌
+```
+
+👎：
+
+```md
+姓名|学号|兴趣爱好
+---|---|---
+张三|101|打篮球
+李四|102|唱歌
+```
 
 ## 删除线
 
-### 使用 `<del>` 或 `~~`（如果 Markdown 渲染引擎支持）表示删除线样式
+### 使用 `<del>` 或 `~~`（如果渲染引擎支持）表示删除线样式
 
 ```md
 <del>哈哈哈哈！</del>被删除了！
 ```
-
-## HTML
 
 ## 其它
 
