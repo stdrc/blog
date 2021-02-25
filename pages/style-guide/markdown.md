@@ -157,7 +157,7 @@ This is the third paragraph. This is the third paragraph. This is the third para
 我的博客是 Project RC，点击 [这里](https://stdrc.cc) 查看。
 ```
 
-### 使用尖括号 `<>` 快速创建链接
+### 使用 `<>` 快速创建链接
 
 👍🏻：
 
