@@ -586,6 +586,8 @@ def foo():
 
 ### 使用 `.md` 作为文件扩展名，而不是 `.markdown` 或 `.mdown`
 
+### 编写内容时遵循 [中文写作风格指南](chinese.html)
+
 ## 参考资料
 
 - <https://google.github.io/styleguide/docguide/style.html>
