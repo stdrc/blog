@@ -1,0 +1,729 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0"><meta name="apple-mobile-web-app-capable" content="yes"><meta http-equiv="X-UA-Compatible" content="ie=edge"><meta property="og:type" content="website"><meta name="twitter:card" content="summary"><style>.bespoke-marp-note,.bespoke-marp-osc,.bespoke-progress-parent{display:none;transition:none}@media screen{body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button{-webkit-appearance:none;-moz-appearance:none;appearance:none;background-color:transparent;border:0;color:inherit;cursor:pointer;font-size:inherit;opacity:.8;outline:none;padding:0;transition:opacity .2s linear;-webkit-tap-highlight-color:transparent}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:disabled,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:disabled,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:disabled{cursor:not-allowed;opacity:.15!important}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:hover,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:hover,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:hover{opacity:1}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:active,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:active,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:hover:active{opacity:.6}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:not(:disabled),body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:not(:disabled),body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:hover:not(:disabled){transition:none}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev],body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button.bespoke-marp-presenter-info-page-prev{background:transparent url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJNNjggOTBMMjggNTBsNDAtNDAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button.bespoke-marp-presenter-info-page-next{background:transparent url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJNMzIgOTBsNDAtNDAtNDAtNDAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen]{background:transparent url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48ZGVmcz48c3R5bGU+LmF7ZmlsbDpub25lO3N0cm9rZTojZmZmO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2Utd2lkdGg6NXB4fTwvc3R5bGU+PC9kZWZzPjxyZWN0IGNsYXNzPSJhIiB4PSIxMCIgeT0iMjAiIHdpZHRoPSI4MCIgaGVpZ2h0PSI2MCIgcng9IjUuNjciLz48cGF0aCBjbGFzcz0iYSIgZD0iTTQwIDcwSDIwVjUwbTIwIDBMMjAgNzBtNDAtNDBoMjB2MjBtLTIwIDBsMjAtMjAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button.exit[data-bespoke-marp-osc=fullscreen],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button.exit[data-bespoke-marp-osc=fullscreen]{background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48ZGVmcz48c3R5bGU+LmF7ZmlsbDpub25lO3N0cm9rZTojZmZmO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2Utd2lkdGg6NXB4fTwvc3R5bGU+PC9kZWZzPjxyZWN0IGNsYXNzPSJhIiB4PSIxMCIgeT0iMjAiIHdpZHRoPSI4MCIgaGVpZ2h0PSI2MCIgcng9IjUuNjciLz48cGF0aCBjbGFzcz0iYSIgZD0iTTIwIDUwaDIwdjIwbS0yMCAwbDIwLTIwbTQwIDBINjBWMzBtMjAgMEw2MCA1MCIvPjwvc3ZnPg==")}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter]{background:transparent url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48ZGVmcz48c3R5bGU+LmF7ZmlsbDpub25lO3N0cm9rZTojZmZmO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS13aWR0aDo1cHh9PC9zdHlsZT48L2RlZnM+PHBhdGggY2xhc3M9ImEiIGQ9Ik0yMCA2MGgtNWE1IDUgMCAwMS01LTVWMjBhNSA1IDAgMDE1LTVoNjBhNSA1IDAgMDE1IDV2NU0zMCA4NWg2MCIvPjxyZWN0IHg9IjMwIiB5PSIzNSIgd2lkdGg9IjYwIiBoZWlnaHQ9IjQwIiByeD0iNSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZmIi8+PHJlY3QgY2xhc3M9ImEiIHg9IjMwIiB5PSIzNSIgd2lkdGg9IjYwIiBoZWlnaHQ9IjQwIiByeD0iNSIvPjxwYXRoIGNsYXNzPSJhIiBkPSJNNDAgNTBoNDBNNDAgNjBoMzAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body,html{height:100%;margin:0}body{background:#000;overflow:hidden}svg.bespoke-marp-slide{content-visibility:hidden;z-index:-1;pointer-events:none;opacity:0}svg.bespoke-marp-slide.bespoke-marp-active{content-visibility:visible;z-index:0;pointer-events:auto;opacity:1}svg.bespoke-marp-slide.bespoke-marp-active.bespoke-marp-active-ready *{-webkit-animation-name:__bespoke_marp__!important;animation-name:__bespoke_marp__!important}@supports not (content-visibility:hidden){svg.bespoke-marp-slide[data-bespoke-marp-load=hideable]{display:none}svg.bespoke-marp-slide[data-bespoke-marp-load=hideable].bespoke-marp-active{display:block}}[data-bespoke-marp-fragment=inactive]{visibility:hidden}body[data-bespoke-view=""] .bespoke-marp-parent,body[data-bespoke-view=next] .bespoke-marp-parent{bottom:0;left:0;position:absolute;right:0;top:0}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc{background:rgba(0,0,0,.65);border-radius:7px;bottom:50px;color:#fff;display:block;font-family:Helvetica,Arial,sans-serif;font-size:16px;left:50%;line-height:0;opacity:1;padding:12px;position:absolute;touch-action:manipulation;transform:translateX(-50%);transition:opacity .2s linear;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;white-space:nowrap;z-index:1;will-change:transform}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>*,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>*{margin-left:6px}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>:first-child,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>:first-child{margin-left:0}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>span,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>span{opacity:.8}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>span[data-bespoke-marp-osc=page],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>span[data-bespoke-marp-osc=page]{display:inline-block;min-width:140px;text-align:center}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen],body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter],body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev]{height:32px;line-height:32px;width:32px}body[data-bespoke-view=""] .bespoke-marp-parent.bespoke-marp-inactive,body[data-bespoke-view=next] .bespoke-marp-parent.bespoke-marp-inactive{cursor:none}body[data-bespoke-view=""] .bespoke-marp-parent.bespoke-marp-inactive>.bespoke-marp-osc,body[data-bespoke-view=next] .bespoke-marp-parent.bespoke-marp-inactive>.bespoke-marp-osc{opacity:0;pointer-events:none}body[data-bespoke-view=""] svg.bespoke-marp-slide,body[data-bespoke-view=next] svg.bespoke-marp-slide{height:100%;left:0;position:absolute;top:0;width:100%}body[data-bespoke-view=""] .bespoke-progress-parent{background:#222;display:flex;height:5px;width:100%}body[data-bespoke-view=""] .bespoke-progress-parent+.bespoke-marp-parent{top:5px}body[data-bespoke-view=""] .bespoke-progress-parent .bespoke-progress-bar{flex:0 0 0;background:#0288d1;transition:flex-basis .2s cubic-bezier(0,1,1,1)}body[data-bespoke-view=next]{background:transparent}body[data-bespoke-view=presenter]{background:#161616}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container{font-family:Helvetica,Arial,sans-serif;height:100%;left:0;position:absolute;top:0;width:100%;display:grid;grid-template-columns:2fr 1fr;grid-template-rows:minmax(140px,1fr) 2fr 3em;grid-template-areas:"current next" "current note" "info    note"}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-parent{grid-area:current;position:relative;overflow:hidden}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-parent svg.bespoke-marp-slide{height:calc(100% - 40px);left:20px;position:absolute;pointer-events:none;top:20px;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;width:calc(100% - 40px)}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-parent svg.bespoke-marp-slide.bespoke-marp-active{filter:drop-shadow(0 3px 10px rgba(0,0,0,.5))}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-next-container{background:#222;cursor:pointer;display:none;grid-area:next;overflow:hidden;position:relative}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-next-container.active{display:block}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-next-container iframe.bespoke-marp-presenter-next{background:transparent;border:0;display:block;filter:drop-shadow(0 3px 10px rgba(0,0,0,.5));height:calc(100% - 40px);left:20px;position:absolute;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;top:20px;width:calc(100% - 40px)}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container{background:#222;color:#eee;grid-area:note}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note{margin:20px;width:calc(100% - 40px);height:calc(100% - 40px);box-sizing:border-box;font-size:1.1em;overflow:auto;padding-right:3px;white-space:pre-wrap;word-wrap:break-word;scrollbar-width:thin;scrollbar-color:hsla(0,0%,93.3%,.5) transparent}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note::-webkit-scrollbar{width:6px}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note::-webkit-scrollbar-track{background:transparent}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note::-webkit-scrollbar-thumb{background:hsla(0,0%,93.3%,.5);border-radius:6px}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note:empty{pointer-events:none}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note.active{display:block}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note p:first-child{margin-top:0}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note p:last-child{margin-bottom:0}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container{align-items:center;box-sizing:border-box;color:#eee;display:flex;flex-wrap:nowrap;grid-area:info;justify-content:center;padding:0 10px}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-time,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-timer{display:block;box-sizing:border-box;padding:0 10px;white-space:nowrap;width:100%}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button{height:1.5em;line-height:1.5em;width:1.5em}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page{order:2;text-align:center}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page .bespoke-marp-presenter-info-page-text{display:inline-block;min-width:120px;text-align:center}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-time{color:#999;order:1;text-align:left}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-timer{color:#999;order:3;text-align:right}}@media print{.bespoke-marp-presenter-info-container,.bespoke-marp-presenter-next-container,.bespoke-marp-presenter-note-container{display:none}}</style><style>@charset "UTF-8";@import url("https://fonts.googleapis.com/css?family=Lato:400,900|Roboto+Mono:400,700&display=swap");div#p>svg>foreignObject>section{width:1280px;height:720px;box-sizing:border-box;overflow:hidden;position:relative;scroll-snap-align:center center}div#p>svg>foreignObject>section:after{bottom:0;content:attr(data-marpit-pagination);padding:inherit;pointer-events:none;position:absolute;right:0}div#p>svg>foreignObject>section:not([data-marpit-pagination]):after{display:none}/* Normalization */div#p>svg>foreignObject>section h1{font-size:2em;margin:0.67em 0}div#p>svg>foreignObject>section video::-webkit-media-controls{will-change:transform}@page{size:1280px 720px;margin:0}@media print{body,html{background-color:#fff;margin:0;page-break-inside:avoid;break-inside:avoid-page}div#p>svg>foreignObject>section{page-break-before:always;break-before:page}div#p>svg>foreignObject>section,div#p>svg>foreignObject>section *{-webkit-print-color-adjust:exact!important;animation-delay:0s!important;animation-duration:0s!important;color-adjust:exact!important;transition:none!important}div#p>svg[data-marpit-svg]{display:block;height:100vh;width:100vw}}div#p>svg>foreignObject>section svg[data-marp-fitting=svg]{display:block;height:auto;width:100%}@supports (-ms-ime-align:auto){div#p>svg>foreignObject>section svg[data-marp-fitting=svg]{position:static}}div#p>svg>foreignObject>section svg[data-marp-fitting=svg].__reflow__{content:""}@supports (-ms-ime-align:auto){div#p>svg>foreignObject>section svg[data-marp-fitting=svg].__reflow__{position:relative}}div#p>svg>foreignObject>section [data-marp-fitting-svg-content]{display:table;white-space:nowrap}div#p>svg>foreignObject>section [data-marp-fitting-svg-content-wrap]{white-space:pre}div#p>svg>foreignObject>section img[data-marp-twemoji]{background:transparent;height:1em;margin:0 .05em 0 .1em;vertical-align:-.1em;width:1em}
+/*!
+ * Marp / Marpit Gaia theme.
+ *
+ * @theme gaia
+ * @author Yuki Hattori
+ *
+ * @auto-scaling true
+ * @size 4:3 960px 720px
+ */div#p>svg>foreignObject>section .hljs{display:block;overflow-x:auto;padding:.5em;background:#000;color:#f8f8f8}div#p>svg>foreignObject>section .hljs-comment,div#p>svg>foreignObject>section .hljs-quote{color:#aeaeae;font-style:italic}div#p>svg>foreignObject>section .hljs-keyword,div#p>svg>foreignObject>section .hljs-selector-tag,div#p>svg>foreignObject>section .hljs-type{color:#e28964}div#p>svg>foreignObject>section .hljs-string{color:#65b042}div#p>svg>foreignObject>section .hljs-subst{color:#daefa3}div#p>svg>foreignObject>section .hljs-link,div#p>svg>foreignObject>section .hljs-regexp{color:#e9c062}div#p>svg>foreignObject>section .hljs-name,div#p>svg>foreignObject>section .hljs-section,div#p>svg>foreignObject>section .hljs-tag,div#p>svg>foreignObject>section .hljs-title{color:#89bdff}div#p>svg>foreignObject>section .hljs-class .hljs-title,div#p>svg>foreignObject>section .hljs-doctag{text-decoration:underline}div#p>svg>foreignObject>section .hljs-bullet,div#p>svg>foreignObject>section .hljs-number,div#p>svg>foreignObject>section .hljs-symbol{color:#3387cc}div#p>svg>foreignObject>section .hljs-params,div#p>svg>foreignObject>section .hljs-template-variable,div#p>svg>foreignObject>section .hljs-variable{color:#3e87e3}div#p>svg>foreignObject>section .hljs-attribute{color:#cda869}div#p>svg>foreignObject>section .hljs-meta{color:#8996a8}div#p>svg>foreignObject>section .hljs-formula{background-color:#0e2231;color:#f8f8f8;font-style:italic}div#p>svg>foreignObject>section .hljs-addition{background-color:#253b22;color:#f8f8f8}div#p>svg>foreignObject>section .hljs-deletion{background-color:#420e09;color:#f8f8f8}div#p>svg>foreignObject>section .hljs-selector-class{color:#9b703f}div#p>svg>foreignObject>section .hljs-selector-id{color:#8b98ab}div#p>svg>foreignObject>section .hljs-emphasis{font-style:italic}div#p>svg>foreignObject>section .hljs-strong{font-weight:700}div#p>svg>foreignObject>section svg[data-marp-fitting=svg]{max-height:580px}div#p>svg>foreignObject>section h1,div#p>svg>foreignObject>section h2,div#p>svg>foreignObject>section h3,div#p>svg>foreignObject>section h4,div#p>svg>foreignObject>section h5,div#p>svg>foreignObject>section h6{margin:.5em 0 0}div#p>svg>foreignObject>section h1 strong,div#p>svg>foreignObject>section h2 strong,div#p>svg>foreignObject>section h3 strong,div#p>svg>foreignObject>section h4 strong,div#p>svg>foreignObject>section h5 strong,div#p>svg>foreignObject>section h6 strong{font-weight:inherit}div#p>svg>foreignObject>section h1{font-size:1.8em}div#p>svg>foreignObject>section h2{font-size:1.5em}div#p>svg>foreignObject>section h3{font-size:1.3em}div#p>svg>foreignObject>section h4{font-size:1.1em}div#p>svg>foreignObject>section h5{font-size:1em}div#p>svg>foreignObject>section h6{font-size:.9em}div#p>svg>foreignObject>section blockquote,div#p>svg>foreignObject>section p{margin:1em 0 0}div#p>svg>foreignObject>section ol>li,div#p>svg>foreignObject>section ul>li{margin:.3em 0 0}div#p>svg>foreignObject>section ol>li>p,div#p>svg>foreignObject>section ul>li>p{margin:.6em 0 0}div#p>svg>foreignObject>section code{display:inline-block;font-family:Roboto Mono,monospace;font-size:.8em;letter-spacing:0;margin:-.1em .15em;padding:.1em .2em;vertical-align:baseline}div#p>svg>foreignObject>section pre{display:block;margin:1em 0 0;min-height:1em;overflow:visible}div#p>svg>foreignObject>section pre code{box-sizing:border-box;margin:0;min-width:100%;padding:.5em;font-size:.7em}div#p>svg>foreignObject>section pre code svg[data-marp-fitting=svg]{max-height:calc(580px - 1em)}div#p>svg>foreignObject>section blockquote{margin:1em 0 0;padding:0 1em;position:relative}div#p>svg>foreignObject>section blockquote:after,div#p>svg>foreignObject>section blockquote:before{content:"“";display:block;font-family:Times New Roman,serif;font-weight:700;position:absolute}div#p>svg>foreignObject>section blockquote:before{top:0;left:0}div#p>svg>foreignObject>section blockquote:after{right:0;bottom:0;transform:rotate(180deg)}div#p>svg>foreignObject>section blockquote>:first-child{margin-top:0}div#p>svg>foreignObject>section mark{background:transparent}div#p>svg>foreignObject>section table{border-spacing:0;border-collapse:collapse;margin:1em 0 0}div#p>svg>foreignObject>section table td,div#p>svg>foreignObject>section table th{padding:.2em .4em;border-width:1px;border-style:solid}div#p>svg>foreignObject>section{background-image:linear-gradient(135deg,hsla(0,0%,53.3%,0),hsla(0,0%,53.3%,.02) 50%,hsla(0,0%,100%,0) 0,hsla(0,0%,100%,.05));font-size:35px;font-family:Lato,Avenir Next,Avenir,Trebuchet MS,Segoe UI,sans-serif;height:720px;line-height:1.35;letter-spacing:1.25px;padding:70px;width:1280px;word-wrap:break-word;color:#455a64;background-color:#fff8e1}div#p>svg>foreignObject>section{--marpit-root-font-size:35px}div#p>svg>foreignObject>section>:first-child,div#p>svg>foreignObject>section>header:first-child+*{margin-top:0}div#p>svg>foreignObject>section a,div#p>svg>foreignObject>section mark{color:#0288d1}div#p>svg>foreignObject>section code{background:#6a7a7d;color:#fff8e1}div#p>svg>foreignObject>section h1 strong,div#p>svg>foreignObject>section h2 strong,div#p>svg>foreignObject>section h3 strong,div#p>svg>foreignObject>section h4 strong,div#p>svg>foreignObject>section h5 strong,div#p>svg>foreignObject>section h6 strong{color:#0288d1}div#p>svg>foreignObject>section pre>code{background:#455a64}div#p>svg>foreignObject>section blockquote:after,div#p>svg>foreignObject>section blockquote:before,div#p>svg>foreignObject>section footer,div#p>svg>foreignObject>section header,div#p>svg>foreignObject>section section:after{color:#6a7a7d}div#p>svg>foreignObject>section table td,div#p>svg>foreignObject>section table th{border-color:#455a64}div#p>svg>foreignObject>section table thead th{background:#455a64;color:#fff8e1}div#p>svg>foreignObject>section table tbody>tr:nth-child(odd) td,div#p>svg>foreignObject>section table tbody>tr:nth-child(odd) th{background:rgba(69,90,100,.1)}div#p>svg>foreignObject>section.invert{color:#fff8e1;background-color:#455a64}div#p>svg>foreignObject>section.invert a,div#p>svg>foreignObject>section.invert mark{color:#81d4fa}div#p>svg>foreignObject>section.invert code{background:#dad8c8;color:#455a64}div#p>svg>foreignObject>section.invert h1 strong,div#p>svg>foreignObject>section.invert h2 strong,div#p>svg>foreignObject>section.invert h3 strong,div#p>svg>foreignObject>section.invert h4 strong,div#p>svg>foreignObject>section.invert h5 strong,div#p>svg>foreignObject>section.invert h6 strong{color:#81d4fa}div#p>svg>foreignObject>section.invert pre>code{background:#fff8e1}div#p>svg>foreignObject>section.invert blockquote:after,div#p>svg>foreignObject>section.invert blockquote:before,div#p>svg>foreignObject>section.invert footer,div#p>svg>foreignObject>section.invert header,div#p>svg>foreignObject>section.invert section:after{color:#dad8c8}div#p>svg>foreignObject>section.invert table td,div#p>svg>foreignObject>section.invert table th{border-color:#fff8e1}div#p>svg>foreignObject>section.invert table thead th{background:#fff8e1;color:#455a64}div#p>svg>foreignObject>section.invert table tbody>tr:nth-child(odd) td,div#p>svg>foreignObject>section.invert table tbody>tr:nth-child(odd) th{background:rgba(255,248,225,.1)}div#p>svg>foreignObject>section.gaia{color:#fff8e1;background-color:#0288d1}div#p>svg>foreignObject>section.gaia a,div#p>svg>foreignObject>section.gaia mark{color:#81d4fa}div#p>svg>foreignObject>section.gaia code{background:#cce2de;color:#0288d1}div#p>svg>foreignObject>section.gaia h1 strong,div#p>svg>foreignObject>section.gaia h2 strong,div#p>svg>foreignObject>section.gaia h3 strong,div#p>svg>foreignObject>section.gaia h4 strong,div#p>svg>foreignObject>section.gaia h5 strong,div#p>svg>foreignObject>section.gaia h6 strong{color:#81d4fa}div#p>svg>foreignObject>section.gaia pre>code{background:#fff8e1}div#p>svg>foreignObject>section.gaia blockquote:after,div#p>svg>foreignObject>section.gaia blockquote:before,div#p>svg>foreignObject>section.gaia footer,div#p>svg>foreignObject>section.gaia header,div#p>svg>foreignObject>section.gaia section:after{color:#cce2de}div#p>svg>foreignObject>section.gaia table td,div#p>svg>foreignObject>section.gaia table th{border-color:#fff8e1}div#p>svg>foreignObject>section.gaia table thead th{background:#fff8e1;color:#0288d1}div#p>svg>foreignObject>section.gaia table tbody>tr:nth-child(odd) td,div#p>svg>foreignObject>section.gaia table tbody>tr:nth-child(odd) th{background:rgba(255,248,225,.1)}div#p>svg>foreignObject>section.lead{display:flex;flex-direction:column;flex-wrap:nowrap;justify-content:center}div#p>svg>foreignObject>section.lead h1,div#p>svg>foreignObject>section.lead h2,div#p>svg>foreignObject>section.lead h3,div#p>svg>foreignObject>section.lead h4,div#p>svg>foreignObject>section.lead h5,div#p>svg>foreignObject>section.lead h6{text-align:center}div#p>svg>foreignObject>section.lead h1 svg[data-marp-fitting=svg],div#p>svg>foreignObject>section.lead h2 svg[data-marp-fitting=svg],div#p>svg>foreignObject>section.lead h3 svg[data-marp-fitting=svg],div#p>svg>foreignObject>section.lead h4 svg[data-marp-fitting=svg],div#p>svg>foreignObject>section.lead h5 svg[data-marp-fitting=svg],div#p>svg>foreignObject>section.lead h6 svg[data-marp-fitting=svg]{--preserve-aspect-ratio:xMidYMid meet}div#p>svg>foreignObject>section.lead p{text-align:center}div#p>svg>foreignObject>section.lead blockquote>h1,div#p>svg>foreignObject>section.lead blockquote>h2,div#p>svg>foreignObject>section.lead blockquote>h3,div#p>svg>foreignObject>section.lead blockquote>h4,div#p>svg>foreignObject>section.lead blockquote>h5,div#p>svg>foreignObject>section.lead blockquote>h6,div#p>svg>foreignObject>section.lead blockquote>p{text-align:left}div#p>svg>foreignObject>section.lead blockquote svg[data-marp-fitting=svg]:not([data-marp-fitting-math]){--preserve-aspect-ratio:xMinYMin meet}div#p>svg>foreignObject>section.lead ol>li>p,div#p>svg>foreignObject>section.lead ul>li>p{text-align:left}div#p>svg>foreignObject>section.lead table{margin-left:auto;margin-right:auto}div#p>svg>foreignObject>section:after,div#p>svg>foreignObject>section footer,div#p>svg>foreignObject>section header{box-sizing:border-box;font-size:66%;height:70px;line-height:50px;overflow:hidden;padding:10px 25px;position:absolute}div#p>svg>foreignObject>section:after{--marpit-root-font-size:66%}div#p>svg>foreignObject>section header{top:0}div#p>svg>foreignObject>section footer,div#p>svg>foreignObject>section header{left:0;right:0}div#p>svg>foreignObject>section footer{bottom:0}div#p>svg>foreignObject>section:after{right:0;bottom:0;font-size:80%}div#p>svg>foreignObject>section:after{--marpit-root-font-size:80%}div#p>svg>foreignObject>section.lead footer{text-align:right}div#p>svg>foreignObject>section[data-marpit-advanced-background=background]{display:block!important;padding:0!important}div#p>svg>foreignObject>section[data-marpit-advanced-background=background]:after,div#p>svg>foreignObject>section[data-marpit-advanced-background=background]:before,div#p>svg>foreignObject>section[data-marpit-advanced-background=content]:after,div#p>svg>foreignObject>section[data-marpit-advanced-background=content]:before{display:none!important}div#p>svg>foreignObject>section[data-marpit-advanced-background=background]>div[data-marpit-advanced-background-container]{all:initial;display:flex;flex-direction:row;height:100%;overflow:hidden;width:100%}div#p>svg>foreignObject>section[data-marpit-advanced-background=background]>div[data-marpit-advanced-background-container][data-marpit-advanced-background-direction=vertical]{flex-direction:column}div#p>svg>foreignObject>section[data-marpit-advanced-background=background][data-marpit-advanced-background-split]>div[data-marpit-advanced-background-container]{width:var(--marpit-advanced-background-split,50%)}div#p>svg>foreignObject>section[data-marpit-advanced-background=background][data-marpit-advanced-background-split=right]>div[data-marpit-advanced-background-container]{margin-left:calc(100% - var(--marpit-advanced-background-split, 50%))}div#p>svg>foreignObject>section[data-marpit-advanced-background=background]>div[data-marpit-advanced-background-container]>figure{all:initial;background-position:center;background-repeat:no-repeat;background-size:cover;flex:auto;margin:0}div#p>svg>foreignObject>section[data-marpit-advanced-background=content],div#p>svg>foreignObject>section[data-marpit-advanced-background=pseudo]{background:transparent!important}div#p>svg>foreignObject>section[data-marpit-advanced-background=pseudo],div#p>svg[data-marpit-svg]>foreignObject[data-marpit-advanced-background=pseudo]{pointer-events:none!important}div#p>svg>foreignObject>section[data-marpit-advanced-background-split]{width:100%;height:100%}</style></head><body><div class="bespoke-marp-osc"><button data-bespoke-marp-osc="prev" tabindex="-1" title="Previous slide">Previous slide</button><span data-bespoke-marp-osc="page"></span><button data-bespoke-marp-osc="next" tabindex="-1" title="Next slide">Next slide</button><button data-bespoke-marp-osc="fullscreen" tabindex="-1" title="Toggle fullscreen (f)">Toggle fullscreen</button><button data-bespoke-marp-osc="presenter" tabindex="-1" title="Open presenter view (p)">Open presenter view</button></div><div id="p"><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="1" data-class="lead invert" data-background-image="url('assets/bg-lead.png')" data-footer="Presented by [RC](https://github.com/richardchien)" data-theme="gaia" data-style="section.lead footer {
+  text-align: right;
+}
+" class="lead invert" style="--class:lead invert;--background-image:url('assets/bg-lead.png');--footer:Presented by [RC](https://github.com/richardchien);--theme:gaia;
+;background-image:url('assets/bg-lead.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h1>Why Write OS In Rust?</h1>
+<h4>ChCoreCon #7, 3/1/2021</h4>
+<footer>Presented by <a href="https://github.com/richardchien">RC</a></footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="2" data-class="invert" data-paginate="true" data-background-image="url('assets/bg.png')" data-theme="gaia" data-style="section.lead footer {
+  text-align: right;
+}
+" class="invert" data-marpit-pagination="2" data-marpit-pagination-total="41" style="--class:invert;--paginate:true;--background-image:url('assets/bg.png');--theme:gaia;
+;background-image:url('assets/bg.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>Outline</h2>
+<ul>
+<li>Safety</li>
+<li>Expression</li>
+<li>Interoperability</li>
+<li>Performance</li>
+<li>Usability</li>
+<li>Drawbacks</li>
+<li>Summary</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="3" data-class="invert" data-paginate="true" data-background-image="url('assets/bg.png')" data-theme="gaia" data-style="section.lead footer {
+  text-align: right;
+}
+" class="invert" data-marpit-pagination="3" data-marpit-pagination-total="41" style="--class:invert;--paginate:true;--background-image:url('assets/bg.png');--theme:gaia;
+;background-image:url('assets/bg.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>Outline</h2>
+<ul>
+<li><strong>Safety</strong> <img class="emoji" draggable="false" alt="👈" src="https://twemoji.maxcdn.com/2/svg/1f448.svg" data-marp-twemoji=""/></li>
+<li>Expression</li>
+<li>Interoperability</li>
+<li>Performance</li>
+<li>Usability</li>
+<li>Drawbacks</li>
+<li>Summary</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="4" data-class="invert" data-paginate="true" data-background-image="url('assets/bg.png')" data-theme="gaia" data-style="section.lead footer {
+  text-align: right;
+}
+" class="invert" data-marpit-pagination="4" data-marpit-pagination-total="41" style="--class:invert;--paginate:true;--background-image:url('assets/bg.png');--theme:gaia;
+;background-image:url('assets/bg.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>Safety</h2>
+<ul>
+<li>Spatial memory safety</li>
+<li>Temporal memory safety</li>
+<li>Thread safety</li>
+</ul>
+<p>According to <a href="https://msrc-blog.microsoft.com/2019/07/18/we-need-a-safer-systems-programming-language/">the MSRC blog</a>, <strong>70%</strong> of the security issues that it assigns a CVE to are memory safety issues!</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="5" data-class="invert" data-paginate="true" data-background-image="url('assets/bg.png')" data-theme="gaia" data-style="section.lead footer {
+  text-align: right;
+}
+" class="invert" data-marpit-pagination="5" data-marpit-pagination-total="41" style="--class:invert;--paginate:true;--background-image:url('assets/bg.png');--theme:gaia;
+;background-image:url('assets/bg.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>Spatial memory safety</h2>
+<p>How C sucks:</p>
+<pre><code class="language-c"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">someos_file_write</span><span class="hljs-params">(<span class="hljs-keyword">int</span> fd, <span class="hljs-keyword">void</span> *buf, <span class="hljs-keyword">size_t</span> count)</span> </span>{
+    <span class="hljs-keyword">int</span> ret, cnt, remain = count; <span class="hljs-comment">// implicit conversion</span>
+    <span class="hljs-comment">// ...</span>
+    <span class="hljs-keyword">while</span> (remain &gt; <span class="hljs-number">0</span>) {
+        fr-&gt;count <span class="hljs-comment">/* ssize_t */</span> = cnt = MIN(remain, FS_BUF_SIZE);
+        <span class="hljs-built_in">memcpy</span>(fr-&gt;buf, buf, cnt);
+        <span class="hljs-comment">// write to file, ret is: 1) &lt; 0 for failure; 2) &gt;= 0 for bytes written</span>
+        ret = ipc_call(fr);
+        buf = (<span class="hljs-keyword">char</span> *)buf + ret; remain -= ret;
+        <span class="hljs-keyword">if</span> (ret != cnt) <span class="hljs-keyword">break</span>;
+    }
+    <span class="hljs-keyword">return</span> count - remain;
+}
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="6" data-class="invert" data-paginate="true" data-background-image="url('assets/bg.png')" data-theme="gaia" data-style="section.lead footer {
+  text-align: right;
+}
+" class="invert" data-marpit-pagination="6" data-marpit-pagination-total="41" style="--class:invert;--paginate:true;--background-image:url('assets/bg.png');--theme:gaia;
+;background-image:url('assets/bg.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>Spatial memory safety</h2>
+<p>At least 4 bugs in the above C code!</p>
+<ol>
+<li><code>int fd</code>: <code>fd</code> can be negative or zero</li>
+<li><code>void *buf</code>: <code>buf</code> can be null</li>
+<li><code>remain = count</code>: <code>remain</code> can be negative due to unmatched type</li>
+<li><code>buf = (char *)buf + ret</code>: <code>ret</code> can be negative, causing out-of-bound access</li>
+</ol>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="7" data-class="invert" data-paginate="true" data-background-image="url('assets/bg.png')" data-theme="gaia" data-style="section.lead footer {
+  text-align: right;
+}
+" class="invert" data-marpit-pagination="7" data-marpit-pagination-total="41" style="--class:invert;--paginate:true;--background-image:url('assets/bg.png');--theme:gaia;
+;background-image:url('assets/bg.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>Spatial memory safety</h2>
+<p>What features of Rust can help?</p>
+<ul>
+<li>Null safety</li>
+<li>Type safety</li>
+<li>Boundary check</li>
+<li>Error handling</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="8" data-class="invert" data-paginate="true" data-background-image="url('assets/bg.png')" data-theme="gaia" data-style="section.lead footer {
+  text-align: right;
+}
+" class="invert" data-marpit-pagination="8" data-marpit-pagination-total="41" style="--class:invert;--paginate:true;--background-image:url('assets/bg.png');--theme:gaia;
+;background-image:url('assets/bg.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>Spatial memory safety</h2>
+<p>Same thing implemented in Rust:</p>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">someos_file_write</span></span>(fd: FileDescriptor, buf: &amp;<span class="hljs-keyword">mut</span> [<span class="hljs-built_in">u8</span>]) -&gt; SomeOsResult&lt;<span class="hljs-built_in">usize</span>&gt; {
+    <span class="hljs-keyword">let</span> count = buf.len();
+    <span class="hljs-keyword">let</span> <span class="hljs-keyword">mut</span> written = <span class="hljs-number">0usize</span>;
+    <span class="hljs-keyword">while</span> written &lt; count {
+        <span class="hljs-keyword">let</span> buf_slice = &amp;<span class="hljs-keyword">mut</span> buf[written..min(written + FS_BUF_SIZE, count)];
+        <span class="hljs-keyword">let</span> n = ipc_call(buf_slice)?;
+        written += n;
+        <span class="hljs-keyword">if</span> n &lt; buf_slice.len() {
+            <span class="hljs-keyword">break</span>;
+        }
+    }
+    <span class="hljs-literal">Ok</span>(written)
+}
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="9" data-class="invert" data-paginate="true" data-background-image="url('assets/bg.png')" data-theme="gaia" data-style="section.lead footer {
+  text-align: right;
+}
+" class="invert" data-marpit-pagination="9" data-marpit-pagination-total="41" style="--class:invert;--paginate:true;--background-image:url('assets/bg.png');--theme:gaia;
+;background-image:url('assets/bg.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>Spatial memory safety</h2>
+<p>What if forgot <code>min(written + FS_BUF_SIZE, count)</code>?</p>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">let</span> buf_slice = &amp;<span class="hljs-keyword">mut</span> buf[written..written + FS_BUF_SIZE];
+</span></span></foreignObject></svg></code></pre>
+<p>If <code>written + FS_BUF_SIZE</code> is larger than <code>buf.len()</code>, it'll panic:</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>thread 'main' panicked at 'range end index 1024 out of range for slice of length 512', src/main.rs:23:30
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="10" data-class="invert" data-paginate="true" data-background-image="url('assets/bg.png')" data-theme="gaia" data-style="section.lead footer {
+  text-align: right;
+}
+" class="invert" data-marpit-pagination="10" data-marpit-pagination-total="41" style="--class:invert;--paginate:true;--background-image:url('assets/bg.png');--theme:gaia;
+;background-image:url('assets/bg.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>Temporal memory safety</h2>
+<p>A bad example in C:</p>
+<pre><code class="language-c"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">usb_request_async</span><span class="hljs-params">(<span class="hljs-keyword">int</span> req, <span class="hljs-keyword">void</span> *buffer, <span class="hljs-keyword">void</span> (*callback)(<span class="hljs-keyword">int</span>, <span class="hljs-keyword">void</span> *))</span> </span>{
+    global_urb-&gt;req = req;
+    global_urb-&gt;buffer = buffer;
+    global_urb-&gt;callback = callback;
+    usb_send_urb_async(global_urb);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">usb_request_cb</span><span class="hljs-params">(<span class="hljs-keyword">int</span> req, <span class="hljs-keyword">void</span> *buffer)</span> </span>{ <span class="hljs-comment">/* access buffer */</span> }
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">func</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">char</span> buf[<span class="hljs-number">4096</span>];
+    usb_request_async(USB_REQ_GET_XXX, buf, usb_request_cb);
+}
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="11" data-class="invert" data-paginate="true" data-background-image="url('assets/bg.png')" data-theme="gaia" data-style="section.lead footer {
+  text-align: right;
+}
+" class="invert" data-marpit-pagination="11" data-marpit-pagination-total="41" style="--class:invert;--paginate:true;--background-image:url('assets/bg.png');--theme:gaia;
+;background-image:url('assets/bg.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>Temporal memory safety</h2>
+<p>What features of Rust can help?</p>
+<ul>
+<li>Lifetime</li>
+<li>Ownership</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="12" data-class="invert" data-paginate="true" data-background-image="url('assets/bg.png')" data-theme="gaia" data-style="section.lead footer {
+  text-align: right;
+}
+" class="invert" data-marpit-pagination="12" data-marpit-pagination-total="41" style="--class:invert;--paginate:true;--background-image:url('assets/bg.png');--theme:gaia;
+;background-image:url('assets/bg.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>Temporal memory safety</h2>
+<p>Try the same in Rust (consider only immutable buffer for simplicity):</p>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">usb_request_async</span></span>&lt;<span class="hljs-symbol">&#x27;a</span>&gt;(
+    req: UsbRequest,
+    buffer: &amp;<span class="hljs-symbol">&#x27;a</span> [<span class="hljs-built_in">u8</span>],
+    callback: <span class="hljs-built_in">Box</span>&lt;<span class="hljs-keyword">dyn</span> <span class="hljs-built_in">Fn</span>(UsbRequest, &amp;[<span class="hljs-built_in">u8</span>]) + <span class="hljs-built_in">Send</span> + <span class="hljs-symbol">&#x27;static</span>&gt;,
+) {
+    std::thread::spawn(<span class="hljs-keyword">move</span> || { <span class="hljs-comment">// simulate async usb request callback</span>
+        callback(req, buffer);
+    });
+}
+</span></span></foreignObject></svg></code></pre>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>error[E0759]: `buffer` has lifetime `'a` but it needs to satisfy a `'static` lifetime requirement
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="13" data-class="invert" data-paginate="true" data-background-image="url('assets/bg.png')" data-theme="gaia" data-style="section.lead footer {
+  text-align: right;
+}
+" class="invert" data-marpit-pagination="13" data-marpit-pagination-total="41" style="--class:invert;--paginate:true;--background-image:url('assets/bg.png');--theme:gaia;
+;background-image:url('assets/bg.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>Temporal memory safety</h2>
+<p>Change a little bit according to the error message:</p>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">usb_request_async</span></span>(
+    req: UsbRequest,
+    buffer: &amp;<span class="hljs-symbol">&#x27;static</span> [<span class="hljs-built_in">u8</span>],
+    callback: <span class="hljs-built_in">Box</span>&lt;<span class="hljs-keyword">dyn</span> <span class="hljs-built_in">Fn</span>(UsbRequest, &amp;[<span class="hljs-built_in">u8</span>]) + <span class="hljs-built_in">Send</span> + <span class="hljs-symbol">&#x27;static</span>&gt;,
+) {
+    std::thread::spawn(<span class="hljs-keyword">move</span> || { <span class="hljs-comment">// simulate async usb request callback</span>
+        callback(req, buffer);
+    });
+}
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="14" data-class="invert" data-paginate="true" data-background-image="url('assets/bg.png')" data-theme="gaia" data-style="section.lead footer {
+  text-align: right;
+}
+" class="invert" data-marpit-pagination="14" data-marpit-pagination-total="41" style="--class:invert;--paginate:true;--background-image:url('assets/bg.png');--theme:gaia;
+;background-image:url('assets/bg.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>Temporal memory safety</h2>
+<p>Then use <code>usb_request_async</code>:</p>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">usb_request_cb</span></span>(req: UsbRequest, buffer: &amp;[<span class="hljs-built_in">u8</span>]) {
+    <span class="hljs-built_in">println!</span>(<span class="hljs-string">&quot;{:?}&quot;</span>, buffer);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">func</span></span>() {
+    <span class="hljs-keyword">let</span> buffer: [<span class="hljs-built_in">u8</span>; <span class="hljs-number">1024</span>] = [<span class="hljs-number">0</span>; <span class="hljs-number">1024</span>];
+    usb_request_async(UsbRequest::GetXxx, &amp;buffer, <span class="hljs-built_in">Box</span>::new(usb_request_cb));
+}
+</span></span></foreignObject></svg></code></pre>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>error[E0597]: `buffer` does not live long enough
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="15" data-class="invert" data-paginate="true" data-background-image="url('assets/bg.png')" data-theme="gaia" data-style="section.lead footer {
+  text-align: right;
+}
+" class="invert" data-marpit-pagination="15" data-marpit-pagination-total="41" style="--class:invert;--paginate:true;--background-image:url('assets/bg.png');--theme:gaia;
+;background-image:url('assets/bg.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>Temporal memory safety</h2>
+<p>Possibly a better design:</p>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">Urb</span></span> {
+    req: UsbRequest,
+    buffer: <span class="hljs-built_in">Vec</span>&lt;<span class="hljs-built_in">u8</span>&gt;,
+    callback: <span class="hljs-built_in">Box</span>&lt;<span class="hljs-keyword">dyn</span> <span class="hljs-built_in">Fn</span>(UsbRequest, &amp;[<span class="hljs-built_in">u8</span>]) + <span class="hljs-built_in">Send</span> + <span class="hljs-symbol">&#x27;static</span>&gt;,
+}
+
+<span class="hljs-keyword">impl</span> Urb {
+    <span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">new</span></span>(req: UsbRequest, buf_size: <span class="hljs-built_in">usize</span>,
+           callback: <span class="hljs-keyword">impl</span> <span class="hljs-built_in">Fn</span>(UsbRequest, &amp;[<span class="hljs-built_in">u8</span>]) + <span class="hljs-built_in">Send</span> + <span class="hljs-symbol">&#x27;static</span>) -&gt; <span class="hljs-keyword">Self</span> {
+        <span class="hljs-keyword">Self</span> { req, buffer: <span class="hljs-built_in">vec!</span>[<span class="hljs-number">0</span>; buf_size], callback: <span class="hljs-built_in">Box</span>::new(callback) }
+    }
+}
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="16" data-class="invert" data-paginate="true" data-background-image="url('assets/bg.png')" data-theme="gaia" data-style="section.lead footer {
+  text-align: right;
+}
+" class="invert" data-marpit-pagination="16" data-marpit-pagination-total="41" style="--class:invert;--paginate:true;--background-image:url('assets/bg.png');--theme:gaia;
+;background-image:url('assets/bg.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>Temporal memory safety</h2>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">usb_send_urb_async</span></span>(urb: Urb) {
+    std::thread::spawn(<span class="hljs-keyword">move</span> || { <span class="hljs-comment">// simulate async usb request callback</span>
+        <span class="hljs-keyword">let</span> cb = urb.callback;
+        cb(urb.req, &amp;urb.buffer);
+    });
+}
+
+<span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">usb_request_cb</span></span>(req: UsbRequest, buffer: &amp;[<span class="hljs-built_in">u8</span>]) {
+    <span class="hljs-built_in">println!</span>(<span class="hljs-string">&quot;{:?}&quot;</span>, buffer);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">func</span></span>() {
+    <span class="hljs-keyword">let</span> urb = Urb::new(UsbRequest::GetXxx, <span class="hljs-number">1024</span>, usb_request_cb);
+    usb_send_urb_async(urb);
+}
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="17" data-class="invert" data-paginate="true" data-background-image="url('assets/bg.png')" data-theme="gaia" data-style="section.lead footer {
+  text-align: right;
+}
+" class="invert" data-marpit-pagination="17" data-marpit-pagination-total="41" style="--class:invert;--paginate:true;--background-image:url('assets/bg.png');--theme:gaia;
+;background-image:url('assets/bg.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>Thread safety</h2>
+<p>Features of Rust to prevent from data races:</p>
+<ul>
+<li>
+<p>Global static variables can't be modified <em>safely</em></p>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">static</span> <span class="hljs-keyword">mut</span> GLOBAL_INT: <span class="hljs-built_in">u32</span> = <span class="hljs-number">1</span>;
+
+<span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">func</span></span>() {
+    <span class="hljs-comment">// bad practice</span>
+    std::thread::spawn(|| <span class="hljs-keyword">unsafe</span> { GLOBAL_INT = <span class="hljs-number">3</span> });
+    <span class="hljs-keyword">unsafe</span> { GLOBAL_INT = <span class="hljs-number">2</span> }
+}
+</span></span></foreignObject></svg></code></pre>
+</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="18" data-class="invert" data-paginate="true" data-background-image="url('assets/bg.png')" data-theme="gaia" data-style="section.lead footer {
+  text-align: right;
+}
+" class="invert" data-marpit-pagination="18" data-marpit-pagination-total="41" style="--class:invert;--paginate:true;--background-image:url('assets/bg.png');--theme:gaia;
+;background-image:url('assets/bg.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>Thread safety</h2>
+<ul>
+<li>Variables that are shared between threads must impl <code>Sync</code><pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-comment">// static GLOBAL_INT_BAD: RefCell&lt;u32&gt; = RefCell::new(1);</span>
+lazy_static! {
+    <span class="hljs-keyword">static</span> <span class="hljs-keyword">ref</span> GLOBAL_INT: Mutex&lt;<span class="hljs-built_in">u32</span>&gt; = Mutex::new(<span class="hljs-number">1</span>);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">func</span></span>() {
+    std::thread::spawn(|| *GLOBAL_INT.lock().unwrap() = <span class="hljs-number">3</span>);
+    *GLOBAL_INT.lock().unwrap() = <span class="hljs-number">2</span>;
+}
+</span></span></foreignObject></svg></code></pre>
+</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="19" data-class="invert" data-paginate="true" data-background-image="url('assets/bg.png')" data-theme="gaia" data-style="section.lead footer {
+  text-align: right;
+}
+" class="invert" data-marpit-pagination="19" data-marpit-pagination-total="41" style="--class:invert;--paginate:true;--background-image:url('assets/bg.png');--theme:gaia;
+;background-image:url('assets/bg.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>Thread safety</h2>
+<ul>
+<li>
+<p>Variables that are sent across threads must impl <code>Send</code></p>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">func</span></span>() {
+    <span class="hljs-keyword">let</span> shared_int = Arc::new(Mutex::new(<span class="hljs-number">1</span>));
+    <span class="hljs-keyword">let</span> shared_int_clone = shared_int.clone();
+
+    std::thread::spawn(<span class="hljs-keyword">move</span> || *shared_int_clone.lock().unwrap() = <span class="hljs-number">3</span>);
+    *shared_int.lock().unwrap() = <span class="hljs-number">2</span>;
+}
+</span></span></foreignObject></svg></code></pre>
+</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="20" data-class="invert" data-paginate="true" data-background-image="url('assets/bg.png')" data-theme="gaia" data-style="section.lead footer {
+  text-align: right;
+}
+" class="invert" data-marpit-pagination="20" data-marpit-pagination-total="41" style="--class:invert;--paginate:true;--background-image:url('assets/bg.png');--theme:gaia;
+;background-image:url('assets/bg.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>Outline</h2>
+<ul>
+<li>Safety</li>
+<li><strong>Expression</strong> <img class="emoji" draggable="false" alt="👈" src="https://twemoji.maxcdn.com/2/svg/1f448.svg" data-marp-twemoji=""/></li>
+<li>Interoperability</li>
+<li>Performance</li>
+<li>Usability</li>
+<li>Drawbacks</li>
+<li>Summary</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="21" data-class="invert" data-paginate="true" data-background-image="url('assets/bg.png')" data-theme="gaia" data-style="section.lead footer {
+  text-align: right;
+}
+" class="invert" data-marpit-pagination="21" data-marpit-pagination-total="41" style="--class:invert;--paginate:true;--background-image:url('assets/bg.png');--theme:gaia;
+;background-image:url('assets/bg.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>Expression</h2>
+<p>Can Rust express everything that C can?</p>
+<p>In theory, YES, both are turing-complete.</p>
+<p>In practice, ALMOST, with some <code>unsafe</code> code. When you can't implement some logic in Rust, you probably should rethink the design.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="22" data-class="invert" data-paginate="true" data-background-image="url('assets/bg.png')" data-theme="gaia" data-style="section.lead footer {
+  text-align: right;
+}
+" class="invert" data-marpit-pagination="22" data-marpit-pagination-total="41" style="--class:invert;--paginate:true;--background-image:url('assets/bg.png');--theme:gaia;
+;background-image:url('assets/bg.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>Expression</h2>
+<p>Example for booting:</p>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-meta">#[no_mangle]</span>
+<span class="hljs-meta">#[link_section = <span class="hljs-meta-string">&quot;.text.boot&quot;</span>]</span>
+<span class="hljs-keyword">extern</span> <span class="hljs-string">&quot;C&quot;</span> <span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">_start_rust</span></span>() -&gt; ! {
+    <span class="hljs-meta">#[link_section = <span class="hljs-meta-string">&quot;.data.boot&quot;</span>]</span>
+    <span class="hljs-keyword">static</span> START: spin::Once&lt;()&gt; = spin::Once::new();
+    START.call_once(|| {
+        clear_bss();
+        memory::create_boot_pt();
+    });
+    memory::enable_mmu();
+    <span class="hljs-keyword">unsafe</span> { _start_kernel() }
+}
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="23" data-class="invert" data-paginate="true" data-background-image="url('assets/bg.png')" data-theme="gaia" data-style="section.lead footer {
+  text-align: right;
+}
+" class="invert" data-marpit-pagination="23" data-marpit-pagination-total="41" style="--class:invert;--paginate:true;--background-image:url('assets/bg.png');--theme:gaia;
+;background-image:url('assets/bg.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>Expression</h2>
+<p>Example for driver:</p>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">handle_irq</span></span>(&amp;<span class="hljs-keyword">self</span>) {
+    <span class="hljs-keyword">loop</span> {
+        <span class="hljs-keyword">let</span> irqstat = <span class="hljs-keyword">self</span>.read_cpu_reg(GICC_IAR);
+        <span class="hljs-keyword">let</span> irqnr = irqstat &amp; GICC_IAR_INT_ID_MASK;
+        <span class="hljs-keyword">match</span> irqnr {
+            <span class="hljs-number">0</span>..=<span class="hljs-number">15</span> =&gt; crate::irq::handle_inter_processor(irqnr),
+            <span class="hljs-number">16</span>..=<span class="hljs-number">31</span> =&gt; crate::irq::handle_local(irqnr - <span class="hljs-number">16</span>),
+            <span class="hljs-number">32</span>..=<span class="hljs-number">1020</span> =&gt; crate::irq::handle_shared(irqnr - <span class="hljs-number">32</span>),
+            _ =&gt; <span class="hljs-keyword">break</span>,
+        }
+        <span class="hljs-keyword">self</span>.write_cpu_reg(GICC_EOIR, irqstat);
+    }
+}
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="24" data-class="invert" data-paginate="true" data-background-image="url('assets/bg.png')" data-theme="gaia" data-style="section.lead footer {
+  text-align: right;
+}
+" class="invert" data-marpit-pagination="24" data-marpit-pagination-total="41" style="--class:invert;--paginate:true;--background-image:url('assets/bg.png');--theme:gaia;
+;background-image:url('assets/bg.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>Expression</h2>
+<p>Much better than C:</p>
+<ul>
+<li>Module: better modularity</li>
+<li>Ownership &amp; Lifetime: memory safety</li>
+<li>Trait: generic programming</li>
+<li>Result &amp; Error: better error handling</li>
+<li>Closure &amp; Iterator: functional programming</li>
+<li>Macro: meta programming</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="25" data-class="invert" data-paginate="true" data-background-image="url('assets/bg.png')" data-theme="gaia" data-style="section.lead footer {
+  text-align: right;
+}
+" class="invert" data-marpit-pagination="25" data-marpit-pagination-total="41" style="--class:invert;--paginate:true;--background-image:url('assets/bg.png');--theme:gaia;
+;background-image:url('assets/bg.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>Expression</h2>
+<p>Compared to C++:</p>
+<ul>
+<li>Similar funtionality</li>
+<li>Safe by default</li>
+<li><code>core</code> and <code>alloc</code> crates without need for <code>std</code></li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="26" data-class="invert" data-paginate="true" data-background-image="url('assets/bg.png')" data-theme="gaia" data-style="section.lead footer {
+  text-align: right;
+}
+" class="invert" data-marpit-pagination="26" data-marpit-pagination-total="41" style="--class:invert;--paginate:true;--background-image:url('assets/bg.png');--theme:gaia;
+;background-image:url('assets/bg.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>Outline</h2>
+<ul>
+<li>Safety</li>
+<li>Expression</li>
+<li><strong>Interoperability</strong> <img class="emoji" draggable="false" alt="👈" src="https://twemoji.maxcdn.com/2/svg/1f448.svg" data-marp-twemoji=""/></li>
+<li>Performance</li>
+<li>Usability</li>
+<li>Drawbacks</li>
+<li>Summary</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="27" data-class="invert" data-paginate="true" data-background-image="url('assets/bg.png')" data-theme="gaia" data-style="section.lead footer {
+  text-align: right;
+}
+" class="invert" data-marpit-pagination="27" data-marpit-pagination-total="41" style="--class:invert;--paginate:true;--background-image:url('assets/bg.png');--theme:gaia;
+;background-image:url('assets/bg.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>Interoperability</h2>
+<p>Call C from Rust:</p>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">extern</span> <span class="hljs-string">&quot;C&quot;</span> {
+    <span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">some_function_in_c</span></span>(buf: *<span class="hljs-keyword">mut</span> <span class="hljs-built_in">u8</span>, n: <span class="hljs-built_in">usize</span>) -&gt; <span class="hljs-built_in">usize</span>;
+}
+
+<span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">func</span></span>() {
+    <span class="hljs-keyword">let</span> <span class="hljs-keyword">mut</span> buf = [<span class="hljs-number">0u8</span>; <span class="hljs-number">1024</span>];
+    <span class="hljs-keyword">let</span> buf_raw_ptr = &amp;<span class="hljs-keyword">mut</span> buf[<span class="hljs-number">0</span>] <span class="hljs-keyword">as</span> *<span class="hljs-keyword">mut</span> <span class="hljs-built_in">u8</span>;
+    <span class="hljs-keyword">let</span> ret = <span class="hljs-keyword">unsafe</span> { some_function_in_c(buf_raw_ptr, buf.len()) };
+}
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="28" data-class="invert" data-paginate="true" data-background-image="url('assets/bg.png')" data-theme="gaia" data-style="section.lead footer {
+  text-align: right;
+}
+" class="invert" data-marpit-pagination="28" data-marpit-pagination-total="41" style="--class:invert;--paginate:true;--background-image:url('assets/bg.png');--theme:gaia;
+;background-image:url('assets/bg.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>Interoperability</h2>
+<p>Call Rust from C:</p>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-meta">#[no_mangle]</span>
+<span class="hljs-keyword">extern</span> <span class="hljs-string">&quot;C&quot;</span> <span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">some_function_in_rust</span></span>(buf: *<span class="hljs-keyword">mut</span> <span class="hljs-built_in">u8</span>, n: <span class="hljs-built_in">usize</span>) -&gt; <span class="hljs-built_in">usize</span> {
+    <span class="hljs-keyword">let</span> buf = <span class="hljs-keyword">unsafe</span> { core::slice::from_raw_parts_mut(buf, n) };
+    <span class="hljs-built_in">println!</span>(<span class="hljs-string">&quot;{:?}&quot;</span>, buf); buf.len()
+}
+</span></span></foreignObject></svg></code></pre>
+<pre><code class="language-c"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-function"><span class="hljs-keyword">extern</span> <span class="hljs-keyword">size_t</span> <span class="hljs-title">some_function_in_rust</span><span class="hljs-params">(<span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">char</span> *buf, <span class="hljs-keyword">size_t</span> n)</span></span>;
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">func</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">char</span> buf[<span class="hljs-number">1024</span>];
+    some_function_in_rust(buf, <span class="hljs-number">1024</span>);
+}
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="29" data-class="invert" data-paginate="true" data-background-image="url('assets/bg.png')" data-theme="gaia" data-style="section.lead footer {
+  text-align: right;
+}
+" class="invert" data-marpit-pagination="29" data-marpit-pagination-total="41" style="--class:invert;--paginate:true;--background-image:url('assets/bg.png');--theme:gaia;
+;background-image:url('assets/bg.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>Outline</h2>
+<ul>
+<li>Safety</li>
+<li>Expression</li>
+<li>Interoperability</li>
+<li><strong>Performance</strong> <img class="emoji" draggable="false" alt="👈" src="https://twemoji.maxcdn.com/2/svg/1f448.svg" data-marp-twemoji=""/></li>
+<li>Usability</li>
+<li>Drawbacks</li>
+<li>Summary</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="30" data-class="invert" data-paginate="true" data-background-image="url('assets/bg.png')" data-theme="gaia" data-style="section.lead footer {
+  text-align: right;
+}
+" class="invert" data-marpit-pagination="30" data-marpit-pagination-total="41" style="--class:invert;--paginate:true;--background-image:url('assets/bg.png');--theme:gaia;
+;background-image:url('assets/bg.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>Performance</h2>
+<p>According to <a href="https://benchmarksgame-team.pages.debian.net/benchmarksgame/fastest/rust.html">The Computer Language Benchmarks Game</a>, Rust achieves same or even better performance than C and C++.</p>
+<p>Features that make Rust fast:</p>
+<ul>
+<li><a href="http://blog.llvm.org/2019/09/closing-gap-cross-language-lto-between.html">Cross-language LTO</a></li>
+<li>Zero-cost abstractions, e.g. <a href="https://doc.rust-lang.org/book/ch13-04-performance.html">Iterators</a></li>
+<li>Faster impl for single-threaded context, e.g. <a href="https://doc.rust-lang.org/alloc/rc/">Rc</a> vs <a href="https://doc.rust-lang.org/alloc/sync/struct.Arc.html">Arc</a></li>
+<li>Carefully implemented builtin data structures, e.g. <a href="https://doc.rust-lang.org/nightly/alloc/collections/btree_map/struct.BTreeMap.html">BTreeMap</a></li>
+<li>......</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="31" data-class="invert" data-paginate="true" data-background-image="url('assets/bg.png')" data-theme="gaia" data-style="section.lead footer {
+  text-align: right;
+}
+" class="invert" data-marpit-pagination="31" data-marpit-pagination-total="41" style="--class:invert;--paginate:true;--background-image:url('assets/bg.png');--theme:gaia;
+;background-image:url('assets/bg.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>Performance</h2>
+<p>Open source projects (re)written in Rust that're proved to be fast(er):</p>
+<ul>
+<li><a href="https://github.com/BurntSushi/ripgrep">ripgrep</a></li>
+<li><a href="https://github.com/alacritty/alacritty">alacritty</a></li>
+<li><a href="https://github.com/sharkdp/fd">fd</a></li>
+<li><a href="https://github.com/actix/actix-web">actix-web</a></li>
+<li><a href="https://github.com/serde-rs/serde">serde</a></li>
+<li><a href="https://github.com/servo/servo">servo</a></li>
+<li>......</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="32" data-class="invert" data-paginate="true" data-background-image="url('assets/bg.png')" data-theme="gaia" data-style="section.lead footer {
+  text-align: right;
+}
+" class="invert" data-marpit-pagination="32" data-marpit-pagination-total="41" style="--class:invert;--paginate:true;--background-image:url('assets/bg.png');--theme:gaia;
+;background-image:url('assets/bg.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>Outline</h2>
+<ul>
+<li>Safety</li>
+<li>Expression</li>
+<li>Interoperability</li>
+<li>Performance</li>
+<li><strong>Usability</strong> <img class="emoji" draggable="false" alt="👈" src="https://twemoji.maxcdn.com/2/svg/1f448.svg" data-marp-twemoji=""/></li>
+<li>Drawbacks</li>
+<li>Summary</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="33" data-class="invert" data-paginate="true" data-background-image="url('assets/bg.png')" data-theme="gaia" data-style="section.lead footer {
+  text-align: right;
+}
+" class="invert" data-marpit-pagination="33" data-marpit-pagination-total="41" style="--class:invert;--paginate:true;--background-image:url('assets/bg.png');--theme:gaia;
+;background-image:url('assets/bg.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>Usability</h2>
+<p>Tools:</p>
+<ul>
+<li><a href="https://rust-lang.github.io/rustup/">Rustup</a> makes toolchain management easy</li>
+<li><a href="https://doc.rust-lang.org/cargo/">Cargo</a> makes dependency management easy</li>
+<li><a href="https://github.com/rust-analyzer/rust-analyzer">rust-analyzer</a> is an excellent language server</li>
+<li><a href="https://doc.rust-lang.org/rustc/what-is-rustc.html">rustc</a> produces comprehensible error messages</li>
+<li><a href="https://github.com/rust-lang/rustfmt">rustfmt</a> formats Rust code according to style guide</li>
+<li><a href="https://github.com/rust-lang/rust-clippy">rust-clippy</a> can catch common mistakes in Rust code</li>
+<li><a href="https://rust-lang.github.io/rust-bindgen/">bindgen</a> helps generate Rust FFI bindings to C and C++ libraries</li>
+<li>......</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="34" data-class="invert" data-paginate="true" data-background-image="url('assets/bg.png')" data-theme="gaia" data-style="section.lead footer {
+  text-align: right;
+}
+" class="invert" data-marpit-pagination="34" data-marpit-pagination-total="41" style="--class:invert;--paginate:true;--background-image:url('assets/bg.png');--theme:gaia;
+;background-image:url('assets/bg.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>Usability</h2>
+<p>Example for dependency management:</p>
+<pre><code class="language-toml"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-section">[dependencies]</span>
+<span class="hljs-attr">spin</span> = <span class="hljs-string">&quot;0.7.0&quot;</span>
+<span class="hljs-attr">buddy_system_allocator</span> = { git = <span class="hljs-string">&quot;https://github.com/richardchien/buddy_system_allocator.git&quot;</span> }
+<span class="hljs-attr">log</span> = <span class="hljs-string">&quot;0.4.0&quot;</span>
+<span class="hljs-attr">lazy_static</span> = { version = <span class="hljs-string">&quot;1.4.0&quot;</span>, features = [<span class="hljs-string">&quot;spin_no_std&quot;</span>] }
+<span class="hljs-attr">bitflags</span> = <span class="hljs-string">&quot;1.2.1&quot;</span>
+
+<span class="hljs-section">[target.&#x27;cfg(target_arch = &quot;aarch64&quot;)&#x27;.dependencies]</span>
+<span class="hljs-attr">aarch64</span> = { git = <span class="hljs-string">&quot;https://github.com/richardchien/aarch64&quot;</span>, rev = <span class="hljs-string">&quot;5dc2a13&quot;</span> }
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="35" data-class="invert" data-paginate="true" data-background-image="url('assets/bg.png')" data-theme="gaia" data-style="section.lead footer {
+  text-align: right;
+}
+" class="invert" data-marpit-pagination="35" data-marpit-pagination-total="41" style="--class:invert;--paginate:true;--background-image:url('assets/bg.png');--theme:gaia;
+;background-image:url('assets/bg.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>Usability</h2>
+<p><code>Debug</code> trait for easy debugging:</p>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-meta">#[repr(u8)]</span>
+<span class="hljs-meta">#[derive(Debug)]</span>
+<span class="hljs-class"><span class="hljs-keyword">enum</span> <span class="hljs-title">IntType</span></span> {
+    SyncEl1t = <span class="hljs-number">1</span>,
+    IrqEl1t = <span class="hljs-number">2</span>,
+    <span class="hljs-comment">// ...</span>
+}
+
+<span class="hljs-meta">#[no_mangle]</span>
+<span class="hljs-keyword">extern</span> <span class="hljs-string">&quot;C&quot;</span> <span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">_handle_interrupt</span></span>(int_type: IntType) {
+    <span class="hljs-built_in">println!</span>(<span class="hljs-string">&quot;Interrupt occurred, type: {:?}&quot;</span>, int_type);
+}
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="36" data-class="invert" data-paginate="true" data-background-image="url('assets/bg.png')" data-theme="gaia" data-style="section.lead footer {
+  text-align: right;
+}
+" class="invert" data-marpit-pagination="36" data-marpit-pagination-total="41" style="--class:invert;--paginate:true;--background-image:url('assets/bg.png');--theme:gaia;
+;background-image:url('assets/bg.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>Outline</h2>
+<ul>
+<li>Safety</li>
+<li>Expression</li>
+<li>Interoperability</li>
+<li>Performance</li>
+<li>Usability</li>
+<li><strong>Drawbacks</strong> <img class="emoji" draggable="false" alt="👈" src="https://twemoji.maxcdn.com/2/svg/1f448.svg" data-marp-twemoji=""/></li>
+<li>Summary</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="37" data-class="invert" data-paginate="true" data-background-image="url('assets/bg.png')" data-theme="gaia" data-style="section.lead footer {
+  text-align: right;
+}
+" class="invert" data-marpit-pagination="37" data-marpit-pagination-total="41" style="--class:invert;--paginate:true;--background-image:url('assets/bg.png');--theme:gaia;
+;background-image:url('assets/bg.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>Drawbacks</h2>
+<ul>
+<li>Steep learning curve</li>
+<li>Many unstable features</li>
+<li>Slow compile speed</li>
+<li>Small ecosystem (but growing quickly)</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="38" data-class="invert" data-paginate="true" data-background-image="url('assets/bg.png')" data-theme="gaia" data-style="section.lead footer {
+  text-align: right;
+}
+" class="invert" data-marpit-pagination="38" data-marpit-pagination-total="41" style="--class:invert;--paginate:true;--background-image:url('assets/bg.png');--theme:gaia;
+;background-image:url('assets/bg.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>Outline</h2>
+<ul>
+<li>Safety</li>
+<li>Expression</li>
+<li>Interoperability</li>
+<li>Performance</li>
+<li>Usability</li>
+<li>Drawbacks</li>
+<li><strong>Summary</strong> <img class="emoji" draggable="false" alt="👈" src="https://twemoji.maxcdn.com/2/svg/1f448.svg" data-marp-twemoji=""/></li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="39" data-class="invert" data-paginate="true" data-background-image="url('assets/bg.png')" data-theme="gaia" data-style="section.lead footer {
+  text-align: right;
+}
+" class="invert" data-marpit-pagination="39" data-marpit-pagination-total="41" style="--class:invert;--paginate:true;--background-image:url('assets/bg.png');--theme:gaia;
+;background-image:url('assets/bg.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>Summary</h2>
+<ul>
+<li>Safe by default</li>
+<li>Rich language features without need for <code>std</code></li>
+<li>Harder to write, but easier to be correct once compiled</li>
+<li>Easy-to-use tools</li>
+<li>Backed by some big companies: Google, Microsoft, Mozilla, ...</li>
+<li>Future seems bright</li>
+</ul>
+<p>Special thanks to <a href="https://github.com/skyzh">Alex Chi</a> for reviewing the slides.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="40" data-class="invert" data-paginate="true" data-background-image="url('assets/bg.png')" data-theme="gaia" data-style="section.lead footer {
+  text-align: right;
+}
+" class="invert" data-marpit-pagination="40" data-marpit-pagination-total="41" style="--class:invert;--paginate:true;--background-image:url('assets/bg.png');--theme:gaia;
+;background-image:url('assets/bg.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>References</h2>
+<ul>
+<li><a href="https://doc.rust-lang.org/book/">The Rust Programming Language</a> &amp; <a href="https://doc.rust-lang.org/nomicon/">The Rustonomicon</a></li>
+<li><a href="https://www.youtube.com/watch?v=DnT-LUQgc7s">Considering Rust</a> by Jon Gjengset</li>
+<li><a href="https://msrc-blog.microsoft.com/2019/07/22/why-rust-for-safe-systems-programming/">Why Rust for safe systems programming</a> by MSRC</li>
+<li><a href="https://hacks.mozilla.org/rewriting-a-browser-component-in-rust/">Implications of Rewriting a Browser Component in Rust</a> by Diane Hosfelt</li>
+<li><a href="https://kornel.ski/rust-c-speed">Speed of Rust vs C</a> by kornelski</li>
+<li><a href="https://www.viva64.com/en/b/0733/">C++ Is Faster and Safer Than Rust: Benchmarked by Yandex</a> by Roman Proskuryakov</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="41" data-class="invert" data-paginate="true" data-background-image="url('assets/bg.png')" data-theme="gaia" data-style="section.lead footer {
+  text-align: right;
+}
+" class="invert" data-marpit-pagination="41" data-marpit-pagination-total="41" style="--class:invert;--paginate:true;--background-image:url('assets/bg.png');--theme:gaia;
+;background-image:url('assets/bg.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>OSes Written in Rust</h2>
+<ul>
+<li><a href="https://www.redox-os.org/">Redox</a>: A Unix-like OS with a modern microkernel</li>
+<li><a href="https://www.tockos.org/">Tock</a>: An embedded OS for low-memory and low-power microcontrollers</li>
+<li><a href="https://mars-research.github.io/redleaf">RedLeaf</a>: A new OS aimed at leveraging Rust language features for developing safe systems</li>
+<li><a href="https://github.com/theseus-os/Theseus">Theseus</a>: A new OS for experimenting with novel OS structure, better state management, and how to shift OS responsibilities like resource management into compiler</li>
+<li><a href="https://github.com/rcore-os/rCore">rCore</a>: A teaching OS based on <a href="https://github.com/phil-opp/blog_os">BlogOS</a>, providing a subset of Linux syscalls</li>
+</ul>
+</section>
+<script>!function(){"use strict";const t="marpitSVGPolyfill:setZoomFactor,",e=Symbol();let r,o;function n(n){const i="object"==typeof n&&n.target||document,a="object"==typeof n?n.zoom:n;window[e]||(Object.defineProperty(window,e,{configurable:!0,value:!0}),window.addEventListener("message",(({data:e,origin:r})=>{if(r===window.origin)try{if(e&&"string"==typeof e&&e.startsWith(t)){const[,t]=e.split(","),r=Number.parseFloat(t);Number.isNaN(r)||(o=r)}}catch(t){console.error(t)}})));let l=!1;Array.from(i.querySelectorAll("svg[data-marpit-svg]"),(t=>{var e,n,i,s;t.style.transform||(t.style.transform="translateZ(0)");const c=a||o||t.currentScale||1;r!==c&&(r=c,l=c);const d=t.getBoundingClientRect(),{length:u}=t.children;for(let r=0;r<u;r+=1){const o=t.children[r],a=o.getScreenCTM();if(a){const t=null!==(n=null===(e=o.x)||void 0===e?void 0:e.baseVal.value)&&void 0!==n?n:0,r=null!==(s=null===(i=o.y)||void 0===i?void 0:i.baseVal.value)&&void 0!==s?s:0,l=o.firstElementChild,{style:u}=l;u.transformOrigin||(u.transformOrigin=`${-t}px ${-r}px`),u.transform=`scale(${c}) matrix(${a.a}, ${a.b}, ${a.c}, ${a.d}, ${a.e-d.left}, ${a.f-d.top}) translateZ(0.0001px)`}}})),!1!==l&&Array.from(i.querySelectorAll("iframe"),(({contentWindow:e})=>{null==e||e.postMessage(`${t}${l}`,"null"===window.origin?"*":window.origin)}))}r=1,o=void 0;const i=(t,e,r)=>{if(t.getAttribute(e)!==r)return t.setAttribute(e,r),!0};function a({once:t=!1,target:e=document}={}){const r="Apple Computer, Inc."===navigator.vendor?[n]:[];let o=!t;const a=()=>{for(const t of r)t({target:e});!function(t=document){Array.from(t.querySelectorAll('svg[data-marp-fitting="svg"]'),(t=>{var e;const r=t.firstChild,o=r.firstChild,{scrollWidth:n,scrollHeight:a}=o;let l,s=1;if(t.hasAttribute("data-marp-fitting-code")&&(l=null===(e=t.parentElement)||void 0===e?void 0:e.parentElement),t.hasAttribute("data-marp-fitting-math")&&(l=t.parentElement),l){const t=getComputedStyle(l),e=Math.ceil(l.clientWidth-parseFloat(t.paddingLeft||"0")-parseFloat(t.paddingRight||"0"));e&&(s=e)}const c=Math.max(n,s),d=Math.max(a,1),u=`0 0 ${c} ${d}`;i(r,"width",`${c}`),i(r,"height",`${d}`),i(t,"preserveAspectRatio",getComputedStyle(t).getPropertyValue("--preserve-aspect-ratio")||"xMinYMin meet"),i(t,"viewBox",u)&&t.classList.toggle("__reflow__")}))}(e),o&&window.requestAnimationFrame(a)};return a(),()=>{o=!1}}const l=Symbol(),s=document.currentScript;((t=document)=>{if("undefined"==typeof window)throw new Error("Marp Core's browser script is valid only in browser context.");if(t[l])return t[l];const e=a({target:t}),r=()=>{e(),delete t[l]};Object.defineProperty(t,l,{configurable:!0,value:r})})(s?s.getRootNode():document)}();
+</script></foreignObject></svg></div><script>!function(){"use strict";var e=function(e,t){var n,r=1===(e.parent||e).nodeType?e.parent||e:document.querySelector(e.parent||e),s=[].filter.call("string"==typeof e.slides?r.querySelectorAll(e.slides):e.slides||r.children,(function(e){return"SCRIPT"!==e.nodeName})),a={},i=function(e,t){return(t=t||{}).index=s.indexOf(e),t.slide=e,t},o=function(e,t){a[e]=(a[e]||[]).filter((function(e){return e!==t}))},l=function(e,t){return(a[e]||[]).reduce((function(e,n){return e&&!1!==n(t)}),!0)},c=function(e,t){s[e]&&(n&&l("deactivate",i(n,t)),n=s[e],l("activate",i(n,t)))},d=function(e,t){var r=s.indexOf(n)+e;l(e>0?"next":"prev",i(n,t))&&c(r,t)},u={off:o,on:function(e,t){return(a[e]||(a[e]=[])).push(t),o.bind(null,e,t)},fire:l,slide:function(e,t){if(!arguments.length)return s.indexOf(n);l("slide",i(s[e],t))&&c(e,t)},next:d.bind(null,1),prev:d.bind(null,-1),parent:r,slides:s,destroy:function(e){l("destroy",i(n,e)),a={}}};return(t||[]).forEach((function(e){e(u)})),n||c(0),u};function t(e){e.parent.classList.add("bespoke-marp-parent"),e.slides.forEach((e=>e.classList.add("bespoke-marp-slide"))),e.on("activate",(t=>{const n=t.slide,r=!n.classList.contains("bespoke-marp-active");e.slides.forEach((e=>{e.classList.remove("bespoke-marp-active"),e.setAttribute("aria-hidden","true")})),n.classList.add("bespoke-marp-active"),n.removeAttribute("aria-hidden"),r&&(n.classList.add("bespoke-marp-active-ready"),document.body.clientHeight,n.classList.remove("bespoke-marp-active-ready"))}))}function n(e){let t=0,n=0;Object.defineProperty(e,"fragments",{enumerable:!0,value:e.slides.map((e=>[null,...e.querySelectorAll("[data-marpit-fragment]")]))});const r=r=>void 0!==e.fragments[t][n+r],s=(r,s)=>{t=r,n=s,e.fragments.forEach(((e,t)=>{e.forEach(((e,n)=>{if(null==e)return;const a=t<r||t===r&&n<=s;e.setAttribute("data-bespoke-marp-fragment",a?"active":"inactive"),t===r&&n===s?e.setAttribute("data-bespoke-marp-current-fragment","current"):e.removeAttribute("data-bespoke-marp-current-fragment")}))})),e.fragmentIndex=s;const a={slide:e.slides[r],index:r,fragments:e.fragments[r],fragmentIndex:s};e.fire("fragment",a)};e.on("next",(({fragment:a=!0})=>{if(a){if(r(1))return s(t,n+1),!1;const a=t+1;e.fragments[a]&&s(a,0)}else{const r=e.fragments[t].length;if(n+1<r)return s(t,r-1),!1;const a=e.fragments[t+1];a&&s(t+1,a.length-1)}})),e.on("prev",(({fragment:a=!0})=>{if(r(-1)&&a)return s(t,n-1),!1;const i=t-1;e.fragments[i]&&s(i,e.fragments[i].length-1)})),e.on("slide",(({index:t,fragment:n})=>{let r=0;if(void 0!==n){const s=e.fragments[t];if(s){const{length:e}=s;r=-1===n?e-1:Math.min(Math.max(n,0),e-1)}}s(t,r)})),s(0,0)}
+/*!
+* screenfull
+* v5.1.0 - 2020-12-24
+* (c) Sindre Sorhus; MIT License
+*/
+var r,s=(function(e){!function(){var t="undefined"!=typeof window&&void 0!==window.document?window.document:{},n=e.exports,r=function(){for(var e,n=[["requestFullscreen","exitFullscreen","fullscreenElement","fullscreenEnabled","fullscreenchange","fullscreenerror"],["webkitRequestFullscreen","webkitExitFullscreen","webkitFullscreenElement","webkitFullscreenEnabled","webkitfullscreenchange","webkitfullscreenerror"],["webkitRequestFullScreen","webkitCancelFullScreen","webkitCurrentFullScreenElement","webkitCancelFullScreen","webkitfullscreenchange","webkitfullscreenerror"],["mozRequestFullScreen","mozCancelFullScreen","mozFullScreenElement","mozFullScreenEnabled","mozfullscreenchange","mozfullscreenerror"],["msRequestFullscreen","msExitFullscreen","msFullscreenElement","msFullscreenEnabled","MSFullscreenChange","MSFullscreenError"]],r=0,s=n.length,a={};r<s;r++)if((e=n[r])&&e[1]in t){for(r=0;r<e.length;r++)a[n[0][r]]=e[r];return a}return!1}(),s={change:r.fullscreenchange,error:r.fullscreenerror},a={request:function(e,n){return new Promise(function(s,a){var i=function(){this.off("change",i),s()}.bind(this);this.on("change",i);var o=(e=e||t.documentElement)[r.requestFullscreen](n);o instanceof Promise&&o.then(i).catch(a)}.bind(this))},exit:function(){return new Promise(function(e,n){if(this.isFullscreen){var s=function(){this.off("change",s),e()}.bind(this);this.on("change",s);var a=t[r.exitFullscreen]();a instanceof Promise&&a.then(s).catch(n)}else e()}.bind(this))},toggle:function(e,t){return this.isFullscreen?this.exit():this.request(e,t)},onchange:function(e){this.on("change",e)},onerror:function(e){this.on("error",e)},on:function(e,n){var r=s[e];r&&t.addEventListener(r,n,!1)},off:function(e,n){var r=s[e];r&&t.removeEventListener(r,n,!1)},raw:r};r?(Object.defineProperties(a,{isFullscreen:{get:function(){return Boolean(t[r.fullscreenElement])}},element:{enumerable:!0,get:function(){return t[r.fullscreenElement]}},isEnabled:{enumerable:!0,get:function(){return Boolean(t[r.fullscreenEnabled])}}}),n?e.exports=a:window.screenfull=a):n?e.exports={isEnabled:!1}:window.screenfull={isEnabled:!1}}()}(r={exports:{}},r.exports),r.exports);function a(e){e.fullscreen=()=>{s.isEnabled&&s.toggle(document.body)},document.addEventListener("keydown",(t=>{70!==t.which&&122!==t.which||t.altKey||t.ctrlKey||t.metaKey||!s.isEnabled||(e.fullscreen(),t.preventDefault())}))}function i(e=2e3){return t=>{let n;function r(){n&&clearTimeout(n),n=setTimeout((()=>{t.parent.classList.add("bespoke-marp-inactive"),t.fire("marp-inactive")}),e),t.parent.classList.contains("bespoke-marp-inactive")&&(t.parent.classList.remove("bespoke-marp-inactive"),t.fire("marp-active"))}document.addEventListener("mousedown",r),document.addEventListener("mousemove",r),document.addEventListener("touchend",r),setTimeout(r,0)}}const o=["AUDIO","BUTTON","INPUT","SELECT","TEXTAREA","VIDEO"];function l(e){e.parent.addEventListener("keydown",(e=>{if(!e.target)return;const t=e.target;(o.includes(t.nodeName)||"true"===t.contentEditable)&&e.stopPropagation()}))}function c(e){window.addEventListener("load",(()=>{for(const t of e.slides){const e=t.querySelector("[data-marp-fitting]")?"":"hideable";t.setAttribute("data-bespoke-marp-load",e)}}))}var d;function u({interval:e=200}={}){return t=>{document.addEventListener("keydown",(e=>{if(32===e.which&&e.shiftKey)t.prev();else if(33===e.which||37===e.which||38===e.which)t.prev({fragment:!e.shiftKey});else if(32!==e.which||e.shiftKey)if(34===e.which||39===e.which||40===e.which)t.next({fragment:!e.shiftKey});else if(35===e.which)t.slide(t.slides.length-1,{fragment:-1});else{if(36!==e.which)return;t.slide(0)}else t.next();e.preventDefault()}));let n,r,s=0;t.parent.addEventListener("wheel",(a=>{let i=!1;const o=(e,t)=>{e&&(i=i||function(e,t){return function(e,t){const n=t===d.X?"Width":"Height";return e[`client${n}`]<e[`scroll${n}`]}(e,t)&&function(e,t){const{overflow:n}=e,r=e[`overflow${t}`];return"auto"===n||"scroll"===n||"auto"===r||"scroll"===r}(getComputedStyle(e),t)}(e,t)),(null==e?void 0:e.parentElement)&&o(e.parentElement,t)};if(0!==a.deltaX&&o(a.target,d.X),0!==a.deltaY&&o(a.target,d.Y),i)return;a.preventDefault(),r&&clearTimeout(r),r=setTimeout((()=>{n=0}),e);const l=Date.now()-s<e,c=Math.sqrt(Math.pow(a.deltaX,2)+Math.pow(a.deltaY,2)),u=c<=n;if(n=c,l||u)return;let f;(a.deltaX>0||a.deltaY>0)&&(f="next"),(a.deltaX<0||a.deltaY<0)&&(f="prev"),f&&(t[f](),s=Date.now())}))}}!function(e){e.X="X",e.Y="Y"}(d||(d={}));const f=(...e)=>history.replaceState(...e),m="data-bespoke-view";var p;!function(e){e.Normal="",e.Presenter="presenter",e.Next="next"}(p||(p={}));const h=(e,{protocol:t,host:n,pathname:r,hash:s}=location)=>{const a=e.toString();return`${t}//${n}${r}${a?"?":""}${a}${s}`},g=()=>{switch(document.body.getAttribute(m)){case p.Normal:return p.Normal;case p.Presenter:return p.Presenter;case p.Next:return p.Next;default:throw new Error("View mode is not assigned.")}},v=e=>new URLSearchParams(location.search).get(e),b=(e,t={})=>{const n=Object.assign({location:location,setter:f},t),r=new URLSearchParams(n.location.search);for(const t of Object.keys(e)){const n=e[t];"string"==typeof n?r.set(t,n):r.delete(t)}try{n.setter(null,document.title,h(r,n.location))}catch(e){console.error(e)}},w={available:(()=>{try{return localStorage.setItem("bespoke-marp","bespoke-marp"),localStorage.removeItem("bespoke-marp"),!0}catch(e){return console.warn("Warning: Using localStorage is restricted in the current host so some features may not work."),!1}})(),get:e=>{try{return localStorage.getItem(e)}catch(e){return null}},set:(e,t)=>{try{return localStorage.setItem(e,t),!0}catch(e){return!1}},remove:e=>{try{return localStorage.removeItem(e),!0}catch(e){return!1}}};function y(e=".bespoke-marp-osc"){const t=document.querySelector(e);if(!t)return()=>{};const n=(e,n)=>{t.querySelectorAll(`[data-bespoke-marp-osc=${JSON.stringify(e)}]`).forEach(n)};return s.isEnabled||n("fullscreen",(e=>e.style.display="none")),w.available||n("presenter",(e=>{e.disabled=!0,e.title="Presenter view is disabled due to restricted localStorage."})),e=>{t.addEventListener("click",(t=>{if(t.target instanceof HTMLElement){const{bespokeMarpOsc:n}=t.target.dataset;switch(n&&t.target.blur(),n){case"next":e.next({fragment:!t.shiftKey});break;case"prev":e.prev({fragment:!t.shiftKey});break;case"fullscreen":"function"==typeof e.fullscreen&&s.isEnabled&&e.fullscreen();break;case"presenter":e.openPresenterView()}}})),e.parent.appendChild(t),e.on("activate",(({index:t})=>{n("page",(n=>n.textContent=`Page ${t+1} of ${e.slides.length}`))})),e.on("fragment",(({index:t,fragments:r,fragmentIndex:s})=>{n("prev",(e=>e.disabled=0===t&&0===s)),n("next",(n=>n.disabled=t===e.slides.length-1&&s===r.length-1))})),e.on("marp-active",(()=>t.removeAttribute("aria-hidden"))),e.on("marp-inactive",(()=>t.setAttribute("aria-hidden","true"))),s.isEnabled&&s.onchange((()=>n("fullscreen",(e=>e.classList.toggle("exit",s.isEnabled&&s.isFullscreen)))))}}function x(){const e=Math.max(Math.floor(.85*window.innerWidth),640),t=Math.max(Math.floor(.85*window.innerHeight),360);return window.open(this.presenterUrl,`bespoke-marp-presenter-${this.syncKey}`,`width=${e},height=${t},menubar=no,toolbar=no`)}function k(){const e=new URLSearchParams(location.search);return e.set("view","presenter"),e.set("sync",this.syncKey),h(e)}var E=["area","base","br","col","command","embed","hr","img","input","keygen","link","meta","param","source","track","wbr"];let L=e=>String(e).replace(/[&<>"']/g,(e=>`&${S[e]};`)),S={"&":"amp","<":"lt",">":"gt",'"':"quot","'":"apos"},I="dangerouslySetInnerHTML",P={className:"class",htmlFor:"for"},M={};function N(e,t){let n=[],r="";t=t||{};for(let e=arguments.length;e-- >2;)n.push(arguments[e]);if("function"==typeof e)return t.children=n.reverse(),e(t);if(e){if(r+="<"+e,t)for(let e in t)!1!==t[e]&&null!=t[e]&&e!==I&&(r+=` ${P[e]?P[e]:L(e)}="${L(t[e])}"`);r+=">"}if(-1===E.indexOf(e)){if(t[I])r+=t[I].__html;else for(;n.length;){let e=n.pop();if(e)if(e.pop)for(let t=e.length;t--;)n.push(e[t]);else r+=!0===M[e]?e:L(e)}r+=e?`</${e}>`:""}return M[r]=!0,r}const F=({children:e})=>N(null,null,...e),$="bespoke-marp-presenter-container",O="bespoke-marp-presenter-next",q="bespoke-marp-presenter-next-container",C="bespoke-marp-presenter-note-container",T="bespoke-marp-presenter-info-container",A="bespoke-marp-presenter-info-page",K="bespoke-marp-presenter-info-page-text",j="bespoke-marp-presenter-info-page-prev",R="bespoke-marp-presenter-info-page-next",U="bespoke-marp-presenter-info-time",D="bespoke-marp-presenter-info-timer";function V(e){const{title:t}=document;document.title="[Presenter view]"+(t?` - ${t}`:"");const n={},r=e=>(n[e]=n[e]||document.querySelector(`.${e}`),n[e]);document.body.appendChild((e=>{const t=document.createElement("div");return t.className=$,t.appendChild(e),t.insertAdjacentHTML("beforeend",N(F,null,N("div",{class:q},N("iframe",{class:O,src:"?view=next"})),N("div",{class:C}),N("div",{class:T},N("div",{class:A},N("button",{class:j,tabindex:"-1",title:"Previous"},"Previous"),N("span",{class:K}),N("button",{class:R,tabindex:"-1",title:"Next"},"Next")),N("time",{class:U,title:"Current time"}),N("div",{class:D})))),t})(e.parent)),(e=>{r(q).addEventListener("click",(()=>e.next()));const t=r(O),n=(s=t,(e,t)=>{var n;return null===(n=s.contentWindow)||void 0===n?void 0:n.postMessage(`navigate:${e},${t}`,"null"===window.origin?"*":window.origin)});var s;t.addEventListener("load",(()=>{r(q).classList.add("active"),n(e.slide(),e.fragmentIndex),e.on("fragment",(({index:e,fragmentIndex:t})=>n(e,t)))}));const a=document.querySelectorAll(".bespoke-marp-note");a.forEach((e=>{e.addEventListener("keydown",(e=>e.stopPropagation())),r(C).appendChild(e)})),e.on("activate",(()=>a.forEach((t=>t.classList.toggle("active",t.dataset.index==e.slide()))))),e.on("activate",(({index:t})=>{r(K).textContent=`${t+1} / ${e.slides.length}`}));const i=r(j),o=r(R);i.addEventListener("click",(t=>{i.blur(),e.prev({fragment:!t.shiftKey})})),o.addEventListener("click",(t=>{o.blur(),e.next({fragment:!t.shiftKey})})),e.on("fragment",(({index:t,fragments:n,fragmentIndex:r})=>{i.disabled=0===t&&0===r,o.disabled=t===e.slides.length-1&&r===n.length-1}));const l=()=>r(U).textContent=(new Date).toLocaleTimeString();l(),setInterval(l,250)})(e)}function X(e){const t=g();return t===p.Next&&e.appendChild(document.createElement("span")),e=>{t===p.Normal&&function(e){if(!(e=>e.syncKey&&"string"==typeof e.syncKey)(e))throw new Error("The current instance of Bespoke.js is invalid for Marp bespoke presenter plugin.");Object.defineProperties(e,{openPresenterView:{enumerable:!0,value:x},presenterUrl:{enumerable:!0,get:k}}),w.available&&document.addEventListener("keydown",(t=>{80!==t.which||t.altKey||t.ctrlKey||t.metaKey||(t.preventDefault(),e.openPresenterView())}))}(e),t===p.Presenter&&V(e),t===p.Next&&function(e){const t=t=>{if(t.origin!==window.origin)return;const[n,r]=t.data.split(":");if("navigate"===n){const[t,n]=r.split(",");let s=Number.parseInt(t,10),a=Number.parseInt(n,10)+1;a>=e.fragments[s].length&&(s+=1,a=0),e.slide(s,{fragment:a})}};window.addEventListener("message",t),e.on("destroy",(()=>window.removeEventListener("message",t)))}(e)}}function Y(e){e.on("activate",(t=>{document.querySelectorAll(".bespoke-progress-parent > .bespoke-progress-bar").forEach((n=>{n.style.flexBasis=100*t.index/(e.slides.length-1)+"%"}))}))}const B=e=>{const t=Number.parseInt(e,10);return Number.isNaN(t)?null:t};function z(e={}){const t=Object.assign({history:!0},e);return e=>{let n=!0;const r=e=>{const t=n;try{return n=!0,e()}finally{n=t}},s=(t={fragment:!0})=>{((t,n)=>{const{fragments:r,slides:s}=e,a=Math.max(0,Math.min(t,s.length-1)),i=Math.max(0,Math.min(n||0,r[a].length-1));a===e.slide()&&i===e.fragmentIndex||e.slide(a,{fragment:i})})((B(location.hash.slice(1))||1)-1,t.fragment?B(v("f")||""):null)};e.on("fragment",(({index:e,fragmentIndex:r})=>{n||b({f:0===r||r.toString()},{location:Object.assign(Object.assign({},location),{hash:`#${e+1}`}),setter:(...e)=>t.history?history.pushState(...e):history.replaceState(...e)})})),setTimeout((()=>{s(),window.addEventListener("hashchange",(()=>r((()=>{s({fragment:!1}),b({f:void 0})})))),window.addEventListener("popstate",(()=>{n||r((()=>s()))})),n=!1}),0)}}let H;function W(e={}){const t=e.key||((e=21)=>{let t="",n=crypto.getRandomValues(new Uint8Array(e));for(;e--;){let r=63&n[e];t+=r<36?r.toString(36):r<62?(r-26).toString(36).toUpperCase():r<63?"_":"-"}return t})(),n=`bespoke-marp-sync-${t}`,r=()=>{const e=w.get(n);return e?JSON.parse(e):Object.create(null)},s=e=>{const t=r(),s=Object.assign(Object.assign({},t),e(t));return w.set(n,JSON.stringify(s)),s};return s((e=>({reference:(e.reference||0)+1}))),e=>{Object.defineProperty(e,"syncKey",{value:t,enumerable:!0});let a=!0;setTimeout((()=>{e.on("fragment",(e=>{a&&s((()=>({index:e.index,fragmentIndex:e.fragmentIndex})))}))}),0),window.addEventListener("storage",(t=>{if(t.key===n&&t.oldValue&&t.newValue){const n=JSON.parse(t.oldValue),r=JSON.parse(t.newValue);if(n.index!==r.index||n.fragmentIndex!==r.fragmentIndex)try{a=!1,e.slide(r.index,{fragment:r.fragmentIndex})}finally{a=!0}}})),e.on("destroy",(()=>{const{reference:e}=r();void 0===e||e<=1?w.remove(n):s((()=>({reference:e-1})))}))}}function J({slope:e=Math.tan(-35*Math.PI/180),swipeThreshold:t=30}={}){return n=>{let r;const s=n.parent,a=e=>{const t=s.getBoundingClientRect();return{x:e.pageX-(t.left+t.right)/2,y:e.pageY-(t.top+t.bottom)/2}};s.addEventListener("touchstart",(e=>{r=1===e.touches.length?a(e.touches[0]):void 0}),{passive:!0}),s.addEventListener("touchmove",(e=>{if(r)if(1===e.touches.length){e.preventDefault();const t=a(e.touches[0]),n=t.x-r.x,s=t.y-r.y;r.delta=Math.sqrt(Math.pow(Math.abs(n),2)+Math.pow(Math.abs(s),2)),r.radian=Math.atan2(n,s)}else r=void 0})),s.addEventListener("touchend",(s=>{if(r){if(r.delta&&r.delta>=t&&r.radian){let t=r.radian-e;t=(t+Math.PI)%(2*Math.PI)-Math.PI,n[t<0?"next":"prev"](),s.stopPropagation()}r=void 0}}),{passive:!0})}}
+/*! *****************************************************************************
+Copyright (c) Microsoft Corporation.
+
+Permission to use, copy, modify, and/or distribute this software for any
+purpose with or without fee is hereby granted.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
+REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
+AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
+INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
+LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
+OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+PERFORMANCE OF THIS SOFTWARE.
+***************************************************************************** */function _(e,t,n,r){return new(n||(n=Promise))((function(s,a){function i(e){try{l(r.next(e))}catch(e){a(e)}}function o(e){try{l(r.throw(e))}catch(e){a(e)}}function l(e){var t;e.done?s(e.value):(t=e.value,t instanceof n?t:new n((function(e){e(t)}))).then(i,o)}l((r=r.apply(e,t||[])).next())}))}const G=()=>(void 0===H&&(H="wakeLock"in navigator&&navigator.wakeLock),H),Q=()=>_(void 0,void 0,void 0,(function*(){const e=G();if(e)try{const t=yield e.request("screen");return t.addEventListener("release",(()=>{console.debug("[Marp CLI] Wake Lock was released")})),console.debug("[Marp CLI] Wake Lock is active"),t}catch(e){console.warn(e)}return null}));function Z(){return _(this,void 0,void 0,(function*(){if(!G())return;let e;const t=()=>{e&&"visible"===document.visibilityState&&Q()};return document.addEventListener("visibilitychange",t),document.addEventListener("fullscreenchange",t),e=yield Q(),e}))}const ee=[p.Normal,p.Presenter,p.Next];!function(r=document.getElementById("p")){document.body.setAttribute(m,(()=>{switch(v("view")){case"next":return p.Next;case"presenter":return p.Presenter;default:return p.Normal}})());const s=(e=>{const t=v(e);return b({[e]:void 0}),t})("sync")||void 0,o=!1,d=!0,f=e(r,((...e)=>{const t=ee.findIndex((e=>g()===e));if(t<0)throw new Error("Invalid view");return e.map((([e,n])=>e[t]&&n)).filter((e=>e))})([[d,d,o],W({key:s})],[[d,d,d],X(r)],[[d,d,o],l],[[d,d,d],t],[[d,o,o],i()],[[d,d,d],c],[[d,d,d],z({history:!1})],[[d,d,o],u()],[[d,d,o],a],[[d,o,o],Y],[[d,d,o],J()],[[d,o,o],y()],[[d,d,d],n],[[d,d,o],Z]));window.addEventListener("beforeunload",(()=>b({sync:f.syncKey}))),window.addEventListener("unload",(()=>f.destroy()))}()}();</script></body></html>
