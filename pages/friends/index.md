@@ -10,7 +10,6 @@ title: 友情链接
 - [kasora's blog](https://blog.kasora.moe)
 - [Kilingzhang](http://blog.kilingzhang.com)
 - [2645 实验室](http://blog.cool2645.com)
-- [魯牛窩](http://momocow.me)
 - [梨子](https://rikakomoe.github.io)
 - [暮光博客](https://muguang.me)
 - [啦哆咪](https://lado.me)
