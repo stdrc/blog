@@ -25,3 +25,4 @@ title: 友情链接
 - [SkinCrab](https://skina.cn/)
 - [Robert's Blog](https://www.robberphex.com/)
 - [Artin's Blog](https://lengthmin.me/)
+- [bleatingsheep 的博客](https://bleatingsheep.org/)
