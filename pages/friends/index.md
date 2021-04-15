@@ -18,7 +18,7 @@ title: 友情链接
 - [澪同学的博客](https://ihomura.cn)
 - [Cow Say](https://cowsay.blog/)
 - [一年又一年的博客](https://iyn.me/i/)
-- [OrzZz~](https://orzzz.org)
+- [orzi!](https://orzi.me)
 - [Anguiao's Blog](https://blog.anguiao.com)
 - [鲸鱼的小站](https://crazywhale.cn/)
 - [愤怒的泡面](http://powman.org/)
