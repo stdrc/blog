@@ -85,7 +85,7 @@ ip addr add 172.30.0.2/24 dev $INTERFACE
 ip route replace 172.30.0.0/24 via 172.30.0.1 dev $INTERFACE
 ```
 
-`/etc/tinc/mynet/tinc-down`（需可执行，以使用 `ifconfig` 为例）：
+`/etc/tinc/mynet/tinc-down`（需可执行，以使用 `iproute` 为例）：
 
 ```sh
 #!/bin/sh
