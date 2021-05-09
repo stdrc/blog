@@ -1,7 +1,7 @@
 ---
 title: 使用 Tinc 组建虚拟局域网
 categories: Ops
-tags: [Tinc, VPN, 网络, 虚拟局域网]
+tags: [Tinc, VPN, SDN, 网络, 虚拟局域网]
 created: 2021-05-04 22:56:00
 ---
 
