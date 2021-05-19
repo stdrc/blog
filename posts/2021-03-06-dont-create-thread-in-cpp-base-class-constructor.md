@@ -58,7 +58,7 @@ int main() {
 }
 ```
 
-这里的基本逻辑是，在 `new TaskImpl` 创建一个 `Task` 子类时，会开一个线程来执行这个 task，具体的就是运行 `run` 方法。理想情况下，由于 C++ 所支持的运行期多态，`Task::task_entry` 拿到的 `task` 参数实际上是一个 `TaskImpl`，对它调用 `run` 应该会动态的分发到 `TaskImpl::run`，但实际上上面的代码并不能稳定工作，报错如下：
+这里的基本逻辑是，在 `new TaskImpl` 创建一个 `Task` 子类时，会开一个线程来执行这个 task，具体的就是运行 `run` 方法。理想情况下，由于 C++ 所支持的运行期多态，`Task::task_entry` 拿到的 `task` 参数实际上是一个 `TaskImpl`，对它调用 `run` 应该会动态地分发到 `TaskImpl::run`，但实际上上面的代码并不能稳定工作，报错如下：
 
 ```
 before run
