@@ -288,13 +288,13 @@ updated: 2020-02-26
 
 正确示例：
 
-> 怎样看待 Google 推出的社交网络产品 Google+ ？
+> 怎样看待 Google 推出的社交网络产品 Google+？
 >
 > iCloud 为用户带来了什么？或：iCloud 为开发者带来了什么？
 
 错误示例：
 
-> Google 推出了社交网络产品 Google+ ，大家怎么看？
+> Google 推出了社交网络产品 Google+，大家怎么看？
 >
 > iCloud 为我们带来了什么？
 
