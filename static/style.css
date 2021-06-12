@@ -1,5 +1,14 @@
+body {
+    border-top: 2px solid #e65100;
+}
+
+.body {
+    padding-top: unset;
+}
+
 .site-title {
     font-family: 'Microsoft YaHei Mono', Consolas, "Liberation Mono", Menlo, Courier, monospace !important;
+    padding: 60px 0;
 }
 
 .site-title h1 {
@@ -14,10 +23,40 @@
     text-decoration: underline;
 }
 
-.site-title h1::before {
-    content: "/* ";
+.site-title h1.lbrace::after {
+    content: " {";
 }
 
-.site-title h1::after {
-    content: " */";
+.site-title h1.rbrace::after {
+    content: "}";
+}
+
+.site-title .column {
+    margin: 0;
+    padding: 0 34px;
+}
+
+@media (max-width: 1000px) {
+    .site-title {
+        padding: 40px 0;
+    }
+
+    .site-title .column {
+        padding: 0 24px;
+    }
+}
+
+.footer {
+    /* unset theme default footer style */
+    overflow: unset;
+    background: unset;
+    color: unset;
+    height: unset;
+    margin-top: unset;
+    align-items: unset;
+}
+
+.footer {
+    max-width: 1180px;
+    margin: 0 auto;
 }
