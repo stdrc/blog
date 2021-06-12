@@ -1,3 +1,3 @@
 [submodule "theme"]
 	path = theme
-	url = git@github.com:verilab/purepress-theme-light.git
+	url = https://github.com/verilab/purepress-theme-light.git
