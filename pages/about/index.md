@@ -18,9 +18,11 @@ title: 关于这个博客的主人
 
 自认为性格还不错，但偶尔也会发脾气；喜欢听歌、唱歌、看电影、打羽毛球、跑步。
 
-## 联系我
+## 找到我
 
 你可以在下面这些地方找到我：
+
+[GitHub](https://github.com/richardchien)
 
 [Telegram](https://telegram.me/richardchien)
 
