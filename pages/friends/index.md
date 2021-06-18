@@ -21,7 +21,7 @@ Coxxs | <https://dev.moe/>
 一年又一年的博客 | <https://iyn.me/i/>
 orzi! | <https://orzi.me/>
 Anguiao | <https://blog.anguiao.com/>
-鲸鱼的小站 | <>
+鲸鱼的小站 | <https://blog.zhamao.xin/>
 愤怒的泡面 | <https://powman.org/>
 Robert的博客 | <https://www.robberphex.com/>
 Artin's Blog | <https://lengthmin.me/>
