@@ -26,3 +26,6 @@ title: 友情链接
 - [Robert's Blog](https://www.robberphex.com/)
 - [Artin's Blog](https://lengthmin.me/)
 - [bleatingsheep 的博客](https://bleatingsheep.org/)
+- [wdvxdr's blog](https://www.wdvxdr.com/)
+- [Kanri's blog](https://blog.kanri.top/)
+- [Mrs4s Blog](https://www.mrs4s.moe/)
