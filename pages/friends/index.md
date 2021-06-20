@@ -29,3 +29,4 @@ bleatingsheep 的博客 | <https://bleatingsheep.org/>
 wdvxdr's blog | <https://www.wdvxdr.com/>
 Kanri's blog | <https://blog.kanri.top/>
 Mrs4s Blog | <https://www.mrs4s.moe/>
+cleoold | <https://cleoold.com/>
