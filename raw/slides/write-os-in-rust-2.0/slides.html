@@ -1,0 +1,1552 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0"><meta name="apple-mobile-web-app-capable" content="yes"><meta http-equiv="X-UA-Compatible" content="ie=edge"><meta property="og:type" content="website"><meta name="twitter:card" content="summary"><style>@media screen{body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button{-webkit-appearance:none;-moz-appearance:none;appearance:none;-webkit-tap-highlight-color:transparent;background-color:transparent;border:0;color:inherit;cursor:pointer;font-size:inherit;opacity:.8;outline:none;padding:0;transition:opacity .2s linear}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:disabled,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:disabled,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:disabled{cursor:not-allowed;opacity:.15!important}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:hover,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:hover,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:hover{opacity:1}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:active,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:active,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:hover:active{opacity:.6}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:not(:disabled),body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:not(:disabled),body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:hover:not(:disabled){transition:none}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev],body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button.bespoke-marp-presenter-info-page-prev{background:transparent url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJNNjggOTAgMjggNTBsNDAtNDAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button.bespoke-marp-presenter-info-page-next{background:transparent url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJtMzIgOTAgNDAtNDAtNDAtNDAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen]{background:transparent url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48ZGVmcz48c3R5bGU+LmF7ZmlsbDpub25lO3N0cm9rZTojZmZmO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2Utd2lkdGg6NXB4fTwvc3R5bGU+PC9kZWZzPjxyZWN0IGNsYXNzPSJhIiB4PSIxMCIgeT0iMjAiIHdpZHRoPSI4MCIgaGVpZ2h0PSI2MCIgcng9IjUuNjciLz48cGF0aCBjbGFzcz0iYSIgZD0iTTQwIDcwSDIwVjUwbTIwIDBMMjAgNzBtNDAtNDBoMjB2MjBtLTIwIDAgMjAtMjAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button.exit[data-bespoke-marp-osc=fullscreen],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button.exit[data-bespoke-marp-osc=fullscreen]{background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48ZGVmcz48c3R5bGU+LmF7ZmlsbDpub25lO3N0cm9rZTojZmZmO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2Utd2lkdGg6NXB4fTwvc3R5bGU+PC9kZWZzPjxyZWN0IGNsYXNzPSJhIiB4PSIxMCIgeT0iMjAiIHdpZHRoPSI4MCIgaGVpZ2h0PSI2MCIgcng9IjUuNjciLz48cGF0aCBjbGFzcz0iYSIgZD0iTTIwIDUwaDIwdjIwbS0yMCAwIDIwLTIwbTQwIDBINjBWMzBtMjAgMEw2MCA1MCIvPjwvc3ZnPg==")}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter]{background:transparent url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48ZGVmcz48c3R5bGU+LmF7ZmlsbDpub25lO3N0cm9rZTojZmZmO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS13aWR0aDo1cHh9PC9zdHlsZT48L2RlZnM+PHBhdGggY2xhc3M9ImEiIGQ9Ik0yMCA2MGgtNWE1IDUgMCAwIDEtNS01VjIwYTUgNSAwIDAgMSA1LTVoNjBhNSA1IDAgMCAxIDUgNXY1TTMwIDg1aDYwIi8+PHJlY3QgeD0iMzAiIHk9IjM1IiB3aWR0aD0iNjAiIGhlaWdodD0iNDAiIHJ4PSI1IiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiLz48cmVjdCBjbGFzcz0iYSIgeD0iMzAiIHk9IjM1IiB3aWR0aD0iNjAiIGhlaWdodD0iNDAiIHJ4PSI1Ii8+PHBhdGggY2xhc3M9ImEiIGQ9Ik00MCA1MGg0ME00MCA2MGgzMCIvPjwvc3ZnPg==") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}}.bespoke-marp-note,.bespoke-marp-osc,.bespoke-progress-parent{display:none;transition:none}@media screen{body,html{height:100%;margin:0}body{background:#000;overflow:hidden}svg.bespoke-marp-slide{content-visibility:hidden;opacity:0;pointer-events:none;z-index:-1}svg.bespoke-marp-slide.bespoke-marp-active{content-visibility:visible;opacity:1;pointer-events:auto;z-index:0}svg.bespoke-marp-slide.bespoke-marp-active.bespoke-marp-active-ready *{-webkit-animation-name:__bespoke_marp__!important;animation-name:__bespoke_marp__!important}@supports not (content-visibility:hidden){svg.bespoke-marp-slide[data-bespoke-marp-load=hideable]{display:none}svg.bespoke-marp-slide[data-bespoke-marp-load=hideable].bespoke-marp-active{display:block}}[data-bespoke-marp-fragment=inactive]{visibility:hidden}body[data-bespoke-view=""] .bespoke-marp-parent,body[data-bespoke-view=next] .bespoke-marp-parent{bottom:0;left:0;position:absolute;right:0;top:0}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc{background:rgba(0,0,0,.65);border-radius:7px;bottom:50px;color:#fff;display:block;font-family:Helvetica,Arial,sans-serif;font-size:16px;left:50%;line-height:0;opacity:1;padding:12px;position:absolute;touch-action:manipulation;transform:translateX(-50%);transition:opacity .2s linear;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;white-space:nowrap;will-change:transform;z-index:1}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>*,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>*{margin-left:6px}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>:first-child,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>:first-child{margin-left:0}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>span,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>span{opacity:.8}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>span[data-bespoke-marp-osc=page],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>span[data-bespoke-marp-osc=page]{display:inline-block;min-width:140px;text-align:center}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen],body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter],body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev]{height:32px;line-height:32px;width:32px}body[data-bespoke-view=""] .bespoke-marp-parent.bespoke-marp-inactive,body[data-bespoke-view=next] .bespoke-marp-parent.bespoke-marp-inactive{cursor:none}body[data-bespoke-view=""] .bespoke-marp-parent.bespoke-marp-inactive>.bespoke-marp-osc,body[data-bespoke-view=next] .bespoke-marp-parent.bespoke-marp-inactive>.bespoke-marp-osc{opacity:0;pointer-events:none}body[data-bespoke-view=""] svg.bespoke-marp-slide,body[data-bespoke-view=next] svg.bespoke-marp-slide{height:100%;left:0;position:absolute;top:0;width:100%}body[data-bespoke-view=""] .bespoke-progress-parent{background:#222;display:flex;height:5px;width:100%}body[data-bespoke-view=""] .bespoke-progress-parent+.bespoke-marp-parent{top:5px}body[data-bespoke-view=""] .bespoke-progress-parent .bespoke-progress-bar{background:#0288d1;flex:0 0 0;transition:flex-basis .2s cubic-bezier(0,1,1,1)}body[data-bespoke-view=next]{background:transparent}body[data-bespoke-view=presenter]{background:#161616}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container{display:grid;font-family:Helvetica,Arial,sans-serif;grid-template-areas:"current next" "current note" "info    note";grid-template-columns:2fr 1fr;grid-template-rows:minmax(140px,1fr) 2fr 3em;height:100%;left:0;position:absolute;top:0;width:100%}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-parent{grid-area:current;overflow:hidden;position:relative}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-parent svg.bespoke-marp-slide{height:calc(100% - 40px);left:20px;pointer-events:none;position:absolute;top:20px;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;width:calc(100% - 40px)}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-parent svg.bespoke-marp-slide.bespoke-marp-active{filter:drop-shadow(0 3px 10px rgba(0,0,0,.5))}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-next-container{background:#222;cursor:pointer;display:none;grid-area:next;overflow:hidden;position:relative}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-next-container.active{display:block}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-next-container iframe.bespoke-marp-presenter-next{background:transparent;border:0;display:block;filter:drop-shadow(0 3px 10px rgba(0,0,0,.5));height:calc(100% - 40px);left:20px;pointer-events:none;position:absolute;top:20px;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;width:calc(100% - 40px)}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container{background:#222;color:#eee;grid-area:note}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note{word-wrap:break-word;scrollbar-width:thin;scrollbar-color:hsla(0,0%,93.3%,.5) transparent;box-sizing:border-box;font-size:1.1em;height:calc(100% - 40px);margin:20px;overflow:auto;padding-right:3px;white-space:pre-wrap;width:calc(100% - 40px)}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note::-webkit-scrollbar{width:6px}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note::-webkit-scrollbar-track{background:transparent}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note::-webkit-scrollbar-thumb{background:hsla(0,0%,93.3%,.5);border-radius:6px}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note:empty{pointer-events:none}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note.active{display:block}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note p:first-child{margin-top:0}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note p:last-child{margin-bottom:0}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container{align-items:center;box-sizing:border-box;color:#eee;display:flex;flex-wrap:nowrap;grid-area:info;justify-content:center;padding:0 10px}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-time,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-timer{box-sizing:border-box;display:block;padding:0 10px;white-space:nowrap;width:100%}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button{height:1.5em;line-height:1.5em;width:1.5em}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page{order:2;text-align:center}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page .bespoke-marp-presenter-info-page-text{display:inline-block;min-width:120px;text-align:center}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-time{color:#999;order:1;text-align:left}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-timer{color:#999;order:3;text-align:right}}@media print{.bespoke-marp-presenter-info-container,.bespoke-marp-presenter-next-container,.bespoke-marp-presenter-note-container{display:none}}</style><style>@charset "UTF-8";@import url("https://fonts.googleapis.com/css?family=Lato:400,900|Roboto+Mono:400,700&display=swap");div#p>svg>foreignObject>section{width:1280px;height:720px;box-sizing:border-box;overflow:hidden;position:relative;scroll-snap-align:center center}div#p>svg>foreignObject>section:after{bottom:0;content:attr(data-marpit-pagination);padding:inherit;pointer-events:none;position:absolute;right:0}div#p>svg>foreignObject>section:not([data-marpit-pagination]):after{display:none}/* Normalization */div#p>svg>foreignObject>section h1{font-size:2em;margin:0.67em 0}div#p>svg>foreignObject>section video::-webkit-media-controls{will-change:transform}@page{size:1280px 720px;margin:0}@media print{body,html{background-color:#fff;margin:0;page-break-inside:avoid;break-inside:avoid-page}div#p>svg>foreignObject>section{page-break-before:always;break-before:page}div#p>svg>foreignObject>section,div#p>svg>foreignObject>section *{-webkit-print-color-adjust:exact!important;animation-delay:0s!important;animation-duration:0s!important;color-adjust:exact!important;transition:none!important}div#p>svg[data-marpit-svg]{display:block;height:100vh;width:100vw}}div#p>svg>foreignObject>section svg[data-marp-fitting=svg]{display:block;height:auto;width:100%}@supports (-ms-ime-align:auto){div#p>svg>foreignObject>section svg[data-marp-fitting=svg]{position:static}}div#p>svg>foreignObject>section svg[data-marp-fitting=svg].__reflow__{content:""}@supports (-ms-ime-align:auto){div#p>svg>foreignObject>section svg[data-marp-fitting=svg].__reflow__{position:relative}}div#p>svg>foreignObject>section [data-marp-fitting-svg-content]{display:table;white-space:nowrap;width:-webkit-max-content;width:-moz-max-content;width:max-content}div#p>svg>foreignObject>section [data-marp-fitting-svg-content-wrap]{white-space:pre}div#p>svg>foreignObject>section img[data-marp-twemoji]{background:transparent;height:1em;margin:0 .05em 0 .1em;vertical-align:-.1em;width:1em}
+/*!
+ * Marp / Marpit Gaia theme.
+ *
+ * @theme gaia
+ * @author Yuki Hattori
+ *
+ * @auto-scaling true
+ * @size 4:3 960px 720px
+ */div#p>svg>foreignObject>section .hljs{background:#000;color:#f8f8f8;display:block;overflow-x:auto;padding:.5em}div#p>svg>foreignObject>section .hljs-comment,div#p>svg>foreignObject>section .hljs-quote{color:#aeaeae;font-style:italic}div#p>svg>foreignObject>section .hljs-keyword,div#p>svg>foreignObject>section .hljs-selector-tag,div#p>svg>foreignObject>section .hljs-type{color:#e28964}div#p>svg>foreignObject>section .hljs-string{color:#65b042}div#p>svg>foreignObject>section .hljs-subst{color:#daefa3}div#p>svg>foreignObject>section .hljs-link,div#p>svg>foreignObject>section .hljs-regexp{color:#e9c062}div#p>svg>foreignObject>section .hljs-name,div#p>svg>foreignObject>section .hljs-section,div#p>svg>foreignObject>section .hljs-tag,div#p>svg>foreignObject>section .hljs-title{color:#89bdff}div#p>svg>foreignObject>section .hljs-class .hljs-title,div#p>svg>foreignObject>section .hljs-doctag{text-decoration:underline}div#p>svg>foreignObject>section .hljs-bullet,div#p>svg>foreignObject>section .hljs-number,div#p>svg>foreignObject>section .hljs-symbol{color:#3387cc}div#p>svg>foreignObject>section .hljs-params,div#p>svg>foreignObject>section .hljs-template-variable,div#p>svg>foreignObject>section .hljs-variable{color:#3e87e3}div#p>svg>foreignObject>section .hljs-attribute{color:#cda869}div#p>svg>foreignObject>section .hljs-meta{color:#8996a8}div#p>svg>foreignObject>section .hljs-formula{background-color:#0e2231;color:#f8f8f8;font-style:italic}div#p>svg>foreignObject>section .hljs-addition{background-color:#253b22;color:#f8f8f8}div#p>svg>foreignObject>section .hljs-deletion{background-color:#420e09;color:#f8f8f8}div#p>svg>foreignObject>section .hljs-selector-class{color:#9b703f}div#p>svg>foreignObject>section .hljs-selector-id{color:#8b98ab}div#p>svg>foreignObject>section .hljs-emphasis{font-style:italic}div#p>svg>foreignObject>section .hljs-strong{font-weight:700}div#p>svg>foreignObject>section svg[data-marp-fitting=svg]{max-height:580px}div#p>svg>foreignObject>section h1,div#p>svg>foreignObject>section h2,div#p>svg>foreignObject>section h3,div#p>svg>foreignObject>section h4,div#p>svg>foreignObject>section h5,div#p>svg>foreignObject>section h6{margin:.5em 0 0}div#p>svg>foreignObject>section h1 strong,div#p>svg>foreignObject>section h2 strong,div#p>svg>foreignObject>section h3 strong,div#p>svg>foreignObject>section h4 strong,div#p>svg>foreignObject>section h5 strong,div#p>svg>foreignObject>section h6 strong{font-weight:inherit}div#p>svg>foreignObject>section h1{font-size:1.8em}div#p>svg>foreignObject>section h2{font-size:1.5em}div#p>svg>foreignObject>section h3{font-size:1.3em}div#p>svg>foreignObject>section h4{font-size:1.1em}div#p>svg>foreignObject>section h5{font-size:1em}div#p>svg>foreignObject>section h6{font-size:.9em}div#p>svg>foreignObject>section blockquote,div#p>svg>foreignObject>section p{margin:1em 0 0}div#p>svg>foreignObject>section ol>li,div#p>svg>foreignObject>section ul>li{margin:.3em 0 0}div#p>svg>foreignObject>section ol>li>p,div#p>svg>foreignObject>section ul>li>p{margin:.6em 0 0}div#p>svg>foreignObject>section code{display:inline-block;font-family:Roboto Mono,monospace;font-size:.8em;letter-spacing:0;margin:-.1em .15em;padding:.1em .2em;vertical-align:baseline}div#p>svg>foreignObject>section pre{display:block;margin:1em 0 0;min-height:1em;overflow:visible}div#p>svg>foreignObject>section pre code{box-sizing:border-box;font-size:.7em;margin:0;min-width:100%;padding:.5em}div#p>svg>foreignObject>section pre code svg[data-marp-fitting=svg]{max-height:calc(580px - 1em)}div#p>svg>foreignObject>section blockquote{margin:1em 0 0;padding:0 1em;position:relative}div#p>svg>foreignObject>section blockquote:after,div#p>svg>foreignObject>section blockquote:before{content:"“";display:block;font-family:Times New Roman,serif;font-weight:700;position:absolute}div#p>svg>foreignObject>section blockquote:before{left:0;top:0}div#p>svg>foreignObject>section blockquote:after{bottom:0;right:0;transform:rotate(180deg)}div#p>svg>foreignObject>section blockquote>:first-child{margin-top:0}div#p>svg>foreignObject>section mark{background:transparent}div#p>svg>foreignObject>section table{border-collapse:collapse;border-spacing:0;margin:1em 0 0}div#p>svg>foreignObject>section table td,div#p>svg>foreignObject>section table th{border-style:solid;border-width:1px;padding:.2em .4em}div#p>svg>foreignObject>section:after,div#p>svg>foreignObject>section footer,div#p>svg>foreignObject>section header{box-sizing:border-box;font-size:66%;height:70px;line-height:50px;overflow:hidden;padding:10px 25px;position:absolute}div#p>svg>foreignObject>section:after{--marpit-root-font-size:66%}div#p>svg>foreignObject>section header{top:0}div#p>svg>foreignObject>section footer,div#p>svg>foreignObject>section header{left:0;right:0}div#p>svg>foreignObject>section footer{bottom:0}div#p>svg>foreignObject>section{word-wrap:break-word;--color-background:#fff8e1;--color-background-stripe:rgba(69,90,100,0.1);--color-foreground:#455a64;--color-dimmed:#6a7a7d;--color-highlight:#0288d1;background-color:var(--color-background);background-image:linear-gradient(135deg,hsla(0,0%,53.3%,0),hsla(0,0%,53.3%,.02) 50%,hsla(0,0%,100%,0) 0,hsla(0,0%,100%,.05));color:var(--color-foreground);font-family:Lato,Avenir Next,Avenir,Trebuchet MS,Segoe UI,sans-serif;font-size:35px;height:720px;letter-spacing:1.25px;line-height:1.35;padding:70px;width:1280px}div#p>svg>foreignObject>section{--marpit-root-font-size:35px}div#p>svg>foreignObject>section:after{bottom:0;font-size:80%;right:0}div#p>svg>foreignObject>section:after{--marpit-root-font-size:80%}div#p>svg>foreignObject>section a,div#p>svg>foreignObject>section mark{color:var(--color-highlight)}div#p>svg>foreignObject>section code{background:var(--color-dimmed);color:var(--color-background)}div#p>svg>foreignObject>section h1 strong,div#p>svg>foreignObject>section h2 strong,div#p>svg>foreignObject>section h3 strong,div#p>svg>foreignObject>section h4 strong,div#p>svg>foreignObject>section h5 strong,div#p>svg>foreignObject>section h6 strong{color:var(--color-highlight)}div#p>svg>foreignObject>section pre>code{background:var(--color-foreground)}div#p>svg>foreignObject>section blockquote:after,div#p>svg>foreignObject>section blockquote:before,div#p>svg>foreignObject>section footer,div#p>svg>foreignObject>section header,div#p>svg>foreignObject>section section:after{color:var(--color-dimmed)}div#p>svg>foreignObject>section table td,div#p>svg>foreignObject>section table th{border-color:var(--color-foreground)}div#p>svg>foreignObject>section table thead th{background:var(--color-foreground);color:var(--color-background)}div#p>svg>foreignObject>section table tbody>tr:nth-child(odd) td,div#p>svg>foreignObject>section table tbody>tr:nth-child(odd) th{background:var(--color-background-stripe,transparent)}div#p>svg>foreignObject>section>:first-child,div#p>svg>foreignObject>section>header:first-child+*{margin-top:0}div#p>svg>foreignObject>section.invert{--color-background:#455a64;--color-background-stripe:rgba(255,248,225,0.1);--color-foreground:#fff8e1;--color-dimmed:#dad8c8;--color-highlight:#81d4fa}div#p>svg>foreignObject>section.gaia{--color-background:#0288d1;--color-background-stripe:rgba(255,248,225,0.1);--color-foreground:#fff8e1;--color-dimmed:#cce2de;--color-highlight:#81d4fa}div#p>svg>foreignObject>section.lead{display:flex;flex-direction:column;flex-wrap:nowrap;justify-content:center}div#p>svg>foreignObject>section.lead h1,div#p>svg>foreignObject>section.lead h2,div#p>svg>foreignObject>section.lead h3,div#p>svg>foreignObject>section.lead h4,div#p>svg>foreignObject>section.lead h5,div#p>svg>foreignObject>section.lead h6{text-align:center}div#p>svg>foreignObject>section.lead h1 svg[data-marp-fitting=svg],div#p>svg>foreignObject>section.lead h2 svg[data-marp-fitting=svg],div#p>svg>foreignObject>section.lead h3 svg[data-marp-fitting=svg],div#p>svg>foreignObject>section.lead h4 svg[data-marp-fitting=svg],div#p>svg>foreignObject>section.lead h5 svg[data-marp-fitting=svg],div#p>svg>foreignObject>section.lead h6 svg[data-marp-fitting=svg]{--preserve-aspect-ratio:xMidYMid meet}div#p>svg>foreignObject>section.lead p{text-align:center}div#p>svg>foreignObject>section.lead blockquote>h1,div#p>svg>foreignObject>section.lead blockquote>h2,div#p>svg>foreignObject>section.lead blockquote>h3,div#p>svg>foreignObject>section.lead blockquote>h4,div#p>svg>foreignObject>section.lead blockquote>h5,div#p>svg>foreignObject>section.lead blockquote>h6,div#p>svg>foreignObject>section.lead blockquote>p{text-align:left}div#p>svg>foreignObject>section.lead blockquote svg[data-marp-fitting=svg]:not([data-marp-fitting-math]){--preserve-aspect-ratio:xMinYMin meet}div#p>svg>foreignObject>section.lead ol>li>p,div#p>svg>foreignObject>section.lead ul>li>p{text-align:left}div#p>svg>foreignObject>section.lead table{margin-left:auto;margin-right:auto}div#p>svg>foreignObject>section.lead footer{text-align:right}div#p>svg>foreignObject>section h2{text-align:center}div#p>svg>foreignObject>section[data-marpit-advanced-background=background]{columns:initial!important;display:block!important;padding:0!important}div#p>svg>foreignObject>section[data-marpit-advanced-background=background]:after,div#p>svg>foreignObject>section[data-marpit-advanced-background=background]:before,div#p>svg>foreignObject>section[data-marpit-advanced-background=content]:after,div#p>svg>foreignObject>section[data-marpit-advanced-background=content]:before{display:none!important}div#p>svg>foreignObject>section[data-marpit-advanced-background=background]>div[data-marpit-advanced-background-container]{all:initial;display:flex;flex-direction:row;height:100%;overflow:hidden;width:100%}div#p>svg>foreignObject>section[data-marpit-advanced-background=background]>div[data-marpit-advanced-background-container][data-marpit-advanced-background-direction=vertical]{flex-direction:column}div#p>svg>foreignObject>section[data-marpit-advanced-background=background][data-marpit-advanced-background-split]>div[data-marpit-advanced-background-container]{width:var(--marpit-advanced-background-split,50%)}div#p>svg>foreignObject>section[data-marpit-advanced-background=background][data-marpit-advanced-background-split=right]>div[data-marpit-advanced-background-container]{margin-left:calc(100% - var(--marpit-advanced-background-split, 50%))}div#p>svg>foreignObject>section[data-marpit-advanced-background=background]>div[data-marpit-advanced-background-container]>figure{all:initial;background-position:center;background-repeat:no-repeat;background-size:cover;flex:auto;margin:0}div#p>svg>foreignObject>section[data-marpit-advanced-background=content],div#p>svg>foreignObject>section[data-marpit-advanced-background=pseudo]{background:transparent!important}div#p>svg>foreignObject>section[data-marpit-advanced-background=pseudo],div#p>svg[data-marpit-svg]>foreignObject[data-marpit-advanced-background=pseudo]{pointer-events:none!important}div#p>svg>foreignObject>section[data-marpit-advanced-background-split]{width:100%;height:100%}</style></head><body><div class="bespoke-marp-osc"><button data-bespoke-marp-osc="prev" tabindex="-1" title="Previous slide">Previous slide</button><span data-bespoke-marp-osc="page"></span><button data-bespoke-marp-osc="next" tabindex="-1" title="Next slide">Next slide</button><button data-bespoke-marp-osc="fullscreen" tabindex="-1" title="Toggle fullscreen (f)">Toggle fullscreen</button><button data-bespoke-marp-osc="presenter" tabindex="-1" title="Open presenter view (p)">Open presenter view</button></div><div id="p"><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="1" data-class="lead invert" data-background-image="url('assets/bg-lead.png')" data-footer="Presented by [RC](https://github.com/richardchien)" data-theme="gaia" data-style="section.lead footer {
+  text-align: right;
+}
+section h2 {
+  text-align: center;
+}
+" class="lead invert" style="--class:lead invert;--background-image:url('assets/bg-lead.png');--footer:Presented by [RC](https://github.com/richardchien);--theme:gaia;--style:section.lead footer {
+  text-align: right;
+}
+section h2 {
+  text-align: center;
+}
+;background-image:url('assets/bg-lead.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h1>Why Write OS In Rust?</h1>
+<p>v2.0</p>
+<footer>Presented by <a href="https://github.com/richardchien">RC</a></footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="2" data-class="invert" data-paginate="true" data-background-image="url('assets/bg-outline.png')" data-theme="gaia" data-style="section.lead footer {
+  text-align: right;
+}
+section h2 {
+  text-align: center;
+}
+" class="invert" data-marpit-pagination="2" data-marpit-pagination-total="60" style="--class:invert;--paginate:true;--background-image:url('assets/bg-outline.png');--theme:gaia;--style:section.lead footer {
+  text-align: right;
+}
+section h2 {
+  text-align: center;
+}
+;background-image:url('assets/bg-outline.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>Outline</h2>
+<ul>
+<li>Language Basics</li>
+<li>Memory Safety</li>
+<li>Expression</li>
+<li>Interoperability</li>
+<li>Performance</li>
+<li>Usability</li>
+<li>Drawbacks</li>
+<li>Summary</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="3" data-class="invert" data-paginate="true" data-background-image="url('assets/bg-outline.png')" data-theme="gaia" data-style="section.lead footer {
+  text-align: right;
+}
+section h2 {
+  text-align: center;
+}
+" class="invert" data-marpit-pagination="3" data-marpit-pagination-total="60" style="--class:invert;--paginate:true;--background-image:url('assets/bg-outline.png');--theme:gaia;--style:section.lead footer {
+  text-align: right;
+}
+section h2 {
+  text-align: center;
+}
+;background-image:url('assets/bg-outline.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>Outline</h2>
+<ul>
+<li><strong>Language Basics ◁</strong></li>
+<li>Memory Safety</li>
+<li>Expression</li>
+<li>Interoperability</li>
+<li>Performance</li>
+<li>Usability</li>
+<li>Drawbacks</li>
+<li>Summary</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="4" data-class="invert" data-paginate="true" data-background-image="url('assets/bg.png')" data-theme="gaia" data-style="section.lead footer {
+  text-align: right;
+}
+section h2 {
+  text-align: center;
+}
+" class="invert" data-marpit-pagination="4" data-marpit-pagination-total="60" style="--class:invert;--paginate:true;--background-image:url('assets/bg.png');--theme:gaia;--style:section.lead footer {
+  text-align: right;
+}
+section h2 {
+  text-align: center;
+}
+;background-image:url('assets/bg.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>Variables</h2>
+<ul>
+<li>Immutable by default</li>
+<li>Shadowing</li>
+</ul>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">let</span> x = <span class="hljs-number">0</span>;
+x = <span class="hljs-number">42</span>; <span class="hljs-comment">// error: cannot assign twice to immutable variable `x`</span>
+
+<span class="hljs-keyword">let</span> <span class="hljs-keyword">mut</span> y = <span class="hljs-number">0</span>;
+y = <span class="hljs-number">42</span>; <span class="hljs-comment">// ok</span>
+</span></span></foreignObject></svg></code></pre>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">let</span> x = foo();
+<span class="hljs-keyword">let</span> x = x.unwrap(); <span class="hljs-comment">// this `x` is different from the above one</span>
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="5" data-class="invert" data-paginate="true" data-background-image="url('assets/bg.png')" data-theme="gaia" data-style="section.lead footer {
+  text-align: right;
+}
+section h2 {
+  text-align: center;
+}
+" class="invert" data-marpit-pagination="5" data-marpit-pagination-total="60" style="--class:invert;--paginate:true;--background-image:url('assets/bg.png');--theme:gaia;--style:section.lead footer {
+  text-align: right;
+}
+section h2 {
+  text-align: center;
+}
+;background-image:url('assets/bg.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>Ownership</h2>
+<ul>
+<li>Move semantics</li>
+</ul>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">let</span> x = <span class="hljs-built_in">String</span>::from(<span class="hljs-string">&quot;foo&quot;</span>);
+<span class="hljs-keyword">let</span> y = x;
+<span class="hljs-built_in">println!</span>(<span class="hljs-string">&quot;{}&quot;</span>, x); <span class="hljs-comment">// error: borrow of moved value: `x`</span>
+</span></span></foreignObject></svg></code></pre>
+<pre><code class="language-cpp"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-comment">// C++: similar but different</span>
+<span class="hljs-keyword">auto</span> x = std::<span class="hljs-built_in">string</span>(<span class="hljs-string">&quot;foo&quot;</span>);
+<span class="hljs-keyword">auto</span> y = std::<span class="hljs-built_in">move</span>(x);
+std::cout &lt;&lt; x &lt;&lt; std::endl; <span class="hljs-comment">// ok, `x` is in valid but unspecified state</span>
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="6" data-class="invert" data-paginate="true" data-background-image="url('assets/bg.png')" data-theme="gaia" data-style="section.lead footer {
+  text-align: right;
+}
+section h2 {
+  text-align: center;
+}
+" class="invert" data-marpit-pagination="6" data-marpit-pagination-total="60" style="--class:invert;--paginate:true;--background-image:url('assets/bg.png');--theme:gaia;--style:section.lead footer {
+  text-align: right;
+}
+section h2 {
+  text-align: center;
+}
+;background-image:url('assets/bg.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>Ownership</h2>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-meta">#[derive(Debug)]</span>
+<span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">MyString</span></span>(<span class="hljs-built_in">String</span>);
+
+<span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">foo1</span></span>(s: <span class="hljs-built_in">String</span>) { <span class="hljs-built_in">println!</span>(<span class="hljs-string">&quot;len: {}&quot;</span>, s.len()); }
+<span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">foo2</span></span>(s: <span class="hljs-built_in">String</span>) -&gt; MyString { <span class="hljs-built_in">println!</span>(<span class="hljs-string">&quot;len: {}&quot;</span>, s.len()); MyString(s) }
+
+<span class="hljs-keyword">pub</span> <span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">main</span></span>() {
+    <span class="hljs-keyword">let</span> x = <span class="hljs-built_in">String</span>::from(<span class="hljs-string">&quot;foo&quot;</span>);
+    foo1(x);
+    <span class="hljs-keyword">let</span> x = <span class="hljs-built_in">String</span>::from(<span class="hljs-string">&quot;bar&quot;</span>);
+    <span class="hljs-keyword">let</span> x = foo2(x);
+    <span class="hljs-built_in">println!</span>(<span class="hljs-string">&quot;{:?}&quot;</span>, x);
+}
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="7" data-class="invert" data-paginate="true" data-background-image="url('assets/bg.png')" data-theme="gaia" data-style="section.lead footer {
+  text-align: right;
+}
+section h2 {
+  text-align: center;
+}
+" class="invert" data-marpit-pagination="7" data-marpit-pagination-total="60" style="--class:invert;--paginate:true;--background-image:url('assets/bg.png');--theme:gaia;--style:section.lead footer {
+  text-align: right;
+}
+section h2 {
+  text-align: center;
+}
+;background-image:url('assets/bg.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>Borrowing</h2>
+<ul>
+<li>Multiple immutable references, or</li>
+<li>Single mutable reference</li>
+</ul>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">let</span> x = <span class="hljs-built_in">String</span>::from(<span class="hljs-string">&quot;foo&quot;</span>);
+<span class="hljs-keyword">let</span> y = &amp;x;
+<span class="hljs-keyword">let</span> z = &amp;x;
+<span class="hljs-built_in">println!</span>(<span class="hljs-string">&quot;{}, {}, {}&quot;</span>, x, y, z); <span class="hljs-comment">// ok</span>
+</span></span></foreignObject></svg></code></pre>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">let</span> <span class="hljs-keyword">mut</span> x = <span class="hljs-built_in">String</span>::from(<span class="hljs-string">&quot;foo&quot;</span>);
+<span class="hljs-keyword">let</span> y = &amp;<span class="hljs-keyword">mut</span> x;
+<span class="hljs-keyword">let</span> z = &amp;<span class="hljs-keyword">mut</span> x; <span class="hljs-comment">// error: cannot borrow `x` as mutable more than once at a time</span>
+y; z;
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="8" data-class="invert" data-paginate="true" data-background-image="url('assets/bg.png')" data-theme="gaia" data-style="section.lead footer {
+  text-align: right;
+}
+section h2 {
+  text-align: center;
+}
+" class="invert" data-marpit-pagination="8" data-marpit-pagination-total="60" style="--class:invert;--paginate:true;--background-image:url('assets/bg.png');--theme:gaia;--style:section.lead footer {
+  text-align: right;
+}
+section h2 {
+  text-align: center;
+}
+;background-image:url('assets/bg.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>Borrowing</h2>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">let</span> <span class="hljs-keyword">mut</span> x = <span class="hljs-number">0</span>;
+<span class="hljs-keyword">let</span> y = &amp;x;
+x = <span class="hljs-number">42</span>; <span class="hljs-comment">// error: cannot assign to `x` because it is borrowed</span>
+<span class="hljs-comment">// *(&amp;mut x) = 42; // basically the same thing</span>
+y;
+</span></span></foreignObject></svg></code></pre>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">let</span> <span class="hljs-keyword">mut</span> x = <span class="hljs-number">0</span>;
+<span class="hljs-keyword">let</span> y = &amp;<span class="hljs-keyword">mut</span> x;
+*y = <span class="hljs-number">42</span>; <span class="hljs-comment">// ok</span>
+x; <span class="hljs-comment">// error: cannot use `x` because it was mutably borrowed</span>
+<span class="hljs-comment">// *(&amp;x); // basically the same thing</span>
+y;
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="9" data-class="invert" data-paginate="true" data-background-image="url('assets/bg.png')" data-theme="gaia" data-style="section.lead footer {
+  text-align: right;
+}
+section h2 {
+  text-align: center;
+}
+" class="invert" data-marpit-pagination="9" data-marpit-pagination-total="60" style="--class:invert;--paginate:true;--background-image:url('assets/bg.png');--theme:gaia;--style:section.lead footer {
+  text-align: right;
+}
+section h2 {
+  text-align: center;
+}
+;background-image:url('assets/bg.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>Smart Pointers</h2>
+<ul>
+<li><code>Box&lt;T&gt;</code>: data on the heap</li>
+</ul>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">let</span> x = <span class="hljs-built_in">Box</span>::new(<span class="hljs-number">42</span>);
+<span class="hljs-keyword">let</span> <span class="hljs-keyword">mut</span> y = x;
+*y += <span class="hljs-number">1</span>;
+<span class="hljs-comment">// there is no `y = nullptr` in Rust</span>
+</span></span></foreignObject></svg></code></pre>
+<pre><code class="language-cpp"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-comment">// C++</span>
+<span class="hljs-keyword">auto</span> x = std::make_unique&lt;<span class="hljs-keyword">int</span>&gt;(<span class="hljs-number">42</span>);
+<span class="hljs-keyword">auto</span> y = std::<span class="hljs-built_in">move</span>(x);
+*y += <span class="hljs-number">1</span>;
+y = <span class="hljs-literal">nullptr</span>;
+<span class="hljs-keyword">auto</span> z = *y; <span class="hljs-comment">// runtime error: segmentation fault</span>
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="10" data-class="invert" data-paginate="true" data-background-image="url('assets/bg.png')" data-theme="gaia" data-style="section.lead footer {
+  text-align: right;
+}
+section h2 {
+  text-align: center;
+}
+" class="invert" data-marpit-pagination="10" data-marpit-pagination-total="60" style="--class:invert;--paginate:true;--background-image:url('assets/bg.png');--theme:gaia;--style:section.lead footer {
+  text-align: right;
+}
+section h2 {
+  text-align: center;
+}
+;background-image:url('assets/bg.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>Smart Pointers</h2>
+<ul>
+<li><code>Rc&lt;T&gt;</code>: multiple ownership (reference count)</li>
+</ul>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">foo</span></span>(val: Rc&lt;<span class="hljs-built_in">String</span>&gt;) { val; <span class="hljs-comment">/* consumes val */</span> }
+
+<span class="hljs-keyword">let</span> x = Rc::new(<span class="hljs-built_in">String</span>::from(<span class="hljs-string">&quot;foo&quot;</span>));
+foo(x.clone()); <span class="hljs-comment">// pass a clone of Rc, instead of moving `x` in</span>
+<span class="hljs-built_in">println!</span>(<span class="hljs-string">&quot;{}&quot;</span>, x); <span class="hljs-comment">// ok</span>
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="11" data-class="invert" data-paginate="true" data-background-image="url('assets/bg.png')" data-theme="gaia" data-style="section.lead footer {
+  text-align: right;
+}
+section h2 {
+  text-align: center;
+}
+" class="invert" data-marpit-pagination="11" data-marpit-pagination-total="60" style="--class:invert;--paginate:true;--background-image:url('assets/bg.png');--theme:gaia;--style:section.lead footer {
+  text-align: right;
+}
+section h2 {
+  text-align: center;
+}
+;background-image:url('assets/bg.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>Smart Pointers</h2>
+<ul>
+<li><code>Cell&lt;T&gt;</code>: interior mutability</li>
+<li><code>RefCell&lt;T&gt;</code>: interior mutability + runtime borrow checking</li>
+</ul>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">let</span> x = Cell::new(<span class="hljs-number">42</span>);
+<span class="hljs-keyword">let</span> y = x.replace(<span class="hljs-number">0</span>);
+<span class="hljs-built_in">assert_eq!</span>(x.get(), <span class="hljs-number">0</span>);
+<span class="hljs-built_in">assert_eq!</span>(y, <span class="hljs-number">42</span>);
+</span></span></foreignObject></svg></code></pre>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">let</span> x = RefCell::new(<span class="hljs-number">42</span>);
+<span class="hljs-keyword">let</span> ref1 = x.borrow();
+<span class="hljs-keyword">let</span> ref2 = x.borrow();
+<span class="hljs-keyword">let</span> ref3 = x.borrow_mut(); <span class="hljs-comment">// runtime error: already borrowed</span>
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="12" data-class="invert" data-paginate="true" data-background-image="url('assets/bg.png')" data-theme="gaia" data-style="section.lead footer {
+  text-align: right;
+}
+section h2 {
+  text-align: center;
+}
+" class="invert" data-marpit-pagination="12" data-marpit-pagination-total="60" style="--class:invert;--paginate:true;--background-image:url('assets/bg.png');--theme:gaia;--style:section.lead footer {
+  text-align: right;
+}
+section h2 {
+  text-align: center;
+}
+;background-image:url('assets/bg.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>Doubly Linked List</h2>
+<ul>
+<li>
+<p>Why it's not easy to implement?</p>
+<ul>
+<li>Because you have to think in Rust.</li>
+</ul>
+</li>
+<li>
+<p>How to implement?</p>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">Node</span></span>&lt;T&gt; {
+    <span class="hljs-keyword">pub</span> data: T,
+    <span class="hljs-keyword">pub</span> prev: <span class="hljs-built_in">Option</span>&lt;Weak&lt;RefCell&lt;Node&lt;T&gt;&gt;&gt;&gt;,
+    <span class="hljs-keyword">pub</span> next: <span class="hljs-built_in">Option</span>&lt;Rc&lt;RefCell&lt;Node&lt;T&gt;&gt;&gt;&gt;,
+}
+</span></span></foreignObject></svg></code></pre>
+<ul>
+<li><a href="https://gist.github.com/anonymous/c3db81ec94bf231b721ef483f58deb35">Full example</a></li>
+</ul>
+</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="13" data-class="invert" data-paginate="true" data-background-image="url('assets/bg.png')" data-theme="gaia" data-style="section.lead footer {
+  text-align: right;
+}
+section h2 {
+  text-align: center;
+}
+" class="invert" data-marpit-pagination="13" data-marpit-pagination-total="60" style="--class:invert;--paginate:true;--background-image:url('assets/bg.png');--theme:gaia;--style:section.lead footer {
+  text-align: right;
+}
+section h2 {
+  text-align: center;
+}
+;background-image:url('assets/bg.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>Unsafe</h2>
+<p>In Safe Rust, the <strong>compiler</strong> ensures soundness;</p>
+<p>In Unsafe Rust, <strong>programmers</strong> ensure soundness.</p>
+<p>Read <a href="https://doc.rust-lang.org/nomicon/">The Rustonomicon</a> before writing unsafe code.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="14" data-class="invert" data-paginate="true" data-background-image="url('assets/bg-outline.png')" data-theme="gaia" data-style="section.lead footer {
+  text-align: right;
+}
+section h2 {
+  text-align: center;
+}
+" class="invert" data-marpit-pagination="14" data-marpit-pagination-total="60" style="--class:invert;--paginate:true;--background-image:url('assets/bg-outline.png');--theme:gaia;--style:section.lead footer {
+  text-align: right;
+}
+section h2 {
+  text-align: center;
+}
+;background-image:url('assets/bg-outline.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>Outline</h2>
+<ul>
+<li>Language Basics</li>
+<li><strong>Memory Safety ◁</strong></li>
+<li>Expression</li>
+<li>Interoperability</li>
+<li>Performance</li>
+<li>Usability</li>
+<li>Drawbacks</li>
+<li>Summary</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="15" data-class="invert" data-paginate="true" data-background-image="url('assets/bg.png')" data-theme="gaia" data-style="section.lead footer {
+  text-align: right;
+}
+section h2 {
+  text-align: center;
+}
+" class="invert" data-marpit-pagination="15" data-marpit-pagination-total="60" style="--class:invert;--paginate:true;--background-image:url('assets/bg.png');--theme:gaia;--style:section.lead footer {
+  text-align: right;
+}
+section h2 {
+  text-align: center;
+}
+;background-image:url('assets/bg.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>Memory Safety</h2>
+<ul>
+<li>Microsoft: <a href="https://msrc-blog.microsoft.com/2019/07/18/we-need-a-safer-systems-programming-language/">70% of all vulnerabilities in their products</a> over the past decade have been caused by a lack of memory safety.</li>
+<li>Chromium: <a href="https://www.chromium.org/Home/chromium-security/memory-safety/">70% of serious security bugs</a> are memory safety problems.</li>
+<li>Android: <a href="https://security.googleblog.com/2019/05/queue-hardening-enhancements.html">90% of their vulnerabilities</a> are memory safety issues.</li>
+<li>Mozilla: <a href="https://hacks.mozilla.org/2019/02/rewriting-a-browser-component-in-rust/">74% of Firefox’s security bugs</a> in its style component are memory safety bugs.</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="16" data-class="invert" data-paginate="true" data-background-image="url('assets/bg.png')" data-theme="gaia" data-style="section.lead footer {
+  text-align: right;
+}
+section h2 {
+  text-align: center;
+}
+" class="invert" data-marpit-pagination="16" data-marpit-pagination-total="60" style="--class:invert;--paginate:true;--background-image:url('assets/bg.png');--theme:gaia;--style:section.lead footer {
+  text-align: right;
+}
+section h2 {
+  text-align: center;
+}
+;background-image:url('assets/bg.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>Memory Safety</h2>
+<ul>
+<li>Spatial memory safety</li>
+<li>Temporal memory safety</li>
+<li>Thread safety</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="17" data-class="invert" data-paginate="true" data-background-image="url('assets/bg.png')" data-theme="gaia" data-style="section.lead footer {
+  text-align: right;
+}
+section h2 {
+  text-align: center;
+}
+" class="invert" data-marpit-pagination="17" data-marpit-pagination-total="60" style="--class:invert;--paginate:true;--background-image:url('assets/bg.png');--theme:gaia;--style:section.lead footer {
+  text-align: right;
+}
+section h2 {
+  text-align: center;
+}
+;background-image:url('assets/bg.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>Spatial Memory Safety</h2>
+<p>How C sucks:</p>
+<pre><code class="language-c"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">someos_file_write</span><span class="hljs-params">(<span class="hljs-keyword">int</span> fd, <span class="hljs-keyword">void</span> *buf, <span class="hljs-keyword">size_t</span> count)</span> </span>{
+    <span class="hljs-keyword">int</span> ret, cnt, remain = count; <span class="hljs-comment">// implicit conversion</span>
+    <span class="hljs-comment">// ...</span>
+    <span class="hljs-keyword">while</span> (remain &gt; <span class="hljs-number">0</span>) {
+        fr-&gt;count <span class="hljs-comment">/* ssize_t */</span> = cnt = MIN(remain, FS_BUF_SIZE);
+        <span class="hljs-built_in">memcpy</span>(fr-&gt;buf, buf, cnt);
+        <span class="hljs-comment">// write to file, ret is: 1) &lt; 0 for failure; 2) &gt;= 0 for bytes written</span>
+        ret = ipc_call(fr);
+        buf = (<span class="hljs-keyword">char</span> *)buf + ret; remain -= ret;
+        <span class="hljs-keyword">if</span> (ret != cnt) <span class="hljs-keyword">break</span>;
+    }
+    <span class="hljs-keyword">return</span> count - remain;
+}
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="18" data-class="invert" data-paginate="true" data-background-image="url('assets/bg.png')" data-theme="gaia" data-style="section.lead footer {
+  text-align: right;
+}
+section h2 {
+  text-align: center;
+}
+" class="invert" data-marpit-pagination="18" data-marpit-pagination-total="60" style="--class:invert;--paginate:true;--background-image:url('assets/bg.png');--theme:gaia;--style:section.lead footer {
+  text-align: right;
+}
+section h2 {
+  text-align: center;
+}
+;background-image:url('assets/bg.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>Spatial Memory Safety</h2>
+<p>At least 4 bugs in the above C code!</p>
+<ol>
+<li><code>int fd</code>: <code>fd</code> can be negative or zero</li>
+<li><code>void *buf</code>: <code>buf</code> can be null or have unmatched size</li>
+<li><code>remain = count</code>: <code>remain</code> can be negative or very large due to unmatched type</li>
+<li><code>ret = ipc_call(fr);</code>: no error checking for <code>ret</code></li>
+</ol>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="19" data-class="invert" data-paginate="true" data-background-image="url('assets/bg.png')" data-theme="gaia" data-style="section.lead footer {
+  text-align: right;
+}
+section h2 {
+  text-align: center;
+}
+" class="invert" data-marpit-pagination="19" data-marpit-pagination-total="60" style="--class:invert;--paginate:true;--background-image:url('assets/bg.png');--theme:gaia;--style:section.lead footer {
+  text-align: right;
+}
+section h2 {
+  text-align: center;
+}
+;background-image:url('assets/bg.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>Spatial Memory Safety</h2>
+<p>What features of Rust can help?</p>
+<ul>
+<li>Null safety</li>
+<li>Type safety</li>
+<li>Boundary check</li>
+<li>Error handling</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="20" data-class="invert" data-paginate="true" data-background-image="url('assets/bg.png')" data-theme="gaia" data-style="section.lead footer {
+  text-align: right;
+}
+section h2 {
+  text-align: center;
+}
+" class="invert" data-marpit-pagination="20" data-marpit-pagination-total="60" style="--class:invert;--paginate:true;--background-image:url('assets/bg.png');--theme:gaia;--style:section.lead footer {
+  text-align: right;
+}
+section h2 {
+  text-align: center;
+}
+;background-image:url('assets/bg.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>Spatial Memory Safety</h2>
+<p>Same thing implemented in Rust:</p>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">someos_file_write</span></span>(fd: FileDescriptor, buf: &amp;<span class="hljs-keyword">mut</span> [<span class="hljs-built_in">u8</span>]) -&gt; SomeOsResult&lt;<span class="hljs-built_in">usize</span>&gt; {
+    <span class="hljs-keyword">let</span> count = buf.len();
+    <span class="hljs-keyword">let</span> <span class="hljs-keyword">mut</span> written = <span class="hljs-number">0usize</span>;
+    <span class="hljs-keyword">while</span> written &lt; count {
+        <span class="hljs-keyword">let</span> buf_slice = &amp;<span class="hljs-keyword">mut</span> buf[written..min(written + FS_BUF_SIZE, count)];
+        <span class="hljs-keyword">let</span> n = ipc_call(buf_slice)?;
+        written += n;
+        <span class="hljs-keyword">if</span> n &lt; buf_slice.len() {
+            <span class="hljs-keyword">break</span>;
+        }
+    }
+    <span class="hljs-literal">Ok</span>(written)
+}
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="21" data-class="invert" data-paginate="true" data-background-image="url('assets/bg.png')" data-theme="gaia" data-style="section.lead footer {
+  text-align: right;
+}
+section h2 {
+  text-align: center;
+}
+" class="invert" data-marpit-pagination="21" data-marpit-pagination-total="60" style="--class:invert;--paginate:true;--background-image:url('assets/bg.png');--theme:gaia;--style:section.lead footer {
+  text-align: right;
+}
+section h2 {
+  text-align: center;
+}
+;background-image:url('assets/bg.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>Spatial Memory Safety</h2>
+<p>What if forgot <code>min(written + FS_BUF_SIZE, count)</code>?</p>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">let</span> buf_slice = &amp;<span class="hljs-keyword">mut</span> buf[written..written + FS_BUF_SIZE];
+</span></span></foreignObject></svg></code></pre>
+<p>If <code>written + FS_BUF_SIZE</code> is larger than <code>buf.len()</code>, it'll panic:</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>thread 'main' panicked at 'range end index 1024 out of range for slice of length 512'
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="22" data-class="invert" data-paginate="true" data-background-image="url('assets/bg.png')" data-theme="gaia" data-style="section.lead footer {
+  text-align: right;
+}
+section h2 {
+  text-align: center;
+}
+" class="invert" data-marpit-pagination="22" data-marpit-pagination-total="60" style="--class:invert;--paginate:true;--background-image:url('assets/bg.png');--theme:gaia;--style:section.lead footer {
+  text-align: right;
+}
+section h2 {
+  text-align: center;
+}
+;background-image:url('assets/bg.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>Temporal Memory Safety</h2>
+<p>A bad example in C:</p>
+<pre><code class="language-c"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">usb_request_async</span><span class="hljs-params">(<span class="hljs-keyword">int</span> req, <span class="hljs-keyword">void</span> *buffer, <span class="hljs-keyword">void</span> (*callback)(<span class="hljs-keyword">int</span>, <span class="hljs-keyword">void</span> *))</span> </span>{
+    global_urb-&gt;req = req;
+    global_urb-&gt;buffer = buffer;
+    global_urb-&gt;callback = callback;
+    usb_send_urb_async(global_urb);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">usb_request_cb</span><span class="hljs-params">(<span class="hljs-keyword">int</span> req, <span class="hljs-keyword">void</span> *buffer)</span> </span>{ <span class="hljs-comment">/* access buffer */</span> }
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">func</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">char</span> buf[<span class="hljs-number">4096</span>];
+    usb_request_async(USB_REQ_GET_XXX, buf, usb_request_cb);
+}
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="23" data-class="invert" data-paginate="true" data-background-image="url('assets/bg.png')" data-theme="gaia" data-style="section.lead footer {
+  text-align: right;
+}
+section h2 {
+  text-align: center;
+}
+" class="invert" data-marpit-pagination="23" data-marpit-pagination-total="60" style="--class:invert;--paginate:true;--background-image:url('assets/bg.png');--theme:gaia;--style:section.lead footer {
+  text-align: right;
+}
+section h2 {
+  text-align: center;
+}
+;background-image:url('assets/bg.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>Temporal Memory Safety</h2>
+<p>What features of Rust can help?</p>
+<ul>
+<li>Lifetime</li>
+<li>Ownership</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="24" data-class="invert" data-paginate="true" data-background-image="url('assets/bg.png')" data-theme="gaia" data-style="section.lead footer {
+  text-align: right;
+}
+section h2 {
+  text-align: center;
+}
+" class="invert" data-marpit-pagination="24" data-marpit-pagination-total="60" style="--class:invert;--paginate:true;--background-image:url('assets/bg.png');--theme:gaia;--style:section.lead footer {
+  text-align: right;
+}
+section h2 {
+  text-align: center;
+}
+;background-image:url('assets/bg.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>Temporal Memory Safety</h2>
+<p>Try the same in Rust (consider only immutable buffer for simplicity):</p>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">usb_request_async</span></span>&lt;<span class="hljs-symbol">&#x27;a</span>&gt;(
+    req: UsbRequest,
+    buffer: &amp;<span class="hljs-symbol">&#x27;a</span> [<span class="hljs-built_in">u8</span>],
+    callback: <span class="hljs-built_in">Box</span>&lt;<span class="hljs-keyword">dyn</span> <span class="hljs-built_in">Fn</span>(UsbRequest, &amp;[<span class="hljs-built_in">u8</span>]) + <span class="hljs-built_in">Send</span> + <span class="hljs-symbol">&#x27;static</span>&gt;,
+) {
+    std::thread::spawn(<span class="hljs-keyword">move</span> || { <span class="hljs-comment">// simulate async usb request callback</span>
+        callback(req, buffer);
+    });
+}
+</span></span></foreignObject></svg></code></pre>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>error: `buffer` has lifetime `'a` but it needs to satisfy a `'static` lifetime requirement
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="25" data-class="invert" data-paginate="true" data-background-image="url('assets/bg.png')" data-theme="gaia" data-style="section.lead footer {
+  text-align: right;
+}
+section h2 {
+  text-align: center;
+}
+" class="invert" data-marpit-pagination="25" data-marpit-pagination-total="60" style="--class:invert;--paginate:true;--background-image:url('assets/bg.png');--theme:gaia;--style:section.lead footer {
+  text-align: right;
+}
+section h2 {
+  text-align: center;
+}
+;background-image:url('assets/bg.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>Temporal Memory Safety</h2>
+<p>Change a little bit according to the error message:</p>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">usb_request_async</span></span>(
+    req: UsbRequest,
+    buffer: &amp;<span class="hljs-symbol">&#x27;static</span> [<span class="hljs-built_in">u8</span>],
+    callback: <span class="hljs-built_in">Box</span>&lt;<span class="hljs-keyword">dyn</span> <span class="hljs-built_in">Fn</span>(UsbRequest, &amp;[<span class="hljs-built_in">u8</span>]) + <span class="hljs-built_in">Send</span> + <span class="hljs-symbol">&#x27;static</span>&gt;,
+) {
+    std::thread::spawn(<span class="hljs-keyword">move</span> || { <span class="hljs-comment">// simulate async usb request callback</span>
+        callback(req, buffer);
+    });
+}
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="26" data-class="invert" data-paginate="true" data-background-image="url('assets/bg.png')" data-theme="gaia" data-style="section.lead footer {
+  text-align: right;
+}
+section h2 {
+  text-align: center;
+}
+" class="invert" data-marpit-pagination="26" data-marpit-pagination-total="60" style="--class:invert;--paginate:true;--background-image:url('assets/bg.png');--theme:gaia;--style:section.lead footer {
+  text-align: right;
+}
+section h2 {
+  text-align: center;
+}
+;background-image:url('assets/bg.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>Temporal Memory Safety</h2>
+<p>Then use <code>usb_request_async</code>:</p>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">usb_request_cb</span></span>(req: UsbRequest, buffer: &amp;[<span class="hljs-built_in">u8</span>]) {
+    <span class="hljs-built_in">println!</span>(<span class="hljs-string">&quot;{:?}&quot;</span>, buffer);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">func</span></span>() {
+    <span class="hljs-keyword">let</span> buffer: [<span class="hljs-built_in">u8</span>; <span class="hljs-number">1024</span>] = [<span class="hljs-number">0</span>; <span class="hljs-number">1024</span>];
+    usb_request_async(UsbRequest::GetXxx, &amp;buffer, <span class="hljs-built_in">Box</span>::new(usb_request_cb));
+}
+</span></span></foreignObject></svg></code></pre>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>error: `buffer` does not live long enough
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="27" data-class="invert" data-paginate="true" data-background-image="url('assets/bg.png')" data-theme="gaia" data-style="section.lead footer {
+  text-align: right;
+}
+section h2 {
+  text-align: center;
+}
+" class="invert" data-marpit-pagination="27" data-marpit-pagination-total="60" style="--class:invert;--paginate:true;--background-image:url('assets/bg.png');--theme:gaia;--style:section.lead footer {
+  text-align: right;
+}
+section h2 {
+  text-align: center;
+}
+;background-image:url('assets/bg.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>Temporal Memory Safety</h2>
+<p>Possibly a better design:</p>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">Urb</span></span> {
+    req: UsbRequest,
+    buffer: <span class="hljs-built_in">Vec</span>&lt;<span class="hljs-built_in">u8</span>&gt;,
+    callback: <span class="hljs-built_in">Box</span>&lt;<span class="hljs-keyword">dyn</span> <span class="hljs-built_in">Fn</span>(UsbRequest, &amp;[<span class="hljs-built_in">u8</span>]) + <span class="hljs-built_in">Send</span> + <span class="hljs-symbol">&#x27;static</span>&gt;,
+}
+
+<span class="hljs-keyword">impl</span> Urb {
+    <span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">new</span></span>(req: UsbRequest, buf_size: <span class="hljs-built_in">usize</span>,
+           callback: <span class="hljs-keyword">impl</span> <span class="hljs-built_in">Fn</span>(UsbRequest, &amp;[<span class="hljs-built_in">u8</span>]) + <span class="hljs-built_in">Send</span> + <span class="hljs-symbol">&#x27;static</span>) -&gt; <span class="hljs-keyword">Self</span> {
+        <span class="hljs-keyword">Self</span> { req, buffer: <span class="hljs-built_in">vec!</span>[<span class="hljs-number">0</span>; buf_size], callback: <span class="hljs-built_in">Box</span>::new(callback) }
+    }
+}
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="28" data-class="invert" data-paginate="true" data-background-image="url('assets/bg.png')" data-theme="gaia" data-style="section.lead footer {
+  text-align: right;
+}
+section h2 {
+  text-align: center;
+}
+" class="invert" data-marpit-pagination="28" data-marpit-pagination-total="60" style="--class:invert;--paginate:true;--background-image:url('assets/bg.png');--theme:gaia;--style:section.lead footer {
+  text-align: right;
+}
+section h2 {
+  text-align: center;
+}
+;background-image:url('assets/bg.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>Temporal Memory Safety</h2>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">usb_send_urb_async</span></span>(urb: Urb) {
+    std::thread::spawn(<span class="hljs-keyword">move</span> || { <span class="hljs-comment">// simulate async usb request callback</span>
+        <span class="hljs-keyword">let</span> cb = urb.callback;
+        cb(urb.req, &amp;urb.buffer);
+    });
+}
+
+<span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">usb_request_cb</span></span>(req: UsbRequest, buffer: &amp;[<span class="hljs-built_in">u8</span>]) {
+    <span class="hljs-built_in">println!</span>(<span class="hljs-string">&quot;{:?}&quot;</span>, buffer);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">func</span></span>() {
+    <span class="hljs-keyword">let</span> urb = Urb::new(UsbRequest::GetXxx, <span class="hljs-number">1024</span>, usb_request_cb);
+    usb_send_urb_async(urb);
+}
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="29" data-class="invert" data-paginate="true" data-background-image="url('assets/bg.png')" data-theme="gaia" data-style="section.lead footer {
+  text-align: right;
+}
+section h2 {
+  text-align: center;
+}
+" class="invert" data-marpit-pagination="29" data-marpit-pagination-total="60" style="--class:invert;--paginate:true;--background-image:url('assets/bg.png');--theme:gaia;--style:section.lead footer {
+  text-align: right;
+}
+section h2 {
+  text-align: center;
+}
+;background-image:url('assets/bg.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>Thread Safety</h2>
+<p>Mutable static variables can't be accessed <strong>safely</strong>:</p>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">static</span> <span class="hljs-keyword">mut</span> BALANCE: <span class="hljs-built_in">u32</span> = <span class="hljs-number">1</span>;
+
+<span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">func</span></span>() {
+    std::thread::spawn(|| BALANCE += <span class="hljs-number">2</span>);
+    BALANCE -= <span class="hljs-number">1</span>;
+}
+</span></span></foreignObject></svg></code></pre>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>error: use of mutable static is unsafe and requires unsafe function or block
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="30" data-class="invert" data-paginate="true" data-background-image="url('assets/bg.png')" data-theme="gaia" data-style="section.lead footer {
+  text-align: right;
+}
+section h2 {
+  text-align: center;
+}
+" class="invert" data-marpit-pagination="30" data-marpit-pagination-total="60" style="--class:invert;--paginate:true;--background-image:url('assets/bg.png');--theme:gaia;--style:section.lead footer {
+  text-align: right;
+}
+section h2 {
+  text-align: center;
+}
+;background-image:url('assets/bg.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>Thread Safety</h2>
+<p>So you may want interior mutability:</p>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">static</span> BALANCE: RefCell&lt;<span class="hljs-built_in">u32</span>&gt; = RefCell::new(<span class="hljs-number">1</span>);
+
+<span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">func</span></span>() {
+    std::thread::spawn(|| BALANCE.replace_with(|&amp;<span class="hljs-keyword">mut</span> old| old + <span class="hljs-number">2</span>));
+    BALANCE.replace_with(|&amp;<span class="hljs-keyword">mut</span> old| old - <span class="hljs-number">1</span>);
+}
+</span></span></foreignObject></svg></code></pre>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>error: `RefCell&lt;u32&gt;` cannot be shared between threads safely
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="31" data-class="invert" data-paginate="true" data-background-image="url('assets/bg.png')" data-theme="gaia" data-style="section.lead footer {
+  text-align: right;
+}
+section h2 {
+  text-align: center;
+}
+" class="invert" data-marpit-pagination="31" data-marpit-pagination-total="60" style="--class:invert;--paginate:true;--background-image:url('assets/bg.png');--theme:gaia;--style:section.lead footer {
+  text-align: right;
+}
+section h2 {
+  text-align: center;
+}
+;background-image:url('assets/bg.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>Thread Safety</h2>
+<p>Variables shared between threads must impl <code>Sync</code> trait:</p>
+<ul>
+<li><code>AtomicXXX</code>, <code>Mutex</code>, Crossbeam, etc.</li>
+</ul>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">static</span> BALANCE: AtomicU32 = AtomicU32::new(<span class="hljs-number">1</span>);
+
+<span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">func</span></span>() {
+    std::thread::spawn(|| BALANCE.fetch_add(<span class="hljs-number">2</span>, Ordering::Relaxed));
+    BALANCE.fetch_sub(<span class="hljs-number">1</span>, Ordering::Relaxed);
+}
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="32" data-class="invert" data-paginate="true" data-background-image="url('assets/bg.png')" data-theme="gaia" data-style="section.lead footer {
+  text-align: right;
+}
+section h2 {
+  text-align: center;
+}
+" class="invert" data-marpit-pagination="32" data-marpit-pagination-total="60" style="--class:invert;--paginate:true;--background-image:url('assets/bg.png');--theme:gaia;--style:section.lead footer {
+  text-align: right;
+}
+section h2 {
+  text-align: center;
+}
+;background-image:url('assets/bg.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>Thread Safety</h2>
+<p>Another way to share - multiple ownership:</p>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">func</span></span>() {
+    <span class="hljs-keyword">let</span> balance = Rc::new(AtomicU32::new(<span class="hljs-number">1</span>));
+    <span class="hljs-keyword">let</span> balance_clone = balance.clone();
+    std::thread::spawn(<span class="hljs-keyword">move</span> || balance_clone.fetch_add(<span class="hljs-number">2</span>, Ordering::Relaxed));
+    balance.fetch_sub(<span class="hljs-number">1</span>, Ordering::Relaxed);
+}
+</span></span></foreignObject></svg></code></pre>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>error: `Rc&lt;AtomicU32&gt;` cannot be sent between threads safely
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="33" data-class="invert" data-paginate="true" data-background-image="url('assets/bg.png')" data-theme="gaia" data-style="section.lead footer {
+  text-align: right;
+}
+section h2 {
+  text-align: center;
+}
+" class="invert" data-marpit-pagination="33" data-marpit-pagination-total="60" style="--class:invert;--paginate:true;--background-image:url('assets/bg.png');--theme:gaia;--style:section.lead footer {
+  text-align: right;
+}
+section h2 {
+  text-align: center;
+}
+;background-image:url('assets/bg.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>Thread Safety</h2>
+<p>Variables sent across threads must impl <code>Send</code> trait:</p>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">func</span></span>() {
+    <span class="hljs-keyword">let</span> balance = Arc::new(AtomicU32::new(<span class="hljs-number">1</span>));
+    <span class="hljs-keyword">let</span> balance_clone = balance.clone();
+    std::thread::spawn(<span class="hljs-keyword">move</span> || balance_clone.fetch_add(<span class="hljs-number">2</span>, Ordering::Relaxed));
+    balance.fetch_sub(<span class="hljs-number">1</span>, Ordering::Relaxed);
+}
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="34" data-class="invert" data-paginate="true" data-background-image="url('assets/bg-outline.png')" data-theme="gaia" data-style="section.lead footer {
+  text-align: right;
+}
+section h2 {
+  text-align: center;
+}
+" class="invert" data-marpit-pagination="34" data-marpit-pagination-total="60" style="--class:invert;--paginate:true;--background-image:url('assets/bg-outline.png');--theme:gaia;--style:section.lead footer {
+  text-align: right;
+}
+section h2 {
+  text-align: center;
+}
+;background-image:url('assets/bg-outline.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>Outline</h2>
+<ul>
+<li>Language Basics</li>
+<li>Memory Safety</li>
+<li><strong>Expression ◁</strong></li>
+<li>Interoperability</li>
+<li>Performance</li>
+<li>Usability</li>
+<li>Drawbacks</li>
+<li>Summary</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="35" data-class="invert" data-paginate="true" data-background-image="url('assets/bg.png')" data-theme="gaia" data-style="section.lead footer {
+  text-align: right;
+}
+section h2 {
+  text-align: center;
+}
+" class="invert" data-marpit-pagination="35" data-marpit-pagination-total="60" style="--class:invert;--paginate:true;--background-image:url('assets/bg.png');--theme:gaia;--style:section.lead footer {
+  text-align: right;
+}
+section h2 {
+  text-align: center;
+}
+;background-image:url('assets/bg.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>Expression</h2>
+<p>Can Rust express everything that C can?</p>
+<p>In theory, YES, both are turing-complete.</p>
+<p>In practice, ALMOST, with some <code>unsafe</code> code. When you can't implement some logic in Rust, you probably should rethink the design.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="36" data-class="invert" data-paginate="true" data-background-image="url('assets/bg.png')" data-theme="gaia" data-style="section.lead footer {
+  text-align: right;
+}
+section h2 {
+  text-align: center;
+}
+" class="invert" data-marpit-pagination="36" data-marpit-pagination-total="60" style="--class:invert;--paginate:true;--background-image:url('assets/bg.png');--theme:gaia;--style:section.lead footer {
+  text-align: right;
+}
+section h2 {
+  text-align: center;
+}
+;background-image:url('assets/bg.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>Low Level Programming</h2>
+<p>Booting:</p>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>global_asm!(<span class="hljs-built_in">include_str!</span>(<span class="hljs-string">&quot;entry.asm&quot;</span>));
+
+<span class="hljs-meta">#[no_mangle]</span>
+<span class="hljs-meta">#[link_section = <span class="hljs-meta-string">&quot;.text.boot&quot;</span>]</span>
+<span class="hljs-keyword">extern</span> <span class="hljs-string">&quot;C&quot;</span> <span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">_start_rust</span></span>() -&gt; ! {
+    <span class="hljs-meta">#[link_section = <span class="hljs-meta-string">&quot;.data.boot&quot;</span>]</span>
+    <span class="hljs-keyword">static</span> START: spin::Once&lt;()&gt; = spin::Once::new();
+    START.call_once(|| { clear_bss(); memory::create_boot_pt(); });
+    memory::enable_mmu();
+    <span class="hljs-keyword">unsafe</span> { _start_kernel() }
+}
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="37" data-class="invert" data-paginate="true" data-background-image="url('assets/bg.png')" data-theme="gaia" data-style="section.lead footer {
+  text-align: right;
+}
+section h2 {
+  text-align: center;
+}
+" class="invert" data-marpit-pagination="37" data-marpit-pagination-total="60" style="--class:invert;--paginate:true;--background-image:url('assets/bg.png');--theme:gaia;--style:section.lead footer {
+  text-align: right;
+}
+section h2 {
+  text-align: center;
+}
+;background-image:url('assets/bg.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>Low Level Programming</h2>
+<p>Accessing system registers:</p>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-meta">#[link_section = <span class="hljs-meta-string">&quot;.text.boot&quot;</span>]</span>
+<span class="hljs-keyword">pub</span> <span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">enable_mmu</span></span>() {
+    <span class="hljs-comment">// set memory attribute indirection</span>
+    MAIR_EL1.write(...);
+    <span class="hljs-comment">// configure stage 1 of the EL1 translation regime</span>
+    TCR_EL1.write(...);
+    <span class="hljs-comment">// set both TTBR0_EL1 and TTBR1_EL1</span>
+    <span class="hljs-keyword">let</span> pgd_frame = PhysFrame::&lt;Size4KiB&gt;::of_addr(<span class="hljs-keyword">unsafe</span> { &amp;BOOT_PGD <span class="hljs-keyword">as</span> *<span class="hljs-keyword">const</span> PageTable } <span class="hljs-keyword">as</span> <span class="hljs-built_in">u64</span>);
+    translation::ttbr_el1_write(<span class="hljs-number">0</span>, pgd_frame);
+    translation::ttbr_el1_write(<span class="hljs-number">1</span>, pgd_frame);
+    translation::local_invalidate_tlb_all();
+    <span class="hljs-comment">// enable MMU</span>
+    SCTLR_EL1.modify(SCTLR_EL1::M::Enable + SCTLR_EL1::C::Cacheable + SCTLR_EL1::I::Cacheable);
+    <span class="hljs-comment">// ensure that MMU is enabled before the next instruction</span>
+    <span class="hljs-keyword">unsafe</span> { barrier::isb() }
+}
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="38" data-class="invert" data-paginate="true" data-background-image="url('assets/bg.png')" data-theme="gaia" data-style="section.lead footer {
+  text-align: right;
+}
+section h2 {
+  text-align: center;
+}
+" class="invert" data-marpit-pagination="38" data-marpit-pagination-total="60" style="--class:invert;--paginate:true;--background-image:url('assets/bg.png');--theme:gaia;--style:section.lead footer {
+  text-align: right;
+}
+section h2 {
+  text-align: center;
+}
+;background-image:url('assets/bg.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>Low Level Programming</h2>
+<p>Driver:</p>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">handle_irq</span></span>(&amp;<span class="hljs-keyword">self</span>) {
+    <span class="hljs-keyword">loop</span> {
+        <span class="hljs-keyword">let</span> irqstat = <span class="hljs-keyword">self</span>.read_cpu_reg(GICC_IAR); <span class="hljs-comment">/* MMIO inside */</span>
+        <span class="hljs-keyword">let</span> irqnr = irqstat &amp; GICC_IAR_INT_ID_MASK;
+        <span class="hljs-keyword">match</span> irqnr {
+            <span class="hljs-number">0</span>..=<span class="hljs-number">15</span> =&gt; crate::irq::handle_inter_processor(irqnr),
+            <span class="hljs-number">16</span>..=<span class="hljs-number">31</span> =&gt; crate::irq::handle_local(irqnr - <span class="hljs-number">16</span>),
+            <span class="hljs-number">32</span>..=<span class="hljs-number">1020</span> =&gt; crate::irq::handle_shared(irqnr - <span class="hljs-number">32</span>),
+            _ =&gt; <span class="hljs-keyword">break</span>,
+        }
+        <span class="hljs-keyword">self</span>.write_cpu_reg(GICC_EOIR, irqstat);
+    }
+}
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="39" data-class="invert" data-paginate="true" data-background-image="url('assets/bg.png')" data-theme="gaia" data-style="section.lead footer {
+  text-align: right;
+}
+section h2 {
+  text-align: center;
+}
+" class="invert" data-marpit-pagination="39" data-marpit-pagination-total="60" style="--class:invert;--paginate:true;--background-image:url('assets/bg.png');--theme:gaia;--style:section.lead footer {
+  text-align: right;
+}
+section h2 {
+  text-align: center;
+}
+;background-image:url('assets/bg.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>More Features</h2>
+<ul>
+<li>Crate &amp; Module: better modularity</li>
+<li>Ownership &amp; Lifetime: memory safety</li>
+<li>Trait: generic programming</li>
+<li>Result &amp; Error: better error handling</li>
+<li>Closure &amp; Iterator: functional programming</li>
+<li>Macro: meta programming</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="40" data-class="invert" data-paginate="true" data-background-image="url('assets/bg.png')" data-theme="gaia" data-style="section.lead footer {
+  text-align: right;
+}
+section h2 {
+  text-align: center;
+}
+" class="invert" data-marpit-pagination="40" data-marpit-pagination-total="60" style="--class:invert;--paginate:true;--background-image:url('assets/bg.png');--theme:gaia;--style:section.lead footer {
+  text-align: right;
+}
+section h2 {
+  text-align: center;
+}
+;background-image:url('assets/bg.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>More Features</h2>
+<p>Traits in drivers:</p>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">pub</span> <span class="hljs-class"><span class="hljs-keyword">trait</span> <span class="hljs-title">IrqChip</span></span> {
+    <span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">enable_local_irq</span></span>(&amp;<span class="hljs-keyword">self</span>, ppi: <span class="hljs-built_in">u32</span>);
+    <span class="hljs-comment">// ...</span>
+    <span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">handle_irq</span></span>(&amp;<span class="hljs-keyword">self</span>);
+}
+
+<span class="hljs-keyword">pub</span> <span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">Gic</span></span> { <span class="hljs-comment">/* ... */</span> }
+
+<span class="hljs-keyword">impl</span> IrqChip <span class="hljs-keyword">for</span> Gic {
+    <span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">enable_local_irq</span></span>(&amp;<span class="hljs-keyword">self</span>, ppi: <span class="hljs-built_in">u32</span>) { <span class="hljs-comment">/* ... */</span> }
+    <span class="hljs-comment">// ...</span>
+    <span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">handle_irq</span></span>(&amp;<span class="hljs-keyword">self</span>) { <span class="hljs-comment">/* ... */</span> }
+}
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="41" data-class="invert" data-paginate="true" data-background-image="url('assets/bg.png')" data-theme="gaia" data-style="section.lead footer {
+  text-align: right;
+}
+section h2 {
+  text-align: center;
+}
+" class="invert" data-marpit-pagination="41" data-marpit-pagination-total="60" style="--class:invert;--paginate:true;--background-image:url('assets/bg.png');--theme:gaia;--style:section.lead footer {
+  text-align: right;
+}
+section h2 {
+  text-align: center;
+}
+;background-image:url('assets/bg.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>More Features</h2>
+<p>Traits in memory management:</p>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">pub</span> <span class="hljs-class"><span class="hljs-keyword">trait</span> <span class="hljs-title">HardwareMemory</span></span> {
+    <span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">memory_get_available_ram</span></span>() -&gt; <span class="hljs-built_in">Vec</span>&lt;Range&lt;PhysAddr&gt;&gt;;
+
+    <span class="hljs-class"><span class="hljs-keyword">type</span> <span class="hljs-title">PageTable</span></span>: PageTable;
+}
+
+<span class="hljs-keyword">pub</span> <span class="hljs-class"><span class="hljs-keyword">trait</span> <span class="hljs-title">PageTable</span></span> {
+    <span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">new</span></span>(is_kernel: <span class="hljs-built_in">bool</span>) -&gt; <span class="hljs-keyword">Self</span>;
+    <span class="hljs-keyword">unsafe</span> <span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">map_kernel</span></span>(&amp;<span class="hljs-keyword">mut</span> <span class="hljs-keyword">self</span>) -&gt; KernResult&lt;()&gt;;
+    <span class="hljs-keyword">unsafe</span> <span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">map</span></span>(&amp;<span class="hljs-keyword">mut</span> <span class="hljs-keyword">self</span>, va_range: Range&lt;VirtAddr&gt;, pa: PhysAddr, ...) -&gt; KernResult&lt;()&gt;;
+}
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="42" data-class="invert" data-paginate="true" data-background-image="url('assets/bg.png')" data-theme="gaia" data-style="section.lead footer {
+  text-align: right;
+}
+section h2 {
+  text-align: center;
+}
+" class="invert" data-marpit-pagination="42" data-marpit-pagination-total="60" style="--class:invert;--paginate:true;--background-image:url('assets/bg.png');--theme:gaia;--style:section.lead footer {
+  text-align: right;
+}
+section h2 {
+  text-align: center;
+}
+;background-image:url('assets/bg.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>More Features</h2>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">impl</span> HardwareMemory <span class="hljs-keyword">for</span> hw {
+    <span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">memory_get_available_ram</span></span>() -&gt; <span class="hljs-built_in">Vec</span>&lt;Range&lt;PhysAddr&gt;&gt; { <span class="hljs-comment">/* ... */</span> }
+
+    <span class="hljs-class"><span class="hljs-keyword">type</span> <span class="hljs-title">PageTable</span></span> = PageTableImpl;
+}
+
+<span class="hljs-keyword">pub</span> <span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">PageTableImpl</span></span> { <span class="hljs-comment">/* ... */</span> }
+
+<span class="hljs-keyword">impl</span> PageTable <span class="hljs-keyword">for</span> PageTableImpl { <span class="hljs-comment">/* ... */</span> }
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="43" data-class="invert" data-paginate="true" data-background-image="url('assets/bg.png')" data-theme="gaia" data-style="section.lead footer {
+  text-align: right;
+}
+section h2 {
+  text-align: center;
+}
+" class="invert" data-marpit-pagination="43" data-marpit-pagination-total="60" style="--class:invert;--paginate:true;--background-image:url('assets/bg.png');--theme:gaia;--style:section.lead footer {
+  text-align: right;
+}
+section h2 {
+  text-align: center;
+}
+;background-image:url('assets/bg.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>More Features</h2>
+<p>Functional programming:</p>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">pub</span>(<span class="hljs-keyword">super</span>) <span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">init</span></span>() {
+    <span class="hljs-keyword">let</span> <span class="hljs-keyword">mut</span> allocator = FRAME_ALLOCATOR.lock();
+    hw::memory_get_available_ram().iter().for_each(|range| {
+        <span class="hljs-keyword">let</span> start_pfn = phys_to_pfn(align_up(range.start));
+        <span class="hljs-keyword">let</span> end_pfn = phys_to_pfn(align_down(range.end));
+        allocator.add_frame(start_pfn, end_pfn);
+    })
+}
+
+<span class="hljs-keyword">pub</span> <span class="hljs-keyword">unsafe</span> <span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">alloc_frame</span></span>() -&gt; <span class="hljs-built_in">Option</span>&lt;PhysAddr&gt; {
+    FRAME_ALLOCATOR.lock().alloc(<span class="hljs-number">1</span>).map(pfn_to_phys)
+}
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="44" data-class="invert" data-paginate="true" data-background-image="url('assets/bg.png')" data-theme="gaia" data-style="section.lead footer {
+  text-align: right;
+}
+section h2 {
+  text-align: center;
+}
+" class="invert" data-marpit-pagination="44" data-marpit-pagination-total="60" style="--class:invert;--paginate:true;--background-image:url('assets/bg.png');--theme:gaia;--style:section.lead footer {
+  text-align: right;
+}
+section h2 {
+  text-align: center;
+}
+;background-image:url('assets/bg.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>More Features</h2>
+<p>DSL supported by macro:</p>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>register_bitfields! {<span class="hljs-built_in">u64</span>,
+    <span class="hljs-keyword">pub</span> SCTLR_EL1 [
+        I   OFFSET(<span class="hljs-number">12</span>) NUMBITS(<span class="hljs-number">1</span>) [ NonCacheable = <span class="hljs-number">0</span>, Cacheable = <span class="hljs-number">1</span> ],
+        NAA OFFSET(<span class="hljs-number">6</span>)  NUMBITS(<span class="hljs-number">1</span>) [ Disable = <span class="hljs-number">0</span>, Enable = <span class="hljs-number">1</span> ],
+        SA0 OFFSET(<span class="hljs-number">4</span>)  NUMBITS(<span class="hljs-number">1</span>) [ Disable = <span class="hljs-number">0</span>, Enable = <span class="hljs-number">1</span> ],
+        SA  OFFSET(<span class="hljs-number">3</span>)  NUMBITS(<span class="hljs-number">1</span>) [ Disable = <span class="hljs-number">0</span>, Enable = <span class="hljs-number">1</span> ],
+        C   OFFSET(<span class="hljs-number">2</span>)  NUMBITS(<span class="hljs-number">1</span>) [ NonCacheable = <span class="hljs-number">0</span>, Cacheable = <span class="hljs-number">1</span> ],
+        <span class="hljs-comment">// ...</span>
+    ]
+}
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="45" data-class="invert" data-paginate="true" data-background-image="url('assets/bg-outline.png')" data-theme="gaia" data-style="section.lead footer {
+  text-align: right;
+}
+section h2 {
+  text-align: center;
+}
+" class="invert" data-marpit-pagination="45" data-marpit-pagination-total="60" style="--class:invert;--paginate:true;--background-image:url('assets/bg-outline.png');--theme:gaia;--style:section.lead footer {
+  text-align: right;
+}
+section h2 {
+  text-align: center;
+}
+;background-image:url('assets/bg-outline.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>Outline</h2>
+<ul>
+<li>Language Basics</li>
+<li>Memory Safety</li>
+<li>Expression</li>
+<li><strong>Interoperability ◁</strong></li>
+<li>Performance</li>
+<li>Usability</li>
+<li>Drawbacks</li>
+<li>Summary</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="46" data-class="invert" data-paginate="true" data-background-image="url('assets/bg.png')" data-theme="gaia" data-style="section.lead footer {
+  text-align: right;
+}
+section h2 {
+  text-align: center;
+}
+" class="invert" data-marpit-pagination="46" data-marpit-pagination-total="60" style="--class:invert;--paginate:true;--background-image:url('assets/bg.png');--theme:gaia;--style:section.lead footer {
+  text-align: right;
+}
+section h2 {
+  text-align: center;
+}
+;background-image:url('assets/bg.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>Interoperability</h2>
+<p>Call C from Rust:</p>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">extern</span> <span class="hljs-string">&quot;C&quot;</span> {
+    <span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">some_function_in_c</span></span>(buf: *<span class="hljs-keyword">mut</span> <span class="hljs-built_in">u8</span>, n: <span class="hljs-built_in">usize</span>) -&gt; <span class="hljs-built_in">usize</span>;
+}
+
+<span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">func</span></span>() {
+    <span class="hljs-keyword">let</span> <span class="hljs-keyword">mut</span> buf = [<span class="hljs-number">0u8</span>; <span class="hljs-number">1024</span>];
+    <span class="hljs-keyword">let</span> buf_raw_ptr = &amp;<span class="hljs-keyword">mut</span> buf[<span class="hljs-number">0</span>] <span class="hljs-keyword">as</span> *<span class="hljs-keyword">mut</span> <span class="hljs-built_in">u8</span>;
+    <span class="hljs-keyword">let</span> ret = <span class="hljs-keyword">unsafe</span> { some_function_in_c(buf_raw_ptr, buf.len()) };
+}
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="47" data-class="invert" data-paginate="true" data-background-image="url('assets/bg.png')" data-theme="gaia" data-style="section.lead footer {
+  text-align: right;
+}
+section h2 {
+  text-align: center;
+}
+" class="invert" data-marpit-pagination="47" data-marpit-pagination-total="60" style="--class:invert;--paginate:true;--background-image:url('assets/bg.png');--theme:gaia;--style:section.lead footer {
+  text-align: right;
+}
+section h2 {
+  text-align: center;
+}
+;background-image:url('assets/bg.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>Interoperability</h2>
+<p>Call Rust from C:</p>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-meta">#[no_mangle]</span>
+<span class="hljs-keyword">extern</span> <span class="hljs-string">&quot;C&quot;</span> <span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">some_function_in_rust</span></span>(buf: *<span class="hljs-keyword">mut</span> <span class="hljs-built_in">u8</span>, n: <span class="hljs-built_in">usize</span>) -&gt; <span class="hljs-built_in">usize</span> {
+    <span class="hljs-keyword">let</span> buf = <span class="hljs-keyword">unsafe</span> { core::slice::from_raw_parts_mut(buf, n) };
+    <span class="hljs-built_in">println!</span>(<span class="hljs-string">&quot;{:?}&quot;</span>, buf); buf.len()
+}
+</span></span></foreignObject></svg></code></pre>
+<pre><code class="language-c"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-function"><span class="hljs-keyword">extern</span> <span class="hljs-keyword">size_t</span> <span class="hljs-title">some_function_in_rust</span><span class="hljs-params">(<span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">char</span> *buf, <span class="hljs-keyword">size_t</span> n)</span></span>;
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">func</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">char</span> buf[<span class="hljs-number">1024</span>];
+    some_function_in_rust(buf, <span class="hljs-number">1024</span>);
+}
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="48" data-class="invert" data-paginate="true" data-background-image="url('assets/bg.png')" data-theme="gaia" data-style="section.lead footer {
+  text-align: right;
+}
+section h2 {
+  text-align: center;
+}
+" class="invert" data-marpit-pagination="48" data-marpit-pagination-total="60" style="--class:invert;--paginate:true;--background-image:url('assets/bg.png');--theme:gaia;--style:section.lead footer {
+  text-align: right;
+}
+section h2 {
+  text-align: center;
+}
+;background-image:url('assets/bg.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>Interoperability</h2>
+<ul>
+<li>Chromium: <a href="https://www.chromium.org/Home/chromium-security/memory-safety/rust-and-c-interoperability">Rust and C++ interoperability</a></li>
+<li>Firefox: <a href="https://manishearth.github.io/blog/2021/02/22/integrating-rust-and-c-plus-plus-in-firefox/">Integrating Rust and C++ in Firefox</a></li>
+<li>Android: <a href="https://security.googleblog.com/2021/06/rustc-interop-in-android-platform.html">Rust/C++ interop in the Android Platform</a></li>
+<li>Linux: <a href="https://lwn.net/Articles/829858/">Supporting Linux kernel development in Rust</a></li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="49" data-class="invert" data-paginate="true" data-background-image="url('assets/bg-outline.png')" data-theme="gaia" data-style="section.lead footer {
+  text-align: right;
+}
+section h2 {
+  text-align: center;
+}
+" class="invert" data-marpit-pagination="49" data-marpit-pagination-total="60" style="--class:invert;--paginate:true;--background-image:url('assets/bg-outline.png');--theme:gaia;--style:section.lead footer {
+  text-align: right;
+}
+section h2 {
+  text-align: center;
+}
+;background-image:url('assets/bg-outline.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>Outline</h2>
+<ul>
+<li>Language Basics</li>
+<li>Memory Safety</li>
+<li>Expression</li>
+<li>Interoperability</li>
+<li><strong>Performance ◁</strong></li>
+<li>Usability</li>
+<li>Drawbacks</li>
+<li>Summary</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="50" data-class="invert" data-paginate="true" data-background-image="url('assets/bg.png')" data-theme="gaia" data-style="section.lead footer {
+  text-align: right;
+}
+section h2 {
+  text-align: center;
+}
+" class="invert" data-marpit-pagination="50" data-marpit-pagination-total="60" style="--class:invert;--paginate:true;--background-image:url('assets/bg.png');--theme:gaia;--style:section.lead footer {
+  text-align: right;
+}
+section h2 {
+  text-align: center;
+}
+;background-image:url('assets/bg.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>Performance</h2>
+<p>According to <a href="https://benchmarksgame-team.pages.debian.net/benchmarksgame/fastest/rust.html">The Computer Language Benchmarks Game</a>, Rust achieves same or even better performance than C and C++.</p>
+<p>Features that make Rust fast:</p>
+<ul>
+<li><a href="http://blog.llvm.org/2019/09/closing-gap-cross-language-lto-between.html">Cross-language LTO</a></li>
+<li>Zero-cost abstractions, e.g. <a href="https://doc.rust-lang.org/book/ch13-04-performance.html">Iterators</a></li>
+<li>Faster impl for single-threaded context, e.g. <a href="https://doc.rust-lang.org/alloc/rc/">Rc</a> vs <a href="https://doc.rust-lang.org/alloc/sync/struct.Arc.html">Arc</a></li>
+<li>Carefully implemented builtin data structures, e.g. <a href="https://doc.rust-lang.org/nightly/alloc/collections/btree_map/struct.BTreeMap.html">BTreeMap</a></li>
+<li>......</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="51" data-class="invert" data-paginate="true" data-background-image="url('assets/bg-outline.png')" data-theme="gaia" data-style="section.lead footer {
+  text-align: right;
+}
+section h2 {
+  text-align: center;
+}
+" class="invert" data-marpit-pagination="51" data-marpit-pagination-total="60" style="--class:invert;--paginate:true;--background-image:url('assets/bg-outline.png');--theme:gaia;--style:section.lead footer {
+  text-align: right;
+}
+section h2 {
+  text-align: center;
+}
+;background-image:url('assets/bg-outline.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>Outline</h2>
+<ul>
+<li>Language Basics</li>
+<li>Memory Safety</li>
+<li>Expression</li>
+<li>Interoperability</li>
+<li>Performance</li>
+<li><strong>Usability ◁</strong></li>
+<li>Drawbacks</li>
+<li>Summary</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="52" data-class="invert" data-paginate="true" data-background-image="url('assets/bg.png')" data-theme="gaia" data-style="section.lead footer {
+  text-align: right;
+}
+section h2 {
+  text-align: center;
+}
+" class="invert" data-marpit-pagination="52" data-marpit-pagination-total="60" style="--class:invert;--paginate:true;--background-image:url('assets/bg.png');--theme:gaia;--style:section.lead footer {
+  text-align: right;
+}
+section h2 {
+  text-align: center;
+}
+;background-image:url('assets/bg.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>Usability</h2>
+<p>Tools:</p>
+<ul>
+<li><a href="https://rust-lang.github.io/rustup/">Rustup</a> makes toolchain management easy</li>
+<li><a href="https://doc.rust-lang.org/cargo/">Cargo</a> makes dependency management easy</li>
+<li><a href="https://github.com/rust-analyzer/rust-analyzer">rust-analyzer</a> is an excellent language server</li>
+<li><a href="https://doc.rust-lang.org/rustc/what-is-rustc.html">rustc</a> produces comprehensible error messages</li>
+<li><a href="https://github.com/rust-lang/rustfmt">rustfmt</a> formats Rust code according to style guide</li>
+<li><a href="https://github.com/rust-lang/rust-clippy">rust-clippy</a> can catch common mistakes in Rust code</li>
+<li><a href="https://rust-lang.github.io/rust-bindgen/">bindgen</a> helps generate Rust FFI bindings to C and C++ libraries</li>
+<li>......</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="53" data-class="invert" data-paginate="true" data-background-image="url('assets/bg.png')" data-theme="gaia" data-style="section.lead footer {
+  text-align: right;
+}
+section h2 {
+  text-align: center;
+}
+" class="invert" data-marpit-pagination="53" data-marpit-pagination-total="60" style="--class:invert;--paginate:true;--background-image:url('assets/bg.png');--theme:gaia;--style:section.lead footer {
+  text-align: right;
+}
+section h2 {
+  text-align: center;
+}
+;background-image:url('assets/bg.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>Usability</h2>
+<p>Dependency management:</p>
+<pre><code class="language-toml"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-section">[dependencies]</span>
+<span class="hljs-attr">spin</span> = <span class="hljs-string">&quot;0.7.0&quot;</span>
+<span class="hljs-attr">buddy_system_allocator</span> = { git = <span class="hljs-string">&quot;https://github.com/richardchien/buddy_system_allocator.git&quot;</span> }
+<span class="hljs-attr">log</span> = <span class="hljs-string">&quot;0.4.0&quot;</span>
+<span class="hljs-attr">lazy_static</span> = { version = <span class="hljs-string">&quot;1.4.0&quot;</span>, features = [<span class="hljs-string">&quot;spin_no_std&quot;</span>] }
+<span class="hljs-attr">bitflags</span> = <span class="hljs-string">&quot;1.2.1&quot;</span>
+
+<span class="hljs-section">[target.&#x27;cfg(target_arch = &quot;aarch64&quot;)&#x27;.dependencies]</span>
+<span class="hljs-attr">aarch64</span> = { git = <span class="hljs-string">&quot;https://github.com/richardchien/aarch64&quot;</span>, rev = <span class="hljs-string">&quot;5dc2a13&quot;</span> }
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="54" data-class="invert" data-paginate="true" data-background-image="url('assets/bg.png')" data-theme="gaia" data-style="section.lead footer {
+  text-align: right;
+}
+section h2 {
+  text-align: center;
+}
+" class="invert" data-marpit-pagination="54" data-marpit-pagination-total="60" style="--class:invert;--paginate:true;--background-image:url('assets/bg.png');--theme:gaia;--style:section.lead footer {
+  text-align: right;
+}
+section h2 {
+  text-align: center;
+}
+;background-image:url('assets/bg.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>Usability</h2>
+<p><code>Debug</code> trait for easy debugging:</p>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-meta">#[repr(u8)]</span>
+<span class="hljs-meta">#[derive(Debug)]</span>
+<span class="hljs-class"><span class="hljs-keyword">enum</span> <span class="hljs-title">IntType</span></span> {
+    SyncEl1t = <span class="hljs-number">1</span>,
+    IrqEl1t = <span class="hljs-number">2</span>,
+    <span class="hljs-comment">// ...</span>
+}
+
+<span class="hljs-meta">#[no_mangle]</span>
+<span class="hljs-keyword">extern</span> <span class="hljs-string">&quot;C&quot;</span> <span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">_handle_interrupt</span></span>(int_type: IntType) {
+    <span class="hljs-built_in">println!</span>(<span class="hljs-string">&quot;Interrupt occurred, type: {:?}&quot;</span>, int_type);
+}
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="55" data-class="invert" data-paginate="true" data-background-image="url('assets/bg-outline.png')" data-theme="gaia" data-style="section.lead footer {
+  text-align: right;
+}
+section h2 {
+  text-align: center;
+}
+" class="invert" data-marpit-pagination="55" data-marpit-pagination-total="60" style="--class:invert;--paginate:true;--background-image:url('assets/bg-outline.png');--theme:gaia;--style:section.lead footer {
+  text-align: right;
+}
+section h2 {
+  text-align: center;
+}
+;background-image:url('assets/bg-outline.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>Outline</h2>
+<ul>
+<li>Language Basics</li>
+<li>Memory Safety</li>
+<li>Expression</li>
+<li>Interoperability</li>
+<li>Performance</li>
+<li>Usability</li>
+<li><strong>Drawbacks ◁</strong></li>
+<li>Summary</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="56" data-class="invert" data-paginate="true" data-background-image="url('assets/bg.png')" data-theme="gaia" data-style="section.lead footer {
+  text-align: right;
+}
+section h2 {
+  text-align: center;
+}
+" class="invert" data-marpit-pagination="56" data-marpit-pagination-total="60" style="--class:invert;--paginate:true;--background-image:url('assets/bg.png');--theme:gaia;--style:section.lead footer {
+  text-align: right;
+}
+section h2 {
+  text-align: center;
+}
+;background-image:url('assets/bg.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>Drawbacks</h2>
+<ul>
+<li>Steep learning curve</li>
+<li>Many unstable features</li>
+<li>Low speed compilation</li>
+<li>Small ecosystem (but growing quickly)</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="57" data-class="invert" data-paginate="true" data-background-image="url('assets/bg-outline.png')" data-theme="gaia" data-style="section.lead footer {
+  text-align: right;
+}
+section h2 {
+  text-align: center;
+}
+" class="invert" data-marpit-pagination="57" data-marpit-pagination-total="60" style="--class:invert;--paginate:true;--background-image:url('assets/bg-outline.png');--theme:gaia;--style:section.lead footer {
+  text-align: right;
+}
+section h2 {
+  text-align: center;
+}
+;background-image:url('assets/bg-outline.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>Outline</h2>
+<ul>
+<li>Language Basics</li>
+<li>Memory Safety</li>
+<li>Expression</li>
+<li>Interoperability</li>
+<li>Performance</li>
+<li>Usability</li>
+<li>Drawbacks</li>
+<li><strong>Summary ◁</strong></li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="58" data-class="invert" data-paginate="true" data-background-image="url('assets/bg.png')" data-theme="gaia" data-style="section.lead footer {
+  text-align: right;
+}
+section h2 {
+  text-align: center;
+}
+" class="invert" data-marpit-pagination="58" data-marpit-pagination-total="60" style="--class:invert;--paginate:true;--background-image:url('assets/bg.png');--theme:gaia;--style:section.lead footer {
+  text-align: right;
+}
+section h2 {
+  text-align: center;
+}
+;background-image:url('assets/bg.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>Summary</h2>
+<ul>
+<li>Safe by default</li>
+<li>Rich language features without need for <code>std</code></li>
+<li>Harder to write, but easier to be correct once compiled</li>
+<li>Easy-to-use tools</li>
+<li>Backed by big companies: Google, Microsoft, Huawei, Mozilla, ...</li>
+<li>Future seems bright</li>
+</ul>
+<p>Special thanks to <a href="https://github.com/skyzh">Alex Chi</a> for reviewing the slides.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="59" data-class="invert" data-paginate="true" data-background-image="url('assets/bg.png')" data-theme="gaia" data-style="section.lead footer {
+  text-align: right;
+}
+section h2 {
+  text-align: center;
+}
+" class="invert" data-marpit-pagination="59" data-marpit-pagination-total="60" style="--class:invert;--paginate:true;--background-image:url('assets/bg.png');--theme:gaia;--style:section.lead footer {
+  text-align: right;
+}
+section h2 {
+  text-align: center;
+}
+;background-image:url('assets/bg.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>References</h2>
+<ul>
+<li><a href="https://doc.rust-lang.org/book/">The Rust Programming Language</a> &amp; <a href="https://doc.rust-lang.org/nomicon/">The Rustonomicon</a></li>
+<li><a href="https://www.youtube.com/watch?v=DnT-LUQgc7s">Considering Rust</a> by Jon Gjengset</li>
+<li><a href="https://www.youtube.com/watch?v=RyY01fRyGhM">Writing Linux Kernel Modules in Safe Rust</a> by Geoffrey Thomas &amp; Alex Gaynor</li>
+<li><a href="https://hacks.mozilla.org/rewriting-a-browser-component-in-rust/">Implications of Rewriting a Browser Component in Rust</a> by Diane Hosfelt</li>
+<li><a href="https://kornel.ski/rust-c-speed">Speed of Rust vs C</a> by kornelski</li>
+<li><a href="https://pvs-studio.com/en/blog/posts/0733/">C++ Is Faster and Safer Than Rust: Benchmarked by Yandex</a> by Roman Proskuryakov</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="60" data-class="invert" data-paginate="true" data-background-image="url('assets/bg.png')" data-theme="gaia" data-style="section.lead footer {
+  text-align: right;
+}
+section h2 {
+  text-align: center;
+}
+" class="invert" data-marpit-pagination="60" data-marpit-pagination-total="60" style="--class:invert;--paginate:true;--background-image:url('assets/bg.png');--theme:gaia;--style:section.lead footer {
+  text-align: right;
+}
+section h2 {
+  text-align: center;
+}
+;background-image:url('assets/bg.png');background-position:center;background-repeat:no-repeat;background-size:cover;">
+<h2>OSes Written in Rust</h2>
+<ul>
+<li><a href="https://www.redox-os.org/">Redox</a>: A Unix-like OS with a modern microkernel</li>
+<li><a href="https://www.tockos.org/">Tock</a>: An embedded OS for low-memory and low-power microcontrollers</li>
+<li><a href="https://mars-research.github.io/redleaf">RedLeaf</a>: A new OS aimed at leveraging Rust language features for developing safe systems</li>
+<li><a href="https://github.com/theseus-os/Theseus">Theseus</a>: A new OS for experimenting with novel OS structure, better state management, and how to shift OS responsibilities like resource management into compiler</li>
+<li><a href="https://github.com/rcore-os/rCore">rCore</a>: A teaching OS based on <a href="https://github.com/phil-opp/blog_os">BlogOS</a>, providing a subset of Linux syscalls</li>
+</ul>
+</section>
+<script>!function(){"use strict";const t="marpitSVGPolyfill:setZoomFactor,",e=Symbol();let r,o;function n(n){const i="object"==typeof n&&n.target||document,a="object"==typeof n?n.zoom:n;window[e]||(Object.defineProperty(window,e,{configurable:!0,value:!0}),window.addEventListener("message",(({data:e,origin:r})=>{if(r===window.origin)try{if(e&&"string"==typeof e&&e.startsWith(t)){const[,t]=e.split(","),r=Number.parseFloat(t);Number.isNaN(r)||(o=r)}}catch(t){console.error(t)}})));let l=!1;Array.from(i.querySelectorAll("svg[data-marpit-svg]"),(t=>{var e,n,i,s;t.style.transform||(t.style.transform="translateZ(0)");const c=a||o||t.currentScale||1;r!==c&&(r=c,l=c);const d=t.getBoundingClientRect(),{length:u}=t.children;for(let r=0;r<u;r+=1){const o=t.children[r],a=o.getScreenCTM();if(a){const t=null!==(n=null===(e=o.x)||void 0===e?void 0:e.baseVal.value)&&void 0!==n?n:0,r=null!==(s=null===(i=o.y)||void 0===i?void 0:i.baseVal.value)&&void 0!==s?s:0,l=o.firstElementChild,{style:u}=l;u.transformOrigin||(u.transformOrigin=`${-t}px ${-r}px`),u.transform=`scale(${c}) matrix(${a.a}, ${a.b}, ${a.c}, ${a.d}, ${a.e-d.left}, ${a.f-d.top}) translateZ(0.0001px)`}}})),!1!==l&&Array.from(i.querySelectorAll("iframe"),(({contentWindow:e})=>{null==e||e.postMessage(`${t}${l}`,"null"===window.origin?"*":window.origin)}))}r=1,o=void 0;const i=(t,e,r)=>{if(t.getAttribute(e)!==r)return t.setAttribute(e,r),!0};function a({once:t=!1,target:e=document}={}){const r="Apple Computer, Inc."===navigator.vendor?[n]:[];let o=!t;const a=()=>{for(const t of r)t({target:e});!function(t=document){Array.from(t.querySelectorAll('svg[data-marp-fitting="svg"]'),(t=>{var e;const r=t.firstChild,o=r.firstChild,{scrollWidth:n,scrollHeight:a}=o;let l,s=1;if(t.hasAttribute("data-marp-fitting-code")&&(l=null===(e=t.parentElement)||void 0===e?void 0:e.parentElement),t.hasAttribute("data-marp-fitting-math")&&(l=t.parentElement),l){const t=getComputedStyle(l),e=Math.ceil(l.clientWidth-parseFloat(t.paddingLeft||"0")-parseFloat(t.paddingRight||"0"));e&&(s=e)}const c=Math.max(n,s),d=Math.max(a,1),u=`0 0 ${c} ${d}`;i(r,"width",`${c}`),i(r,"height",`${d}`),i(t,"preserveAspectRatio",getComputedStyle(t).getPropertyValue("--preserve-aspect-ratio")||"xMinYMin meet"),i(t,"viewBox",u)&&t.classList.toggle("__reflow__")}))}(e),o&&window.requestAnimationFrame(a)};return a(),()=>{o=!1}}const l=Symbol(),s=document.currentScript;((t=document)=>{if("undefined"==typeof window)throw new Error("Marp Core's browser script is valid only in browser context.");if(t[l])return t[l];const e=a({target:t}),r=()=>{e(),delete t[l]};Object.defineProperty(t,l,{configurable:!0,value:r})})(s?s.getRootNode():document)}();
+</script></foreignObject></svg></div><script>/*!! License: https://unpkg.com/@marp-team/marp-cli@1.1.1/lib/bespoke.js.LICENSE.txt */
+!function(){"use strict";var e=function(e,t){var n,r=1===(e.parent||e).nodeType?e.parent||e:document.querySelector(e.parent||e),a=[].filter.call("string"==typeof e.slides?r.querySelectorAll(e.slides):e.slides||r.children,(function(e){return"SCRIPT"!==e.nodeName})),s={},i=function(e,t){return(t=t||{}).index=a.indexOf(e),t.slide=e,t},o=function(e,t){s[e]=(s[e]||[]).filter((function(e){return e!==t}))},l=function(e,t){return(s[e]||[]).reduce((function(e,n){return e&&!1!==n(t)}),!0)},c=function(e,t){a[e]&&(n&&l("deactivate",i(n,t)),n=a[e],l("activate",i(n,t)))},d=function(e,t){var r=a.indexOf(n)+e;l(e>0?"next":"prev",i(n,t))&&c(r,t)},u={off:o,on:function(e,t){return(s[e]||(s[e]=[])).push(t),o.bind(null,e,t)},fire:l,slide:function(e,t){if(!arguments.length)return a.indexOf(n);l("slide",i(a[e],t))&&c(e,t)},next:d.bind(null,1),prev:d.bind(null,-1),parent:r,slides:a,destroy:function(e){l("destroy",i(n,e)),s={}}};return(t||[]).forEach((function(e){e(u)})),n||c(0),u};function t(e){e.parent.classList.add("bespoke-marp-parent"),e.slides.forEach((e=>e.classList.add("bespoke-marp-slide"))),e.on("activate",(t=>{const n=t.slide,r=!n.classList.contains("bespoke-marp-active");e.slides.forEach((e=>{e.classList.remove("bespoke-marp-active"),e.setAttribute("aria-hidden","true")})),n.classList.add("bespoke-marp-active"),n.removeAttribute("aria-hidden"),r&&(n.classList.add("bespoke-marp-active-ready"),document.body.clientHeight,n.classList.remove("bespoke-marp-active-ready"))}))}function n(e){let t=0,n=0;Object.defineProperty(e,"fragments",{enumerable:!0,value:e.slides.map((e=>[null,...e.querySelectorAll("[data-marpit-fragment]")]))});const r=r=>void 0!==e.fragments[t][n+r],a=(r,a)=>{t=r,n=a,e.fragments.forEach(((e,t)=>{e.forEach(((e,n)=>{if(null==e)return;const s=t<r||t===r&&n<=a;e.setAttribute("data-bespoke-marp-fragment",s?"active":"inactive"),t===r&&n===a?e.setAttribute("data-bespoke-marp-current-fragment","current"):e.removeAttribute("data-bespoke-marp-current-fragment")}))})),e.fragmentIndex=a;const s={slide:e.slides[r],index:r,fragments:e.fragments[r],fragmentIndex:a};e.fire("fragment",s)};e.on("next",(({fragment:s=!0})=>{if(s){if(r(1))return a(t,n+1),!1;const s=t+1;e.fragments[s]&&a(s,0)}else{const r=e.fragments[t].length;if(n+1<r)return a(t,r-1),!1;const s=e.fragments[t+1];s&&a(t+1,s.length-1)}})),e.on("prev",(({fragment:s=!0})=>{if(r(-1)&&s)return a(t,n-1),!1;const i=t-1;e.fragments[i]&&a(i,e.fragments[i].length-1)})),e.on("slide",(({index:t,fragment:n})=>{let r=0;if(void 0!==n){const a=e.fragments[t];if(a){const{length:e}=a;r=-1===n?e-1:Math.min(Math.max(n,0),e-1)}}a(t,r)})),a(0,0)}var r,a={exports:{}};r=a,function(){var e="undefined"!=typeof window&&void 0!==window.document?window.document:{},t=r.exports,n=function(){for(var t,n=[["requestFullscreen","exitFullscreen","fullscreenElement","fullscreenEnabled","fullscreenchange","fullscreenerror"],["webkitRequestFullscreen","webkitExitFullscreen","webkitFullscreenElement","webkitFullscreenEnabled","webkitfullscreenchange","webkitfullscreenerror"],["webkitRequestFullScreen","webkitCancelFullScreen","webkitCurrentFullScreenElement","webkitCancelFullScreen","webkitfullscreenchange","webkitfullscreenerror"],["mozRequestFullScreen","mozCancelFullScreen","mozFullScreenElement","mozFullScreenEnabled","mozfullscreenchange","mozfullscreenerror"],["msRequestFullscreen","msExitFullscreen","msFullscreenElement","msFullscreenEnabled","MSFullscreenChange","MSFullscreenError"]],r=0,a=n.length,s={};r<a;r++)if((t=n[r])&&t[1]in e){for(r=0;r<t.length;r++)s[n[0][r]]=t[r];return s}return!1}(),a={change:n.fullscreenchange,error:n.fullscreenerror},s={request:function(t,r){return new Promise(function(a,s){var i=function(){this.off("change",i),a()}.bind(this);this.on("change",i);var o=(t=t||e.documentElement)[n.requestFullscreen](r);o instanceof Promise&&o.then(i).catch(s)}.bind(this))},exit:function(){return new Promise(function(t,r){if(this.isFullscreen){var a=function(){this.off("change",a),t()}.bind(this);this.on("change",a);var s=e[n.exitFullscreen]();s instanceof Promise&&s.then(a).catch(r)}else t()}.bind(this))},toggle:function(e,t){return this.isFullscreen?this.exit():this.request(e,t)},onchange:function(e){this.on("change",e)},onerror:function(e){this.on("error",e)},on:function(t,n){var r=a[t];r&&e.addEventListener(r,n,!1)},off:function(t,n){var r=a[t];r&&e.removeEventListener(r,n,!1)},raw:n};n?(Object.defineProperties(s,{isFullscreen:{get:function(){return Boolean(e[n.fullscreenElement])}},element:{enumerable:!0,get:function(){return e[n.fullscreenElement]}},isEnabled:{enumerable:!0,get:function(){return Boolean(e[n.fullscreenEnabled])}}}),t?r.exports=s:window.screenfull=s):t?r.exports={isEnabled:!1}:window.screenfull={isEnabled:!1}}();var s=a.exports;function i(e){e.fullscreen=()=>{s.isEnabled&&s.toggle(document.body)},document.addEventListener("keydown",(t=>{"f"!==t.key&&"F11"!==t.key||t.altKey||t.ctrlKey||t.metaKey||!s.isEnabled||(e.fullscreen(),t.preventDefault())}))}function o(e=2e3){return t=>{let n;function r(){n&&clearTimeout(n),n=setTimeout((()=>{t.parent.classList.add("bespoke-marp-inactive"),t.fire("marp-inactive")}),e),t.parent.classList.contains("bespoke-marp-inactive")&&(t.parent.classList.remove("bespoke-marp-inactive"),t.fire("marp-active"))}document.addEventListener("mousedown",r),document.addEventListener("mousemove",r),document.addEventListener("touchend",r),setTimeout(r,0)}}const l=["AUDIO","BUTTON","INPUT","SELECT","TEXTAREA","VIDEO"];function c(e){e.parent.addEventListener("keydown",(e=>{if(!e.target)return;const t=e.target;(l.includes(t.nodeName)||"true"===t.contentEditable)&&e.stopPropagation()}))}function d(e){window.addEventListener("load",(()=>{for(const t of e.slides){const e=t.querySelector("[data-marp-fitting]")?"":"hideable";t.setAttribute("data-bespoke-marp-load",e)}}))}var u;function f({interval:e=250}={}){return t=>{document.addEventListener("keydown",(e=>{if(" "===e.key&&e.shiftKey)t.prev();else if("ArrowLeft"===e.key||"ArrowUp"===e.key||"PageUp"===e.key)t.prev({fragment:!e.shiftKey});else if(" "!==e.key||e.shiftKey)if("ArrowRight"===e.key||"ArrowDown"===e.key||"PageDown"===e.key)t.next({fragment:!e.shiftKey});else if("End"===e.key)t.slide(t.slides.length-1,{fragment:-1});else{if("Home"!==e.key)return;t.slide(0)}else t.next();e.preventDefault()}));let n,r,a=0;t.parent.addEventListener("wheel",(s=>{let i=!1;const o=(e,t)=>{e&&(i=i||function(e,t){return function(e,t){const n=t===u.X?"Width":"Height";return e[`client${n}`]<e[`scroll${n}`]}(e,t)&&function(e,t){const{overflow:n}=e,r=e[`overflow${t}`];return"auto"===n||"scroll"===n||"auto"===r||"scroll"===r}(getComputedStyle(e),t)}(e,t)),(null==e?void 0:e.parentElement)&&o(e.parentElement,t)};if(0!==s.deltaX&&o(s.target,u.X),0!==s.deltaY&&o(s.target,u.Y),i)return;s.preventDefault();const l=Math.sqrt(Math.pow(s.deltaX,2)+Math.pow(s.deltaY,2));if(void 0!==s.wheelDelta){if(void 0===s.webkitForce&&Math.abs(s.wheelDelta)<40)return;if(s.deltaMode===s.DOM_DELTA_PIXEL&&l<4)return}else if(s.deltaMode===s.DOM_DELTA_PIXEL&&l<12)return;r&&clearTimeout(r),r=setTimeout((()=>{n=0}),e);const c=Date.now()-a<e,d=l<=n;if(n=l,c||d)return;let f;(s.deltaX>0||s.deltaY>0)&&(f="next"),(s.deltaX<0||s.deltaY<0)&&(f="prev"),f&&(t[f](),a=Date.now())}))}}!function(e){e.X="X",e.Y="Y"}(u||(u={}));const p=(...e)=>history.replaceState(...e),m="data-bespoke-view",g="presenter",h="next",v=["",g,h],b=(e,{protocol:t,host:n,pathname:r,hash:a}=location)=>{const s=e.toString();return`${t}//${n}${r}${s?"?":""}${s}${a}`},w=()=>{const e=document.body.getAttribute(m);if(v.includes(e))return e;throw new Error("View mode is not assigned.")},y=e=>new URLSearchParams(location.search).get(e),k=(e,t={})=>{var n;const r=Object.assign({location:location,setter:p},t),a=new URLSearchParams(r.location.search);for(const t of Object.keys(e)){const n=e[t];"string"==typeof n?a.set(t,n):a.delete(t)}try{r.setter(Object.assign({},null!==(n=window.history.state)&&void 0!==n?n:{}),"",b(a,r.location))}catch(e){console.error(e)}},E={available:(()=>{try{return localStorage.setItem("bespoke-marp","bespoke-marp"),localStorage.removeItem("bespoke-marp"),!0}catch(e){return console.warn("Warning: Using localStorage is restricted in the current host so some features may not work."),!1}})(),get:e=>{try{return localStorage.getItem(e)}catch(e){return null}},set:(e,t)=>{try{return localStorage.setItem(e,t),!0}catch(e){return!1}},remove:e=>{try{return localStorage.removeItem(e),!0}catch(e){return!1}}};function x(e=".bespoke-marp-osc"){const t=document.querySelector(e);if(!t)return()=>{};const n=(e,n)=>{t.querySelectorAll(`[data-bespoke-marp-osc=${JSON.stringify(e)}]`).forEach(n)};return s.isEnabled||n("fullscreen",(e=>e.style.display="none")),E.available||n("presenter",(e=>{e.disabled=!0,e.title="Presenter view is disabled due to restricted localStorage."})),e=>{t.addEventListener("click",(t=>{if(t.target instanceof HTMLElement){const{bespokeMarpOsc:n}=t.target.dataset;switch(n&&t.target.blur(),n){case"next":e.next({fragment:!t.shiftKey});break;case"prev":e.prev({fragment:!t.shiftKey});break;case"fullscreen":"function"==typeof e.fullscreen&&s.isEnabled&&e.fullscreen();break;case"presenter":e.openPresenterView()}}})),e.parent.appendChild(t),e.on("activate",(({index:t})=>{n("page",(n=>n.textContent=`Page ${t+1} of ${e.slides.length}`))})),e.on("fragment",(({index:t,fragments:r,fragmentIndex:a})=>{n("prev",(e=>e.disabled=0===t&&0===a)),n("next",(n=>n.disabled=t===e.slides.length-1&&a===r.length-1))})),e.on("marp-active",(()=>t.removeAttribute("aria-hidden"))),e.on("marp-inactive",(()=>t.setAttribute("aria-hidden","true"))),s.isEnabled&&s.onchange((()=>n("fullscreen",(e=>e.classList.toggle("exit",s.isEnabled&&s.isFullscreen)))))}}function L(e){window.addEventListener("message",(t=>{if(t.origin!==window.origin)return;const[n,r]=t.data.split(":");if("navigate"===n){const[t,n]=r.split(",");let a=Number.parseInt(t,10),s=Number.parseInt(n,10)+1;s>=e.fragments[a].length&&(a+=1,s=0),e.slide(a,{fragment:s})}}))}function S(e){if(!(e=>e.syncKey&&"string"==typeof e.syncKey)(e))throw new Error("The current instance of Bespoke.js is invalid for Marp bespoke presenter plugin.");Object.defineProperties(e,{openPresenterView:{enumerable:!0,value:M},presenterUrl:{enumerable:!0,get:I}}),E.available&&document.addEventListener("keydown",(t=>{"p"!==t.key||t.altKey||t.ctrlKey||t.metaKey||(t.preventDefault(),e.openPresenterView())}))}function M(){const e=Math.max(Math.floor(.85*window.innerWidth),640),t=Math.max(Math.floor(.85*window.innerHeight),360);return window.open(this.presenterUrl,`bespoke-marp-presenter-${this.syncKey}`,`width=${e},height=${t},menubar=no,toolbar=no`)}function I(){const e=new URLSearchParams(location.search);return e.set("view","presenter"),e.set("sync",this.syncKey),b(e)}var P=["area","base","br","col","command","embed","hr","img","input","keygen","link","meta","param","source","track","wbr"];let O=e=>String(e).replace(/[&<>"']/g,(e=>`&${F[e]};`)),F={"&":"amp","<":"lt",">":"gt",'"':"quot","'":"apos"},$="dangerouslySetInnerHTML",A={className:"class",htmlFor:"for"},T={};function q(e,t){let n=[],r="";t=t||{};for(let e=arguments.length;e-- >2;)n.push(arguments[e]);if("function"==typeof e)return t.children=n.reverse(),e(t);if(e){if(r+="<"+e,t)for(let e in t)!1!==t[e]&&null!=t[e]&&e!==$&&(r+=` ${A[e]?A[e]:O(e)}="${O(t[e])}"`);r+=">"}if(-1===P.indexOf(e)){if(t[$])r+=t[$].__html;else for(;n.length;){let e=n.pop();if(e)if(e.pop)for(let t=e.length;t--;)n.push(e[t]);else r+=!0===T[e]?e:O(e)}r+=e?`</${e}>`:""}return T[r]=!0,r}const K=({children:e})=>q(null,null,...e),N="bespoke-marp-presenter-container",C="bespoke-marp-presenter-next",D="bespoke-marp-presenter-next-container",j="bespoke-marp-presenter-note-container",X="bespoke-marp-presenter-info-container",R="bespoke-marp-presenter-info-page",U="bespoke-marp-presenter-info-page-text",B="bespoke-marp-presenter-info-page-prev",V="bespoke-marp-presenter-info-page-next",Y="bespoke-marp-presenter-info-time",H="bespoke-marp-presenter-info-timer";function z(e){const{title:t}=document;document.title="[Presenter view]"+(t?` - ${t}`:"");const n={},r=e=>(n[e]=n[e]||document.querySelector(`.${e}`),n[e]);document.body.appendChild((e=>{const t=document.createElement("div");return t.className=N,t.appendChild(e),t.insertAdjacentHTML("beforeend",q(K,null,q("div",{class:D},q("iframe",{class:C,src:"?view=next"})),q("div",{class:j}),q("div",{class:X},q("div",{class:R},q("button",{class:B,tabindex:"-1",title:"Previous"},"Previous"),q("span",{class:U}),q("button",{class:V,tabindex:"-1",title:"Next"},"Next")),q("time",{class:Y,title:"Current time"}),q("div",{class:H})))),t})(e.parent)),(e=>{r(D).addEventListener("click",(()=>e.next()));const t=r(C),n=(a=t,(e,t)=>{var n;return null===(n=a.contentWindow)||void 0===n?void 0:n.postMessage(`navigate:${e},${t}`,"null"===window.origin?"*":window.origin)});var a;t.addEventListener("load",(()=>{r(D).classList.add("active"),n(e.slide(),e.fragmentIndex),e.on("fragment",(({index:e,fragmentIndex:t})=>n(e,t)))}));const s=document.querySelectorAll(".bespoke-marp-note");s.forEach((e=>{e.addEventListener("keydown",(e=>e.stopPropagation())),r(j).appendChild(e)})),e.on("activate",(()=>s.forEach((t=>t.classList.toggle("active",t.dataset.index==e.slide()))))),e.on("activate",(({index:t})=>{r(U).textContent=`${t+1} / ${e.slides.length}`}));const i=r(B),o=r(V);i.addEventListener("click",(t=>{i.blur(),e.prev({fragment:!t.shiftKey})})),o.addEventListener("click",(t=>{o.blur(),e.next({fragment:!t.shiftKey})})),e.on("fragment",(({index:t,fragments:n,fragmentIndex:r})=>{i.disabled=0===t&&0===r,o.disabled=t===e.slides.length-1&&r===n.length-1}));const l=()=>r(Y).textContent=(new Date).toLocaleTimeString();l(),setInterval(l,250)})(e)}function _(e){const t=w();return t===h&&e.appendChild(document.createElement("span")),{"":S,[g]:z,[h]:L}[t]}function J(e){e.on("activate",(t=>{document.querySelectorAll(".bespoke-progress-parent > .bespoke-progress-bar").forEach((n=>{n.style.flexBasis=100*t.index/(e.slides.length-1)+"%"}))}))}const W=e=>{const t=Number.parseInt(e,10);return Number.isNaN(t)?null:t};function G(e={}){const t=Object.assign({history:!0},e);return e=>{let n=!0;const r=e=>{const t=n;try{return n=!0,e()}finally{n=t}},a=(t={fragment:!0})=>{((t,n)=>{const{fragments:r,slides:a}=e,s=Math.max(0,Math.min(t,a.length-1)),i=Math.max(0,Math.min(n||0,r[s].length-1));s===e.slide()&&i===e.fragmentIndex||e.slide(s,{fragment:i})})((W(location.hash.slice(1))||1)-1,t.fragment?W(y("f")||""):null)};e.on("fragment",(({index:e,fragmentIndex:r})=>{n||k({f:0===r||r.toString()},{location:Object.assign(Object.assign({},location),{hash:`#${e+1}`}),setter:(...e)=>t.history?history.pushState(...e):history.replaceState(...e)})})),setTimeout((()=>{a(),window.addEventListener("hashchange",(()=>r((()=>{a({fragment:!1}),k({f:void 0})})))),window.addEventListener("popstate",(()=>{n||r((()=>a()))})),n=!1}),0)}}function Q(e={}){var t;const n=e.key||(null===(t=window.history.state)||void 0===t?void 0:t.marpBespokeSyncKey)||Math.random().toString(36).slice(2),r=`bespoke-marp-sync-${n}`;var a;a={marpBespokeSyncKey:n},k({},{setter:(e,...t)=>p(Object.assign(Object.assign({},e),a),...t)});const s=()=>{const e=E.get(r);return e?JSON.parse(e):Object.create(null)},i=e=>{const t=s(),n=Object.assign(Object.assign({},t),e(t));return E.set(r,JSON.stringify(n)),n},o=()=>{window.removeEventListener("pageshow",o),i((e=>({reference:(e.reference||0)+1})))};return e=>{o(),Object.defineProperty(e,"syncKey",{value:n,enumerable:!0});let t=!0;setTimeout((()=>{e.on("fragment",(e=>{t&&i((()=>({index:e.index,fragmentIndex:e.fragmentIndex})))}))}),0),window.addEventListener("storage",(n=>{if(n.key===r&&n.oldValue&&n.newValue){const r=JSON.parse(n.oldValue),a=JSON.parse(n.newValue);if(r.index!==a.index||r.fragmentIndex!==a.fragmentIndex)try{t=!1,e.slide(a.index,{fragment:a.fragmentIndex})}finally{t=!0}}}));const a=()=>{const{reference:e}=s();void 0===e||e<=1?E.remove(r):i((()=>({reference:e-1})))};window.addEventListener("pagehide",(e=>{e.persisted&&window.addEventListener("pageshow",o),a()})),e.on("destroy",a)}}function Z({slope:e=Math.tan(-35*Math.PI/180),swipeThreshold:t=30}={}){return n=>{let r;const a=n.parent,s=e=>{const t=a.getBoundingClientRect();return{x:e.pageX-(t.left+t.right)/2,y:e.pageY-(t.top+t.bottom)/2}};a.addEventListener("touchstart",(e=>{r=1===e.touches.length?s(e.touches[0]):void 0}),{passive:!0}),a.addEventListener("touchmove",(e=>{if(r)if(1===e.touches.length){e.preventDefault();const t=s(e.touches[0]),n=t.x-r.x,a=t.y-r.y;r.delta=Math.sqrt(Math.pow(Math.abs(n),2)+Math.pow(Math.abs(a),2)),r.radian=Math.atan2(n,a)}else r=void 0})),a.addEventListener("touchend",(a=>{if(r){if(r.delta&&r.delta>=t&&r.radian){let t=r.radian-e;t=(t+Math.PI)%(2*Math.PI)-Math.PI,n[t<0?"next":"prev"](),a.stopPropagation()}r=void 0}}),{passive:!0})}}function ee(e,t,n,r){return new(n||(n=Promise))((function(a,s){function i(e){try{l(r.next(e))}catch(e){s(e)}}function o(e){try{l(r.throw(e))}catch(e){s(e)}}function l(e){var t;e.done?a(e.value):(t=e.value,t instanceof n?t:new n((function(e){e(t)}))).then(i,o)}l((r=r.apply(e,t||[])).next())}))}let te;const ne=()=>(void 0===te&&(te="wakeLock"in navigator&&navigator.wakeLock),te),re=()=>ee(void 0,void 0,void 0,(function*(){const e=ne();if(e)try{return yield e.request("screen")}catch(e){console.warn(e)}return null}));function ae(){return ee(this,void 0,void 0,(function*(){if(!ne())return;let e;const t=()=>{e&&"visible"===document.visibilityState&&re()};return document.addEventListener("visibilitychange",t),document.addEventListener("fullscreenchange",t),e=yield re(),e}))}!function(r=document.getElementById("p")){document.body.setAttribute(m,(()=>{const e=y("view");return e===h||e===g?e:""})());const a=(e=>{const t=y(e);return k({[e]:void 0}),t})("sync")||void 0,s=!1,l=!0;e(r,((...e)=>{const t=v.findIndex((e=>w()===e));if(t<0)throw new Error("Invalid view");return e.map((([e,n])=>e[t]&&n)).filter((e=>e))})([[l,l,s],Q({key:a})],[[l,l,l],_(r)],[[l,l,s],c],[[l,l,l],t],[[l,s,s],o()],[[l,l,l],d],[[l,l,l],G({history:!1})],[[l,l,s],f()],[[l,l,s],i],[[l,s,s],J],[[l,l,s],Z()],[[l,s,s],x()],[[l,l,l],n],[[l,l,s],ae]))}()}();</script></body></html>
