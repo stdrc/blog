@@ -6,19 +6,29 @@ title: 技术分享演讲
 
 ## 技术演讲
 
-- [Why Write OS In Rust? v2.0](../slides/write-os-in-rust-2.0/slides.html) (2021.7.2)
-- [ChCoreCon #7: Why Write OS In Rust?](../slides/write-os-in-rust/slides.html) (2021.3.1)
-- [重新认识 C++：分享 Modern C++ 的冰山一角的一角](https://slides.com/richardchien/cczu-osa-meet-cpp) (2020.5.30)
-- [常州大学开源软件协会「代码之外」活动](https://www.bilibili.com/video/BV1Ut411y7vn/) (2018.11.24)
+- Why Write OS In Rust? v2.0 (2021.7.2)
+    - [录屏](https://www.bilibili.com/video/BV1tP4y1x7h7/)
+    - [Slides](../slides/write-os-in-rust-2.0/slides.html)
+- ChCoreCon #7: Why Write OS In Rust? (2021.3.1)
+    - [Slides](../slides/write-os-in-rust/slides.html)
+- 重新认识 C++：分享 Modern C++ 的冰山一角的一角 (2020.5.30)
+    - [Slides](https://slides.com/richardchien/cczu-osa-meet-cpp)
+- 常州大学开源软件协会「代码之外」活动 (2018.11.24)
+    - [录屏](https://www.bilibili.com/video/BV1Ut411y7vn/)
 
 ## 论文分享
 
-- [NrOS: Effective Replication and Sharing in an Operating System](../slides/nros/) (2021.7.29)
+- NrOS: Effective Replication and Sharing in an Operating System (2021.7.29)
+    - [论文 PDF](https://www.usenix.org/system/files/osdi21-bhardwaj.pdf)
+    - [Slides](../slides/nros/)
 
 ## 培训
 
-- [Python 和 QQ 机器人开发基础培训](https://www.bilibili.com/video/BV19t411679V/) (2019.1.12~2019.1.16)
+- Python 和 QQ 机器人开发基础培训 (2019.1.12~2019.1.16)
+    - [录屏](https://www.bilibili.com/video/BV19t411679V/)
+    - [文档](https://shimo.im/docs/yb89I6ct1Ooy1mOA)
 
 ## 科普
 
-- [Introduction of the Interrupt Mechanism](../slides/interrupt/) (2021.6.9)
+- Introduction of the Interrupt Mechanism (2021.6.9)
+    - [Slides](../slides/interrupt/)
