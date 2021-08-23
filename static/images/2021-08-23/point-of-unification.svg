@@ -1,0 +1,117 @@
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" xmlns:v="http://schemas.microsoft.com/visio/2003/SVGExtensions/" width="291.66336" height="261.10752" viewBox="0 0 218.748 195.831" xml:space="preserve" color-interpolation-filters="sRGB" class="st11" version="1.1">
+	
+
+	<style type="text/css">
+	<![CDATA[
+		.st1 {fill:#d9d9d9;stroke:#000000;stroke-width:0.24}
+		.st2 {fill:#000000;font-family:Arial,Helvetica,sans-serif;font-size:0.666664em}
+		.st3 {fill:#c4d6a0;stroke:#000000;stroke-width:0.24}
+		.st4 {fill:#fdefe3;stroke:#000000;stroke-width:0.24}
+		.st5 {font-size:1em}
+		.st6 {stroke:#000000;stroke-linecap:butt;stroke-width:0.24}
+		.st7 {marker-end:url(#mrkr4-28);stroke:#000000;stroke-linecap:butt;stroke-width:0.24}
+		.st8 {fill:#000000;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.11764705882353}
+		.st9 {fill:#7395bf;stroke:#000000;stroke-linecap:butt;stroke-width:0.5}
+		.st10 {marker-end:url(#mrkr4-28);marker-start:url(#mrkr4-64);stroke:#000000;stroke-linecap:butt;stroke-width:0.24}
+		.st11 {fill:none;fill-rule:evenodd;font-size:12px;overflow:visible;stroke-linecap:square;stroke-miterlimit:3}
+	]]>
+	</style>
+
+	<defs id="Markers">
+		<g id="lend4">
+			<path d="M 2 1 L -0 0 L 2 -1 L 2 1 " style="stroke:none"/>
+		</g>
+		<marker overflow="visible" id="mrkr4-28" class="st8" orient="auto">
+			<use xlink:href="#lend4" transform="scale(-8.5,-8.5) "/>
+		</marker>
+		<marker overflow="visible" id="mrkr4-64" class="st8" orient="auto">
+			<use xlink:href="#lend4" transform="scale(8.5) "/>
+		</marker>
+	</defs>
+	<g>
+		<title>Page-1</title>
+		
+		
+		<g id="shape12-1" transform="translate(0.24,-29.4461)">
+			<title>Sheet.12</title>
+			<desc>Core</desc>
+			
+			
+			<rect x="0" y="29.6861" width="218.268" height="166.144" rx="5.66929" ry="5.66929" class="st1"/>
+			<text x="174.75" y="47.49" class="st2">Core</text>		</g>
+		<g id="shape1-4" transform="translate(81.2674,-37.95)">
+			<title>Sheet.1</title>
+			<desc>TLB</desc>
+			
+			
+			<rect x="0" y="167.484" width="56.6929" height="28.3465" rx="5.66929" ry="5.66929" class="st3"/>
+			<text x="21.01" y="184.06" class="st2">TLB</text>		</g>
+		<g id="shape34-7" transform="translate(6.14929,-97.4776)">
+			<title>Sheet.34</title>
+			<desc>Instruction Cache</desc>
+			
+			
+			<rect x="0" y="167.484" width="56.6929" height="28.3465" rx="5.66929" ry="5.66929" class="st4"/>
+			<text x="9.89" y="179.26" class="st2">Instruction<tspan x="16.78" dy="9.5999616" class="st5">Cache</tspan></text>		</g>
+		<g id="shape33-11" transform="translate(156.386,-97.4776)">
+			<title>Sheet.33</title>
+			<desc>Data Cache</desc>
+			
+			
+			<rect x="0" y="167.484" width="56.6929" height="28.3465" rx="5.66929" ry="5.66929" class="st4"/>
+			<text x="7.22" y="184.06" class="st2">Data Cache</text>		</g>
+		<g id="shape18-14" transform="translate(81.2674,-83.3044)">
+			<title>Sheet.18</title>
+			<desc>I D</desc>
+			
+			
+			<rect x="0" y="139.138" width="56.6929" height="56.6929" rx="5.66929" ry="5.66929" class="st4"/>
+			<text x="8.64" y="169.88" class="st2">I<tspan dx="4.482em" class="st5">D </tspan> </text>		</g>
+		<g id="group2-18" transform="translate(34.4957,-9.60356)">
+			<title>Sheet.2</title>
+			<g id="shape16-19" transform="translate(1.41732,0)">
+				<title>Brace 2</title>
+				<desc>Point of Unification</desc>
+				
+				
+				<path d="M0 184.49 L0 190.16 L2.83 193 L72.28 193 L75.12 195.83 L77.95 193 L147.4 193 L150.24 190.16 L150.24 184.49" class="st6"/>
+				<text x="41.77" y="203.03" class="st2">Point of Unification</text>			</g>
+		</g>
+		<g id="shape4-23" transform="translate(156.386,-104.564)">
+			<title>Dynamic connector.4</title>
+			<path d="M0 188.74 L-14.35 188.74" class="st7"/>
+		</g>
+		<g id="shape5-29" transform="translate(62.8422,-104.564)">
+			<title>Dynamic connector.5</title>
+			<path d="M0 188.74 L14.35 188.74" class="st7"/>
+		</g>
+		<g id="shape6-34" transform="translate(102.527,-66.2965)">
+			<title>Dynamic connector.6</title>
+			<path d="M7.09 195.83 L7.09 182.9" class="st7"/>
+		</g>
+		<g id="shape7-39" transform="translate(179.063,-23.7768)">
+			<title>Dynamic connector.7</title>
+			<path d="M7.09 195.83 L7.09 126.21" class="st7"/>
+		</g>
+		<g id="shape8-44" transform="translate(28.8265,-23.7768)">
+			<title>Dynamic connector.8</title>
+			<path d="M7.09 195.83 L7.09 126.21" class="st7"/>
+		</g>
+		<g id="shape9-49" transform="translate(102.527,-18.1075)">
+			<title>Dynamic connector.9</title>
+			<path d="M7.09 195.83 L7.09 180.07" class="st7"/>
+		</g>
+		<g id="shape35-54" transform="translate(68.2715,-155.906)">
+			<title>Sheet.35</title>
+			<desc>System control registers</desc>
+			
+			
+			<rect x="0" y="167.484" width="85.0394" height="28.3465" class="st9"/>
+			<text x="16.07" y="179.26" class="st2">System control <tspan x="27.18" dy="9.5999616" class="st5">registers</tspan></text>		</g>
+		<g id="shape36-58" transform="translate(303.787,39.925) rotate(90)">
+			<title>Sheet.36</title>
+			<path d="M3.72 195.83 L4.08 195.83 L11.83 195.83" class="st10"/>
+		</g>
+	</g>
+</svg>
