@@ -8,9 +8,9 @@ title: 技术分享演讲
 
 - Why Write OS In Rust? v2.0 (2021.7.2)
     - [录屏](https://www.bilibili.com/video/BV1tP4y1x7h7/)
-    - [Slides](../slides/write-os-in-rust-2.0/slides.html)
+    - [Slides](/raw/slides/write-os-in-rust-2.0/slides.html)
 - ChCoreCon #7: Why Write OS In Rust? (2021.3.1)
-    - [Slides](../slides/write-os-in-rust/slides.html)
+    - [Slides](/raw/slides/write-os-in-rust/slides.html)
 - 重新认识 C++：分享 Modern C++ 的冰山一角的一角 (2020.5.30)
     - [Slides](https://slides.com/richardchien/cczu-osa-meet-cpp)
 - 常州大学开源软件协会「代码之外」活动 (2018.11.24)
@@ -20,7 +20,7 @@ title: 技术分享演讲
 
 - NrOS: Effective Replication and Sharing in an Operating System (2021.7.29)
     - [论文 PDF](https://www.usenix.org/system/files/osdi21-bhardwaj.pdf)
-    - [Slides](../slides/nros/)
+    - [Slides](/raw/slides/nros/)
 
 ## 培训
 
@@ -31,4 +31,4 @@ title: 技术分享演讲
 ## 科普
 
 - Introduction of the Interrupt Mechanism (2021.6.9)
-    - [Slides](../slides/interrupt/)
+    - [Slides](/raw/slides/interrupt/)

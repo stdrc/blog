@@ -2,14 +2,15 @@
   <div class="column">
     <h2>/**<br>
       &nbsp;* Filename: &nbsp;&nbsp;&nbsp;<a href="{{ url_for('index') }}">stdrc.cc</a><br>
-      &nbsp;* Description: {{ site.subtitle }}<br>
-      &nbsp;* Author: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/richardchien">{{ site.author }}</a><br>
+      &nbsp;* Description: {{ global.site.subtitle }}<br>
+      &nbsp;* Author: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/richardchien">{{ global.site.author
+        }}</a><br>
       &nbsp;* Powered By: &nbsp;<a href="https://github.com/verilab/purepress">PurePress</a> & <a
         href="https://github.com/verilab/purepress-theme-light">Light</a><br>
       &nbsp;*/<br>
       <br>
       #include &lt;stdrc.hh&gt;
     </h2>
-    <h1 class="lbrace"><a href="{{ url_for('index') }}">{{ site.title }}</a></h1>
+    <h1 class="lbrace"><a href="{{ url_for('index') }}">{{ global.site.title }}</a></h1>
   </div>
 </div>
