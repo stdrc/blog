@@ -45,9 +45,9 @@ PoU 的一个应用场景是：运行的时候修改自身代码之后，使用�
 
 ARMv8-A 采用弱内存模型，对 normal memory 的读写可能乱序执行，页表里可以配置为 non-reordering（可用于 device memory）。
 
-Normal memory: RAM, Flash, ROM in physical memory，这些内存允许以弱内存序的方式访问，以提高性能。
+Normal memory：RAM、Flash、ROM in physical memory，这些内存允许以弱内存序的方式访问，以提高性能。
 
-单核单线程上连续的有依赖的 `str` 和 `ldr` 不会收到弱内存序的影响，比如：
+单核单线程上连续的有依赖的 `str` 和 `ldr` 不会受到弱内存序的影响，比如：
 
 ```armasm
 str x0, [x2]
