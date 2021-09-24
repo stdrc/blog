@@ -23,4 +23,4 @@ title: 关于这个博客的主人
 你可以通过下面的途径联系我：
 
 - [Telegram](https://telegram.me/richardchien)
-- Email: stdrc AT outlook DOT com
+- Email: rcx AT live DOT com
