@@ -1,7 +1,7 @@
 ---
 title: std::function 作为参数的函数重载问题
 categories: Dev
-tags: [C++, 函数重载, 类型转换]
+tags: [C++, std::function, 函数对象, 函数重载, 类型转换]
 created: 2021-09-27 22:58:00
 ---
 
