@@ -143,7 +143,7 @@ class /* ... */ function<_Rp(_ArgTypes...)> /* : ... */ {
 };
 ```
 
-可以看到 `MARK 2` 处为满足 `_EnableIfCallable<_Fp>` 的 `_Fp` 实现了一个构造函数，而满足 `_EnableIfCallable<_Fp>` 意味着 `__callable<_Fp>::value` 是 `true`。根据 `MARK 1` 处的偏特化，发现当 `_Rp`（也就是 `std::function` 的返回类型）为 `void`、或调用 `_Fp` 的返回类型可以转换为 `_Rp`，`__callable<_Fp>::value` 是 `true`。
+可以看到 `MARK 2` 处为满足 `_EnableIfCallable<_Fp>` 的 `_Fp` 实现了一个构造函数，而满足 `_EnableIfCallable<_Fp>` 意味着 `__callable<_Fp>::value` 是 `true`。根据 `MARK 1` 处的偏特化，发现当 `_Rp`（也就是 `std::function` 的返回类型）为 `void`、或调用 `_Fp` 的返回值类型可以转换为 `_Rp` 时，`__callable<_Fp>::value` 是 `true`。
 
 也就是说，除了前面观察发现的结论——有返回类型的 `std::function` 可以转换为无返回类型的 `std::function`，标准库还允许有返回类型的 `std::function` 转换为返回类型可由前者的返回类型构造的 `std::function`。用上一节的方式验证如下：
 
