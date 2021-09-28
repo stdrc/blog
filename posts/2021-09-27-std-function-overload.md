@@ -61,11 +61,13 @@ void foo_user() {
 }
 ```
 
-确实解决了无法找到合适的重载函数的问题。进而意识到，用 lambda 的时候会报错是因为 lambda 到 `std::function` 有一次类型转换，而一开始的代码报错可能是因为 `[&]() -> bool { return true; }` 既可以转换为 `std::function<bool()>` 也可以转换为 `std::function<void()>`，从而产生了二义性。
+确实解决了无法找到合适的重载函数的问题。进而意识到，用 lambda 的时候会报错是因为 lambda 到 `std::function` 有一次类型转换，而 `[&]() -> bool { return true; }` **可能**既可以转换为 `std::function<bool()>` 也可以转换为 `std::function<void()>`，从而产生了二义性。
 
-群友后来又发现 `std::function<bool()>` 可以赋值给 `std::function<void()>`，于是猜测 `std::function` 可能不关心它所表示的函数的返回类型，但这仍然无法解释为什么 `foo([&]() {})` 不报错。后来因为忙其它事情，群里也没有继续再讨论了。
+群友后来又发现 `std::function<bool()>` 可以赋值给 `std::function<void()>`，于是猜测 `std::function` **可能**不关心它所表示的函数的返回类型，但这仍然无法解释为什么 `foo([&]() {})` 不报错。后来因为忙其它事情，群里也没有继续再讨论了。
 
-空闲下来之后，继续研究了这个问题。为了方便解释，下面用 Cling 解释器来求值一些 type trait，以观察不同 `std::function` 实例之间的关系。
+空闲下来之后，继续研究了这个问题，把前面觉得可能的猜测都找到了定论。
+
+为了方便解释，下面用 Cling 解释器来求值一些 type trait，以观察不同 `std::function` 实例之间的关系。
 
 首先导入需要的头文件：
 
@@ -96,7 +98,7 @@ $ cling -std=c++17
 (const bool) false
 ```
 
-观察上述结果可以发现，在参数类型相同的情况下，有返回类型的 `std::function` 可以转换为无返回类型的 `std::function`。
+观察上面的结果可以发现，在参数类型相同的情况下，有返回类型的 `std::function` 可以转换为无返回类型的 `std::function`，反过来则不可以。
 
 从而一开始的问题便可以解释通了：
 
