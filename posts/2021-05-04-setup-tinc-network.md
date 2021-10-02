@@ -3,6 +3,7 @@ title: 使用 Tinc 组建虚拟局域网
 categories: Ops
 tags: [Tinc, VPN, SDN, 网络, 虚拟局域网]
 created: 2021-05-04 22:56:00
+updated: 2021-10-02 19:09:00
 ---
 
 以前曾经用过 [ZeroTier](https://www.zerotier.com/) 给自己多个分布在不同地方的设备组建大内网，后来用不着了，就没再折腾，前段时间又想重新组一下网，于是尝试了一下另一个同类的开源软件 [Tinc](https://www.tinc-vpn.org/)。本文记录一下使用 Tinc 搭建虚拟网的关键步骤。
@@ -82,7 +83,6 @@ Digest = sha512
 #!/bin/sh
 ip link set $INTERFACE up
 ip addr add 172.30.0.2/24 dev $INTERFACE
-ip route replace 172.30.0.0/24 via 172.30.0.1 dev $INTERFACE
 ```
 
 `/etc/tinc/mynet/tinc-down`（需可执行，以使用 `iproute` 为例）：
