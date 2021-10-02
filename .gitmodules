@@ -4,3 +4,6 @@
 [submodule "themes/minimal"]
 	path = themes/minimal
 	url = https://github.com/verilab/purepress-theme-minimal.git
+[submodule "themes/default"]
+	path = themes/default
+	url = https://github.com/verilab/purepress-theme-default.git
