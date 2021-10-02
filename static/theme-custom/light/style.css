@@ -23,13 +23,13 @@ body {
     text-decoration: underline;
 }
 
-.site-title h1.lbrace::after {
+/* .site-title h1.lbrace::after {
     content: " {";
 }
 
 .site-title h1.rbrace::after {
     content: "}";
-}
+} */
 
 .site-title .column {
     margin: 0;
@@ -40,14 +40,12 @@ body {
     .site-title {
         padding: 40px 0;
     }
-
     .site-title .column {
         padding: 0 24px;
     }
 }
 
-.footer {
-    /* unset theme default footer style */
+/* .footer {
     overflow: unset;
     background: unset;
     color: unset;
@@ -59,4 +57,4 @@ body {
 .footer {
     max-width: 1180px;
     margin: 0 auto;
-}
+} */

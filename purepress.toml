@@ -1,10 +1,13 @@
 [site]
-title = "rc::blog"
+title = "Project RC"
 subtitle = "一只腊鸡的技术成长。"
 author = "Richard Chien"
+copyright_year = 2021
 timezone = "Asia/Shanghai"
 
 [config]
-posts_per_index_page = 5
+posts_per_index_page = 999999
 disqus_enabled = true
 disqus_short_name = "richardchien"
+google_analytics_enabled = true
+google_analytics_id = "G-681FDHED04"
