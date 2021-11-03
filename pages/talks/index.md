@@ -1,10 +1,10 @@
 ---
-title: 技术分享演讲
+title: 演讲
 ---
 
 这里放自己在学校/实验室中分享过的自我感觉还不错的内容。
 
-## 技术演讲
+## 技术分享
 
 - Why Write OS In Rust? v2.0 (2021.7.2)
     - [录屏](https://www.bilibili.com/video/BV1tP4y1x7h7/)
