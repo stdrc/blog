@@ -24,8 +24,11 @@ title: 演讲
 
 ## 培训
 
-- Python 和 QQ 机器人开发基础培训 (2019.1.12~2019.1.16)
-    - [录屏](https://www.bilibili.com/video/BV19t411679V/)
+- Modern CMake By Example (2021.11.3)
+    - [录屏](https://www.bilibili.com/video/BV14h41187FZ)
+    - [代码](https://github.com/richardchien/modern-cmake-by-example)
+- Python 和 QQ 机器人开发基础培训 (2019.1.12-16)
+    - [录屏](https://www.bilibili.com/video/BV19t411679V)
     - [文档](https://shimo.im/docs/yb89I6ct1Ooy1mOA)
 
 ## 科普
