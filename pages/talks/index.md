@@ -7,14 +7,14 @@ title: 演讲
 ## 技术分享
 
 - Why Write OS In Rust? v2.0 (2021.7.2)
-    - [录屏](https://www.bilibili.com/video/BV1tP4y1x7h7/)
+    - [录屏](https://www.bilibili.com/video/BV1tP4y1x7h7)
     - [Slides](/raw/slides/write-os-in-rust-2.0/slides.html)
 - ChCoreCon #7: Why Write OS In Rust? (2021.3.1)
     - [Slides](/raw/slides/write-os-in-rust/slides.html)
 - 重新认识 C++：分享 Modern C++ 的冰山一角的一角 (2020.5.30)
     - [Slides](https://slides.com/richardchien/cczu-osa-meet-cpp)
 - 常州大学开源软件协会「代码之外」活动 (2018.11.24)
-    - [录屏](https://www.bilibili.com/video/BV1Ut411y7vn/)
+    - [录屏](https://www.bilibili.com/video/BV1Ut411y7vn)
 
 ## 论文分享
 
