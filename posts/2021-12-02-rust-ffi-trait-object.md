@@ -145,7 +145,7 @@ fn main() {
 
 为什么会有这个区别呢，是因为当把 `&foo_impl` 转成 trait object 时，它丢失了原来的具体类型信息，这时候要调用 `FooImpl::foo` 函数，需要走虚函数表查询函数地址，这个过程叫做 [动态分派](https://zh.wikipedia.org/wiki/%E5%8A%A8%E6%80%81%E5%88%86%E6%B4%BE)（dynamic dispatch）。因此，`&dyn Foo` 的第一个 8 字节指向 `FooImpl` 对象，第二个 8 字节指向 `FooImpl` 的虚函数表。
 
-有趣的是，C++ 中实现 dynamic dispatch 时，是把虚函数表指针放在对象的开头（[这篇文章](2021-03-06-dont-create-thread-in-cpp-base-class-constructor.md) 中有过相关讨论），所以 C++ 中不需要胖指针，代价是调用虚函数时需要多一次 dereference。
+有趣的是，C++ 中实现 dynamic dispatch 时，是把虚函数表指针放在对象的开头（[这篇文章](/posts/2021-03-06-dont-create-thread-in-cpp-base-class-constructor.md) 中有过相关讨论），所以 C++ 中不需要胖指针，代价是调用虚函数时需要多一次 dereference。
 
 回到问题，由于 `&dyn Foo` 乃至 `*const dyn Foo` 是胖指针，那么转成 `*const c_void` 传给 `call_c_with_foo` 的时候就已经丢失了第二个 8 字节的虚函数表指针，由 C 代码再传回 `call_rust_with_foo`，虚函数表指针就是一个野指针了。
 
