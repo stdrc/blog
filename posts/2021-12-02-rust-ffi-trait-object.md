@@ -9,7 +9,7 @@ created: 2021-12-02 20:38:00
 
 ## Foreign Language Interface（FFI）
 
-众所周知，Rust 和 C 可以相互调用对方导出的函数，调用接口称为 FFI。
+众所周知，Rust 和 C 可以相互调用对方导出的函数，这种调用接口称为 FFI。
 
 举一个极简的例子，来演示 Rust 和 C 的互调用：
 
