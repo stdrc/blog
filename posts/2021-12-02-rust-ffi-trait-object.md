@@ -13,61 +13,62 @@ created: 2021-12-02 20:38:00
 
 举一个极简的例子，来演示 Rust 和 C 的互调用：
 
-- `src/boring.c`
+```c
+// src/boring.c
 
-    ```c
-    #include <stdio.h>
+#include <stdio.h>
 
-    extern void call_rust_with_foo(void *foo);
+extern void call_rust_with_foo(void *foo);
 
-    void call_c_with_foo(void *foo) {
-        printf("Hello from C!\n");
-        call_rust_with_foo(foo);
+void call_c_with_foo(void *foo) {
+    printf("Hello from C!\n");
+    call_rust_with_foo(foo);
+}
+```
+
+```rust
+// src/main.rs
+
+use std::os::raw::c_void;
+
+pub struct Foo {}
+
+impl Foo {
+    fn foo(&self) {
+        println!("foo!");
     }
-    ```
+}
 
-- `src/main.rs`
+#[link(name = "boring", kind = "static")]
+extern "C" {
+    fn call_c_with_foo(foo: *const c_void);
+}
 
-    ```rust
-    use std::os::raw::c_void;
+#[no_mangle]
+pub extern "C" fn call_rust_with_foo(foo: *const Foo) {
+    println!("Hello from Rust!");
+    let foo = unsafe { &*(foo) };
+    foo.foo();
+}
 
-    pub struct Foo {}
-
-    impl Foo {
-        fn foo(&self) {
-            println!("foo!");
-        }
+fn main() {
+    let foo_impl = Foo {};
+    let foo = &foo_impl;
+    unsafe {
+        call_c_with_foo(foo as *const Foo as *const c_void);
     }
+}
+```
 
-    #[link(name = "boring", kind = "static")]
-    extern "C" {
-        fn call_c_with_foo(foo: *const c_void);
-    }
+```rust
+// build.rs
 
-    #[no_mangle]
-    pub extern "C" fn call_rust_with_foo(foo: *const Foo) {
-        println!("Hello from Rust!");
-        let foo = unsafe { &*(foo) };
-        foo.foo();
-    }
+use cc;
 
-    fn main() {
-        let foo_impl = Foo {};
-        let foo = &foo_impl;
-        unsafe {
-            call_c_with_foo(foo as *const Foo as *const c_void);
-        }
-    }
-    ```
-- `build.rs`
-
-    ```rust
-    use cc;
-
-    fn main() {
-        cc::Build::new().file("src/boring.c").compile("libboring.a");
-    }
-    ```
+fn main() {
+    cc::Build::new().file("src/boring.c").compile("libboring.a");
+}
+```
 
 编译运行会输出：
 
@@ -84,6 +85,8 @@ foo!
 修改后 `src/main.rs` 文件如下：
 
 ```rust
+// src/main.rs
+
 use std::os::raw::c_void;
 
 pub trait Foo {
@@ -153,6 +156,7 @@ fn main() {
 这种方案不需要修改上面的 C 代码，只需修改 `src/main.rs`：
 
 ```rust
+// src/main.rs
 // ...
 
 #[no_mangle]
@@ -190,61 +194,61 @@ pub struct TraitObject {
 
 于是对代码修改如下：
 
-- `src/boring.c`
+```c
+// src/boring.c
 
-    ```c
-    #include <stdio.h>
+#include <stdio.h>
 
-    struct TraitObject {
-        void *data;
-        void *vtable;
-    };
+struct TraitObject {
+    void *data;
+    void *vtable;
+};
 
-    extern void call_rust_with_foo(struct TraitObject foo);
+extern void call_rust_with_foo(struct TraitObject foo);
 
-    void call_c_with_foo(struct TraitObject foo) {
-        printf("Hello from C!\n");
-        call_rust_with_foo(foo);
+void call_c_with_foo(struct TraitObject foo) {
+    printf("Hello from C!\n");
+    call_rust_with_foo(foo);
+}
+```
+
+```rust
+// src/main.rs
+// ...
+
+#[repr(C)]
+pub struct TraitObject {
+    data: *const c_void,
+    vtable: *const c_void,
+}
+
+#[link(name = "boring", kind = "static")]
+extern "C" {
+    fn call_c_with_foo(foo: TraitObject);
+}
+
+#[no_mangle]
+pub extern "C" fn call_rust_with_foo(foo: TraitObject) {
+    println!("Hello from Rust!");
+    let foo: &dyn Foo = unsafe { std::mem::transmute(foo) };
+    foo.foo();
+}
+
+fn main() {
+    let foo_impl = FooImpl {};
+    let foo = &foo_impl as &dyn Foo;
+    unsafe {
+        call_c_with_foo(std::mem::transmute(foo));
     }
-    ```
-
-- `src/main.rs`
-
-    ```rust
-    // ...
-
-    #[repr(C)]
-    pub struct TraitObject {
-        data: *const c_void,
-        vtable: *const c_void,
-    }
-
-    #[link(name = "boring", kind = "static")]
-    extern "C" {
-        fn call_c_with_foo(foo: TraitObject);
-    }
-
-    #[no_mangle]
-    pub extern "C" fn call_rust_with_foo(foo: TraitObject) {
-        println!("Hello from Rust!");
-        let foo: &dyn Foo = unsafe { std::mem::transmute(foo) };
-        foo.foo();
-    }
-
-    fn main() {
-        let foo_impl = FooImpl {};
-        let foo = &foo_impl as &dyn Foo;
-        unsafe {
-            call_c_with_foo(std::mem::transmute(foo));
-        }
-    }
-    ```
+}
+```
 
 ### 第二种写法
 
 在 `std::raw::TraitObject` deprecated 之后，标准库引入了新的接口（[rust-lang/rfcs#2580](https://github.com/rust-lang/rfcs/pull/2580)）来实现类似的功能。于是上面的 Rust 代码也可以写成这样：
 
 ```rust
+// src/main.rs
 // ...
 
 #[repr(C)]
