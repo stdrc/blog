@@ -249,6 +249,11 @@ fn main() {
 
 ```rust
 // src/main.rs
+
+#![feature(ptr_metadata)]
+
+use std::ptr::{DynMetadata, Pointee};
+
 // ...
 
 #[repr(C)]
