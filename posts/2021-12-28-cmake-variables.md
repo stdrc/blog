@@ -384,3 +384,13 @@ my_function()
 ```
 
 也就是说，当 `include(MyModule)` 时，`CMAKE_CURRENT_LIST_FILE` 和 `CMAKE_CURRENT_LIST_DIR` 指向 CMake 模块文件的位置，而其它相关变量则继承自 `include` 的调用处；当调用宏和函数时，上述所有变量都继承自调用处。
+
+## 所以应该用哪个呢？
+
+这里记录几个我自身的经验：
+
+- 如果要引用同目录或下级目录的位置，可以用相对路径或使用 `CMAKE_CURRENT_SOURCE_DIR`/`CMAKE_CURRENT_LIST_DIR`（根据当前 CMake 文件是 `CMakeLists.txt` 还是 `*.cmake` 适当选择）
+- `configure_file` 产生的文件存放位置和 `add_custom_target` 默认的工作目录是 `CMAKE_CURRENT_BINARY_DIR`
+- 当要引用相对于项目根目录的位置时
+    - 如果是在编写一个库，应该用 `PROJECT_SOURCE_DIR`，防止别人把你的项目当作子目录去 `add_subdirectory` 时出现问题
+    - 如果是在编写一个应用，或者确定项目不会被 `add_subdirectory`，可以使用 `CMAKE_SOURCE_DIR`
