@@ -108,7 +108,7 @@ main, &syscall_count: 0x562c67343008, syscall_count 5
 
 发现 `test/main.c` 和 `libc.so` 中访问的 `syscall_count` 甚至地址都不一样。于是进行了一些尝试，给 test 程序添加了 `-fPIC` 编译选项，行为就符合预期了，改成加 `-fPIE`，行为又不正常（后来才发现我安装的 GCC 9 打开了 `--enable-default-pie`，也就是说 PIE 就是默认行为）。
 
-虽然加上 `-fPIC` 后“解决了”问题（实际上并不是最正确的解法，后面说），但还是不甘心，因为最近被 PIC 相关问题折腾的够呛，想认真了解一下其中的细节，于是进行了一番搜索，找到了跟我相似的问题[^same-question]，接着顺着问题下的回答和之前阅读 [MaskRay](https://maskray.me)（一位 LLVM 贡献者）的博客的印象，慢慢终于弄懂了问题产生的本质原因。
+虽然加上 `-fPIC` 后“解决了”问题（实际上并不是最正确的解法，后面说），但还是不甘心，因为最近被 PIC 相关问题折腾得够呛，想认真了解一下其中的细节，于是进行了一番搜索，找到了跟我相似的问题[^same-question]，接着顺着问题下的回答和之前阅读 [MaskRay](https://maskray.me)（一位 LLVM 贡献者）的博客的印象，慢慢终于弄懂了问题产生的本质原因。
 
 [^same-question]: https://stackoverflow.com/questions/39394971/can-i-declare-a-global-variable-in-a-shared-library
 
