@@ -245,7 +245,7 @@ syscall_count++;
 
 说了这么多，仍然没有解释为什么 PIC 和 PIE 行为不同。我的理解是这样的，PIC 编译出的目标文件可能用于动态库，所以它不能对外部定义的全局变量有自己的拷贝，而是只能通过 GOT 表访问，而 PIE 则确定是用于可执行文件，所以即使它有自己的拷贝，只要所有动态库都通过 GOT 表访问，就能保证全局只有一个该变量。这就是前面说的，PIE 模式给了编译器一定的优化空间。
 
-另外，PIE 模式下使用 copy relocation 也不是从一开始就有的行为，而是在 GCC 5 引入的，为的是减少使用 GOT 导致的额外内存访问开销[^gcc-pie-copyreloc]。Clang 也在某个版本中引入了编译选项 `-mpie-copy-relocations` 来开启 copy relocation[^clang-d19995][^clang-d19996]，后来 MaskRay 将其改成了 `-f[no-]direct-access-external-data`[^clang-d92633]，但后者在 GCC 的提议[^gcc-direct-access-external-data] 没有被接受。
+另外，PIE 模式下使用 copy relocation 也不是从一开始就有的行为，而是在 GCC 5 引入的，为的是减少使用 GOT 导致的额外内存访问开销[^gcc-pie-copyreloc]。Clang 也在某个版本中引入了编译选项 `-mpie-copy-relocations` 来开启 copy relocation[^clang-d19995][^clang-d19996]，后来 MaskRay 将其改成了 `-f[no-]direct-access-external-data`[^clang-d92633]，但后者在 GCC 的提议[^gcc-direct-access-external-data]没有被接受。
 
 [^gcc-pie-copyreloc]: https://gcc.gnu.org/git/?p=gcc.git&a=commit;h=77ad54d911dd7cb88caf697ac213929f6132fdcf
 [^clang-d19995]: https://reviews.llvm.org/D19995
