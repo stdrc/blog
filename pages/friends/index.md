@@ -31,3 +31,4 @@ Kanri's blog | <https://blog.kanri.top>
 Mrs4s Blog | <https://www.mrs4s.moe>
 cleoold | <https://cleoold.com>
 清纯的小黄瓜 | <https://blog.ggemo.com>
+This Cute World (ryan4yin) | <https://thiscute.world>
