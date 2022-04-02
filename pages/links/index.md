@@ -1,8 +1,8 @@
 ---
-title: 友情链接
+title: 链接
 ---
 
-下面是友链啦～
+## 朋友们
 
 站名 / 大佬名 | 地址
 --- | ---
@@ -32,3 +32,9 @@ Mrs4s Blog | <https://www.mrs4s.moe>
 cleoold | <https://cleoold.com>
 清纯的小黄瓜 | <https://blog.ggemo.com>
 This Cute World (ryan4yin) | <https://thiscute.world>
+
+## 有趣的网站
+
+- [Learning Music](https://learningsynths.ableton.com/zh-Hans/)
+- [CSS Dinor](https://flukeout.github.io/)
+- [Regex Golf](https://alf.nu/RegexGolf)
