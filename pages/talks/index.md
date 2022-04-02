@@ -33,5 +33,5 @@ title: 演讲
 
 ## 科普
 
-- Introduction of the Interrupt Mechanism (2021.6.9)
+- Introduction to the Interrupt Mechanism (2021.6.9)
     - [Slides](/raw/slides/interrupt/)
