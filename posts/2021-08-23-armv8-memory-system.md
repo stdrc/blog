@@ -121,7 +121,7 @@ option | ordered accesses (before - after) | shareability domain
 - Load-Acquire (LDAR): All loads and stores that are after an LDAR in program order, and that match the shareability domain of the target address, must be observed after the LDAR.
 - Store-Release (STLR): All loads and stores preceding an STLR that match the shareability domain of the target address must be observed before the STLR.
 - LDAXR
-- STAXR
+- STLXR
 
 Unlike the data barrier instructions, which take a qualifier to control which shareability domains see the effect of the barrier, the LDAR and STLR instructions use the attribute of the address accessed.
 
