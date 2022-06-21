@@ -25,7 +25,7 @@ title: 演讲
 ## 培训
 
 - Modern CMake By Example (2021.11.3)
-    - [录屏](https://www.bilibili.com/video/BV14h41187FZ)
+    - [录屏](https://www.bilibili.com/video/BV1Yv4y1g7fq)
     - [代码](https://github.com/richardchien/modern-cmake-by-example)
 - Python 和 QQ 机器人开发基础培训 (2019.1.12-16)
     - [录屏](https://www.bilibili.com/video/BV19t411679V)
