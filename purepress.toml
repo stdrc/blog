@@ -4,6 +4,7 @@ subtitle = "一只腊鸡的技术成长。"
 author = "Richard Chien"
 copyright_year = "2013-2022"
 timezone = "Asia/Shanghai"
+language = "zh-Hans"
 
 [config]
 posts_per_index_page = 999999
