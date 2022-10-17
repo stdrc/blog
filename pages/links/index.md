@@ -38,3 +38,5 @@ This Cute World (ryan4yin) | <https://thiscute.world>
 - [Learning Music](https://learningsynths.ableton.com/zh-Hans/)
 - [CSS Dinor](https://flukeout.github.io/)
 - [Regex Golf](https://alf.nu/RegexGolf)
+- [OSS Insight](https://ossinsight.io/)
+- [神奇海螺试验场](https://lab.magiconch.com/)
