@@ -12,3 +12,5 @@ disqus_enabled = true
 disqus_short_name = "richardchien"
 google_analytics_enabled = true
 google_analytics_id = "G-681FDHED04"
+hitokoto_enabled = true
+hitokoto_categories = ["h", "d", "i", "k"]
