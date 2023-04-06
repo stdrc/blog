@@ -24,6 +24,9 @@ title: 演讲
 
 ## 培训
 
+- 从零开始使用 LaTeX 排版论文 (2023.4.1)
+    - [录屏](https://www.bilibili.com/video/BV1Z24y157GM)
+    - [Slides](https://github.com/sjtug/sjtulib-latex-talk/releases/tag/2023-spring)
 - Modern CMake By Example (2021.11.3)
     - [录屏](https://www.bilibili.com/video/BV1Yv4y1g7fq)
     - [代码](https://github.com/richardchien/modern-cmake-by-example)
