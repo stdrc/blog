@@ -30,6 +30,7 @@ title: 链接
 - [cleoold](https://cleoold.com)
 - [清纯的小黄瓜](https://blog.ggemo.com)
 - [This Cute World (ryan4yin)](https://thiscute.world)
+- [Abrahum Link](https://abrahum.link/)
 
 ## 有趣的网站
 
