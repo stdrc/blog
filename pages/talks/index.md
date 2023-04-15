@@ -13,7 +13,7 @@ title: 演讲
     - [Slides](/raw/slides/write-os-in-rust/slides.html)
 - 重新认识 C++：分享 Modern C++ 的冰山一角的一角 (2020.5.30)
     - [Slides](https://slides.com/richardchien/cczu-osa-meet-cpp)
-- 常州大学开源软件协会「代码之外」活动 (2018.11.24)
+- 开源软件协会「代码之外」活动 (2018.11.24)
     - [录屏](https://www.bilibili.com/video/BV1Ut411y7vn)
 
 ## 论文分享
