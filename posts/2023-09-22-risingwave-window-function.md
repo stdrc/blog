@@ -66,7 +66,7 @@ FROM orders;
 
 上一节中两个 SQL 例子即是采用通用模式进行计算。
 
-**EOWC 模式（Emit-On-Update）**
+**EOWC 模式（Emit-On-Window-Close）**
 
 通过在查询中加入 `EMIT ON WINDOW CLOSE` 关键字[^rw-doc-eowc][^note-eowc]，即可采用 EOWC 输出模式。
 
