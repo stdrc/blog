@@ -39,3 +39,5 @@ title: 链接
 - [Regex Golf](https://alf.nu/RegexGolf)
 - [OSS Insight](https://ossinsight.io/)
 - [神奇海螺试验场](https://lab.magiconch.com/)
+- [Kern Type - a letter spacing game](https://type.method.ac/)
+- [Can't Unsee](https://cantunsee.space/)
