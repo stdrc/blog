@@ -1,0 +1,11 @@
+{% if global.config.disqus_enabled %}
+<div class="article discuss-thread" id="discuss-thread">
+  <hr>
+  {% if entry.url != '/donate/' %}
+  <h2>赞赏</h2>
+  <p>如果本篇内容对你有所帮助，欢迎 <a href="{{ url_for('page', rel_url='donate/') }}">点击这里</a> 赞赏～</p>
+  {% endif %}
+  <h2>评论</h2>
+  {% include 'discuss/disqus.html' %}
+</div>
+{% endif %}
