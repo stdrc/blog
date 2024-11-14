@@ -5,12 +5,10 @@
       <ul>
         <li><a href="{{ url_for('index') }}">首页</a></li>
         <li><a href="{{ url_for('page', rel_url='about/') }}">关于</a></li>
-        <li><a href="{{ url_for('page', rel_url='nav/') }}">链接</a></li>
-        <li><a href="{{ url_for('archive') }}">归档</a></li>
-        <li><a href="{{ url_for('feed') }}">订阅</a></li>
-        <li><a href="https://github.com/richardchien">GitHub</a></li>
-        <li><a href="https://stdrc.me/">CV</a></li>
-        <li><a href="https://afdian.net/@richardchien">赞助</a></li>
+        <li><a href="{{ url_for('page', rel_url='links/') }}">友联</a></li>
+        <li><a href="{{ url_for('archive') }}">所有文章</a></li>
+        <li><a href="{{ url_for('feed') }}">RSS</a></li>
+        <li><a href="https://jump.stdrc.cc/github" target="_blank">GitHub</a></li>
       </ul>
     </nav>
   </div>
@@ -20,15 +18,16 @@
       <ul>
         <li><a href="{{ url_for('page', rel_url='style-guides/') }}">风格指南</a></li>
         <li><a href="{{ url_for('page', rel_url='talks/') }}">演讲</a></li>
+        <li><a href="https://reviews.stdrc.cc" target="_blank">书影音评论</a></li>
       </ul>
     </nav>
   </div>
-  {% if entry and entry.toc_html %}
+  <!-- {% if entry and entry.toc_html %}
   <div class="widget">
     <h4>本页目录</h4>
     <nav>
       {{ entry.toc_html | safe }}
     </nav>
   </div>
-  {% endif %}
+  {% endif %} -->
 </div>
