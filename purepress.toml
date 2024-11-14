@@ -1,13 +1,13 @@
 [site]
 title = "Project RC"
-subtitle = "一只腊鸡的技术成长。"
+subtitle = "一种标准阿西的设计与实现。"
 author = "Richard Chien"
 copyright_year = "2013-2024"
 timezone = "Asia/Shanghai"
 language = "zh-Hans"
 
 [config]
-posts_per_index_page = 999999
+posts_per_index_page = 5
 disqus_enabled = true
 disqus_short_name = "richardchien"
 google_analytics_enabled = false
