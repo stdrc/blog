@@ -8,7 +8,7 @@ language = "zh-Hans"
 
 [config]
 posts_per_index_page = 99999
-disqus_enabled = true
+disqus_enabled = false
 disqus_short_name = "richardchien"
 google_analytics_enabled = false
 google_analytics_id = "G-681FDHED04"
